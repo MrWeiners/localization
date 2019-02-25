@@ -121,7 +121,7 @@ GUILD_JOIN_REQUESTS: '§6Гильдии §8| §fУ вас §e%s §fнеприн�
 MAIL_JOIN_REQUESTS: '§6Mail §8| §fУ вас §e%s §fнепрочитаных писем §7(Нажмите сюда)'
 MAIL_JOIN_HOVER: "§fНажмите сюда,\n§fчтобы открыть список писем"
 
-MSG_TITLE: '§7Наш Discord: §6discord.gg/fNQf4Dn'
+MSG_TITLE: '§7私たちの不和: §6discord.gg/fNQf4Dn'
 MSG_SUBTITLE: '§7グループ: §cvk.com/filkworld'
 
 #Ru items
@@ -323,7 +323,7 @@ WHOIS_FORMAT: '/whois <ник>'
 STAFFCHAT_FORMAT: '/sc <сообщение>'
 DONATECHAT_FORMAT: '/dc <сообщение>'
 PERSONALUP_FORMAT: '/personalup <ключ>'
-ASK_FORMAT: '/ask <ваш вопрос>'
+ASK_FORMAT: '/ask <あなたの質問>'
 ANS_FORMAT: '/ans <ник> <ответ>'
 FIND_FORMAT: '/find <ник>'
 KTEM_FORMAT: '/ktem <сообщение>'
