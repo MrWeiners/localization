@@ -113,7 +113,7 @@ GUILD_JOIN_ONLINE: '§6Гильдии §8| §fВ онлайне: §a%s§f %s'
 
 FRIEND_JOIN_BROADCAST: '§6Друзья §8| §f%s %s §f%s в игру §7(нажмите сюда)'
 FRIEND_JOIN_HOVER: "§fНажмите сюда,\n§fчтобы написать %s %s"
-FRIEND_JOIN_ONLINE: '§6Друзья §8| §fВ онлайне §a%s§f %s'
+FRIEND_JOIN_ONLINE: '§6友達 §8| §fВ онлайне §a%s§f %s'
 
 FRIEND_JOIN_REQUESTS: '§6Друзья §8| §fУ вас §e%s §fнепринятых заявок в друзья'
 PARTY_JOIN_REQUESTS: '§6Party §8| §fУ вас §e%s §fнепринятых заявок в party'
@@ -324,7 +324,7 @@ STAFFCHAT_FORMAT: '/sc <Сообщение>'
 DONATECHAT_FORMAT: '/dc <сообщение>'
 PERSONALUP_FORMAT: '/personalup <ключ>'
 ASK_FORMAT: '/ask <あなたの質問>'
-ANS_FORMAT: '/ans <ник> <ответ>'
+ANS_FORMAT: '/ans <ニック> <ともかく>'
 FIND_FORMAT: '/find <ник>'
 KTEM_FORMAT: '/ktem <сообщение>'
 BAN_FORMAT: '/ban <ник> <время/e> <причина>'
