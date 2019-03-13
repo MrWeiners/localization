@@ -18,9 +18,10 @@ BAN_REQUEST_SENT: '§eYour request to block this player has been sent to all onl
 BAN_REQUEST_ALREADY_SENT: '§cPlease block this player has already been sent, wait for decision'
 
 BAN_REQUEST_BROADCAST: '§cModeration §8| §7%s §7lock requests %s §7on §7%s §7because of §e%s'
-
-BAN_ACCEPT_FORMAT: '/ktembanrequests accept <the nickname of the offender>'
-BAN_REJECT_FORMAT: '/ktembanrequests reject <the nickname of the offender>'
+BAN_REQUEST_ACCEPT: '§cModeration §8| %s§a одобрил §7просьбу на блокировку §e%s'
+BAN_REQUEST_REJECT: '§cModeration §8| %s§c отклонил §7просьбу на блокировку §e%s'
+BAN_ACCEPT_FORMAT: '/banrequests accept <the nickname of the offender>'
+BAN_REJECT_FORMAT: '/banrequests reject <the nickname of the offender>'
 
 BAN_REQUEST_HOVER: '§fClick to accept the request'
 
@@ -68,24 +69,50 @@ DEVELOPER: '§4Developer'
 ELITE: '§aElite'
 
 RESTARTING_BROADCAST: '§cBefore a restart remained, §e%s§c %s'
-
-NO_CONNECT_REASON: '§cError#13, Synchronization is not executed. Please will report in a group » §a§nvk.com/FilkWorld'
-
+NO_CONNECT_REASON: '§cError#13, Synchronization is not executed. Report, if error to repeated » §a§nvk.com/FilkWorld'
+CORE_NO_FOUND_PLAYER: '§cError #7, Player not found. Report, if error to repeated » §a§nvk.com/FilkWorld\n\n§cError code (%s)'
 
 SECOND_0: 'second'
 SECOND_1: ''
-SECOND_2: 's'
-SECOND_3: ''
+SECOND_2: ''
+SECOND_3: 's'
+
+KTEMS_0: 'ktem'
+KTEMS_1: ''
+KTEMS_2: ''
+KTEMS_3: 's'
+
+KEY_0: 'key'
+KEY_1: ''
+KEY_2: ''
+KEY_3: 's'
+
+MONEY_0: 'money'
+MONEY_1: ''
+MONEY_2: ''
+MONEY_3: ''
+
+GOLD_0: 'gold'
+GOLD_1: ''
+GOLD_2: ''
+GOLD_3: 's'
+
+REPORT_0: 'report'
+REPORT_1: ''
+REPORT_2: ''
+REPORT_3: 's'
 
 PLAYER_0: 'player'
-PLAYER_1: 's'
+PLAYER_1: ''
 PLAYER_2: ''
-PLAYER_3: ''
+PLAYER_3: 's'
 
 FRIEND_0: 'friend'
-FRIEND_1: 's'
+FRIEND_1: ''
 FRIEND_2: ''
-FRIEND_3: ''
+FRIEND_3: 's'
+
+UNKNOWN: 'unknown'
 
 TIME_1: ' centuries'
 TIME_2: ' centuries'
@@ -114,6 +141,61 @@ TIME_24: ''
 TIME_25: ' seconds'
 TIME_26: ''
 
+ITEMS_REMOVE_STATS: '§6Предметы §8| §fВы удалили статус %s'
+ITEMS_REMOVE_DONATE: '§6Предметы §8| §fВы удалили привилегию %s'
+ITEMS_REMOVE_COINS: '§6Предметы §8| §fВы удалили предмет §aМонеты §f(§6+%s§f)'
+ITEMS_REMOVE_KEYS: '§6Предметы §8| §fВы удалили предмет §dКлючи §f(§d+%s§f)'
+ITEMS_REMOVE_XP: '§6Предметы §8| §fВы удалили предмет §eXP §f(§e+%s§f)'
+ITEMS_REMOVE_KTEMS: '§6Предметы §8| §fВы удалили предмет §5Ктемы §f(§6+%s§f)'
+ITEMS_REMOVE_GOLDS: '§6Предметы §8| §fВы удалили предмет §eЗолото §f(§a+%s§f)'
+
+ITEMS_ADD_STATS: '§6Предметы §8| §fВы забрали статус %s'
+ITEMS_ADD_DONATE: '§6Предметы §8| §fВы забрали привилегию %s'
+
+COINS_ADD: '§6+%s'
+KEY_ADD: '§d+%s'
+XP_ADD: '§a+%s XP'
+EXP_ADD: '§3+%s EXP'
+KTEMS_ADD: '§5+%s'
+GOLDS_ADD: '§e+%s'
+
+EFFECTSHOP_EFFECT_NOT_LEVEL: '§cДля покупки данного effect, вам нужен level §d%s§c или выше'
+EFFECTSHOP_SOUND_NOT_LEVEL: '§cДля покупки данного sound, вам нужен level §d%s§c или выше'
+
+PERSONALUP_CONFIRM: '§cПодтвердите свой ключ /personalup <ключ>'
+
+SERVER_LINKS: |-
+  §7Адрес сервера: §eplay.filkworld.cf
+  
+  §7Группа Вконтакте: §fvk.com/filkworld
+  
+  §7Сайт: §ffilkworld.cf
+  §7Форум: §fforum.filkworld.cf
+  
+  §7Почта: §dhappy_mc@list.ru
+REWARDS_1: '§fВы получили §b%s§f награду:'
+REWARDS_2: '§7+§6%s§f монет'
+REWARDS_3: '§7+§a%s§f опыта'
+REWARDS_4: '§7+§d%s§f ключа'
+
+ANS_REASON: '1.16. (Оффтоп)'
+ANS_REASON_MSG: 'Данный чат предназначен исключительно для помощи игрокам с адекватными вопросами, помните это'
+ANS_USE_MSG: '§6Вопросы §8| §fДля ответа пишите §a/ans %s <ваше сообщение> §7(наведите)'
+ANS_USE_HOVER: '§fНажмите, чтобы ответить игроку %s'
+
+REPORT_REASON_1: '1.4 (Реклама посторонних ресурсов)'
+REPORT_REASON_2: '1.3 (Флуд)'
+REPORT_REASON_3: '1.5 (Попрашайнечество)'
+REPORT_REASON_4: '(Возможно аккаунт взломан, сообщите vk.com/filkworld)'
+REPORT_REASON_5: '1.6 (Читы)'
+
+SERVER_STOP: '§6Сервер §8| §fОтключение сервера §a%s§f...'
+SERVER_START: '§6Сервер §8| §fВключение сервера §a%s§f..'
+SERVER_KILL: '§6Сервер §8| §fУбийство сервера §a%s§f. . '
+
+LEVEL_NOT: '§cОшибка, награды можно получать только с 5 уровня'
+NPC_TELRPORT: '§aТелепортирую на сервер %s'
+
 TAB_HEADER: "§2§lFilk§3§lWorld §8(§2%s§8)\n\n§fOnline-store:\n§ewww.filkworld.cf\n"
 TAB_FOOTER: "\n§fYou are on the server:\n§e%s"
 
@@ -127,12 +209,14 @@ JOIN_RECOMMEND_ADDMAIL: "§bBind mail\n\n §e▸ Click here to link your email"
 JOIN_RECOMMEND_CREATEAPI: "§bCreate api-key\n\n §e▸ Click here to create an api key"
 JOIN_RECOMMEND_CHANGEAPI: "§bTo change the api-key\n\n §e▸ Click here to change your api key"
 
-GUILD_JOIN_BROADCAST: '§2Guild §8| %s §f%s to server'
+GUILD_JOIN_CHAT: '§2Guild §8| %s §f%s to server'
 GUILD_JOIN_HOVER: "§fClick here,\n§fto write to the player %s"
+GUILD_JOIN_ACTIONBAR: '§2Guild §8| %s §f%s to server'
 GUILD_JOIN_ONLINE: '§6Guild §8| §fOnline: §a%s§f %s'
 
-FRIEND_JOIN_BROADCAST: '§6Friends §8| §f%s %s §f%s to game §7(click here)'
+FRIEND_JOIN_CHAT: '§6Friends §8| §f%s %s §f%s to game §7(click here)'
 FRIEND_JOIN_HOVER: "§fClick here,\n§fto send message %s %s"
+FRIEND_JOIN_ACTIONBAR: '§6Friends §8| §f%s %s §f%s to game'
 FRIEND_JOIN_ONLINE: '§6Friends §8| §fOnline §a%s§f %s'
 
 FRIEND_JOIN_REQUESTS: '§6Friends §8| §fYou have §e%s §frejected friend requests'
@@ -263,7 +347,7 @@ TRAINING_STAGE_3_MSG_17_SUBTITLE: '§fтогда Вы можете приобр�
 TRAINING_STAGE_3_MSG_18_TITLE: ''
 TRAINING_STAGE_3_MSG_18_SUBTITLE: '§7И конечно самое главное...'
 TRAINING_STAGE_3_MSG_19_TITLE: '§fИнтересны §5разработки§f, или есть вопросы по плагинам§f/§6форуму§f?'
-TRAINING_STAGE_3_MSG_19_SUBTITLE: '§fТогда просто оставьте все сообщеие §5разработчику §f- §5/Ktem <сообщение>'
+TRAINING_STAGE_3_MSG_19_SUBTITLE: '§fТогда просто оставьте сообщеие §5разработчику §f- §5/dev <сообщение>'
 TRAINING_STAGE_3_MSG_20_TITLE: '§fА теперь давайте выберем §aрежим§f для игры'
 TRAINING_STAGE_3_MSG_20_SUBTITLE: '§cкогда откроется меню, нажмите на любой из доступных режимов'
 
@@ -279,7 +363,7 @@ TRAINING_STAGE_6_SUBTITLE: '§fIf you want to know all available commands, use �
 
 CREATIVE_COMMANDS: '§eСоздайте свой плот §c/p auto§e, или телепортируйтесь домой §c/p home'
 
-BOARD_NEWS: 'News: §a'
+BOARD_NEWS: 'News: §3'
 BOARD_PLAYERS: 'Players'
 BOARD_TEAMS: 'Teams'
 BOARD_FOR_START: 'Для старта нужно'
@@ -327,13 +411,17 @@ BOARD_BREAK: 'Destroyed '
 COMMAND_LOBBY: '§eTo go to lobby use §c/lobby'
 ERROR_COMMAND: '§cError, write %s'
 
-VERIFY_ALERT: '§cVerify your account -> /ktemverify <код>'
+VERIFY_ALERT: '§cVerify your account -> /verify <код>'
 VERIFY_SUCCESS: '§6Verify §8| §fYou verifed your account, data updated'
 VERIFY_ERRORCODE: '§cError, code written wrong'
 VERIFY_INFO: '§cwritten wrong code'
 VERIFY_REASON: '§cError #18 Пожалуйста сообщите в группу » §a§nvk.com/Ktem_Projects'
 VERIFY_ERROR_INFO: '%s §4was blocked'
 VERIFY_SESSION_REMOVE: '§6Verify §8| §fSession removed'
+VERIFY_UPDATED_BROADCAST: '§6Verify §8| %s§f обновил данные своей сессии'
+VERIFY_ERROR_BROADCAST: '§6Verify §8| %s§c ввел неверный код'
+VERIFY_BLOCKED_BROADCAST: '§6Verify §8| %s§4 был заблокирован'
+VERIFY_REMOVED_BROADCAST: '§6Verify §8| %s§f удалил данные своей сессии'
 
 NO_PERMISSION: '§cYou do not have permissions'
 NO_PERMISSION_GROUP: '§cYou do not have permissions, buy %s§c or higher'
@@ -348,18 +436,18 @@ PERSONALUP_FORMAT: '/personalup <key>'
 ASK_FORMAT: '/ask <your questing>'
 ANS_FORMAT: '/ans <nickname> <message>'
 FIND_FORMAT: '/find <nickname>'
-KTEM_FORMAT: '/ktem <message>'
+DEVELOPER_FORMAT: '/developer <your message for developer>'
 BAN_FORMAT: '/ban <nickname> <time/e> <reason>'
 MUTE_FORMAT: '/mute <nickname> <time/e> <reason>'
 UNBAN_FORMAT: '/unban <nickname>'
 UNBANIP_FORMAT: '/unbanip <ip>'
 UNMUTE_FORMAT: '/unmute <nickname>'
 KICK_FORMAT: '/kick <nickname> <reason>'
-KTEMVINF_FORMAT: '/ktemvinf <nickname>'
+BANINFO_FORMAT: '/baninfo <nickname>'
 SKIN_FORMAT: '/skin <premium nickname/clear>'
 SERVER_FORMAT: '/server <server>'
 STP_FORMAT: '/stp <nickname>'
-VERIFY_FORMAT: '/ktemverify <key>'
+VERIFY_FORMAT: '/verify <key>'
 PARTYCHAT_FORMAT: '/pchat <message>'
 GUILDCHAT_FORMAT: '/gchat <message>'
 IGNORE_FORMAT: '/ignore <nickname>'
@@ -383,15 +471,16 @@ SPAWN_START: '%sProcess of teleportation is running, you will be teleported in �
 SPAWN_ALREADY: '§cProcess of teleportation is already running'
 SPAWN_CANCEL: '§cYou moved, teleportation canceled'
 
-KTEM_DELAY: "§cSend message to Ktem, can only once an hour"
-KTEM_CREATE: |-
- §6Ktem §8| §fYour message was send to ktem's messages
- §f If Ktem didn't answered it during one day,
- §f You may write to the server's group to send your message to Ktem,
- §f group: §evk.com/filkworld§f write to - §eCommunity's messages
-KTEM_INFORMATION: '§6Ktem §8| §f%s §a%s'
-KTEM_INFORMATION: '%s %s'
-KTEM_ERROR: §6Ktem §8| §fYour message have to contain more than §e3§f and less than §c100§f symbols
+DEVELOPER_DELAY: '§cSend message to developer, can only once an hour'
+DEVELOPER_CREATE: |-
+ §6Server §8| §fYour message was send to server developer,
+ §f If developer didn't answered it during one 1-2 days,
+ §f You also may write message to developer group,
+ §f to link: §5vk.me/ktem_projects§f, or forum a theme name,
+ §f "§eMessage for developer§f".
+  
+ §f Also if want, sent message for server group §bvk.com/filkworld
+DEVELOPER_ERROR: '§6Server §8| §fYour message have to contain more than §e3§f and less than §c100§f symbols'
 
 HELP_PAPER_FOR: '§e▸ Sub commands for %s:'
 
@@ -402,8 +491,8 @@ STAFFCHAT_OFF: '§cDisabled'
 
 SPYCMD_HELP: |-
  - '§6SpyCmd §8| §fCommands list:'
- - '§7/ktemspycmd on §f- enable commands spying'
- - '§7/ktemspycmd off §f- disable spying'
+ - '§7/spycmd on §f- enable commands spying'
+ - '§7/spycmd off §f- disable spying'
 SPYCMD_ON: '§6SpyCmd §8| §fNow you are spying for commands'
 SPYCMD_OFF: '§6SpyCmd §8| §fYou are no longer spying for commands'
 SPYCMD_ALREADY: '§cSpying is already enabled'
@@ -412,23 +501,27 @@ SPYCMD_FORMAT: '§6Cmd §8| %s §8» §b%s'
 SPYCHAT_ON: '§6Chat §8| §fNow you are spying for chat'
 SPYCHAT_OFF: '§6Chat §8| §fYou are no longer spying for chat'
 
-GROUP_SET_FORMAT: '/ktemgroup set <nickname> <group>'
-GROUP_CLEAR_FORMAT: '/ktemgroup clear <nickname>'
-GROUP_VIEW_FORMAT: '/ktemgroup view <group>'
-GROUP_MIGRATE_FORMAT: '/ktemgroup migrate <old nickname> <new nickname>'
+GROUP_SET_FORMAT: '/group set <nickname> <group>'
+GROUP_CLEAR_FORMAT: '/group clear <nickname>'
+GROUP_VIEW_FORMAT: '/group view <group>'
+GROUP_MIGRATE_FORMAT: '/group migrate <old nickname> <new nickname>'
 
 GROUP_HELP:
  - '§6Groups §8| §fCommands list:'
- - '§7/ktemgroup clear <nickname> §f- clearing group'
- - '§7/ktemgroup migrate <old nickname> <new nickname> §f- transfer group'
- - '§7/ktemgroup set <nickname> <group> §f- update group'
- - '§7/ktemgroup view <group> §f- show all players with certain group'
+ - '§7/group clear <nickname> §f- clearing group'
+ - '§7/group migrate <old nickname> <new nickname> §f- transfer group'
+ - '§7/group set <nickname> <group> §f- update group'
+ - '§7/group view <group> §f- show all players with certain group'
 GROUP_ERROR_ACCESS: "§cYou can't manage groups of this player"
 GROUP_ALREADY_DEFAULT: "§cThis player hasn't got group"
 GROUP_CLEAR: '§eFrom player %s §egroup has been removed'
 GROUP_SET: '§eFor player %s §ehas been set group %s'
-GROUP_INVALID: '§cYou wrote wrong group. Available groups: §fDEFAULT, PREMIUM, GOLD, LEGEND, EMERALD, GOLEM, DIAMOND, ENDERMAN'
+GROUP_INVALID: '§cYou wrote wrong group. Available groups: §fDEFAULT, PREMIUM, GOLD, LEGEND, EMERALD, GOLEM, DIAMOND, ENDERMAN, TESTER, ELITE'
 GROUP_MIGRATE: '§eFor player %s §ehas been transfered group %s'
+GROUP_CLEAR_BROADCAST: '§6Group §8| %s§7 снял привилегию с игрока %s'
+GROUP_MIGRATE_BROADCAST: '§6Group §8| %s§7 перенес привилегию с игрока %s§7 на %s'
+GROUP_VIEW_INVALID: '§cYou wrote wrong group. Available groups: §fDEFAULT, PREMIUM, GOLD, LEGEND, EMERALD, GOLEM, DIAMOND, ENDERMAN, TESTER, ELITE'
+GROUP_SET_BROADCAST: '§6Group §8| %s§7 установил игроку %s§7 группу %s'
 
 NO_FOUND_PLAYER: '§cPlayer %s§c not found or player is offline'
 NO_NEVER_PLAYER: '§cError, player %s never played on our project'
@@ -450,45 +543,86 @@ PLAYER_NAME_11: 'joined'
 PLAYER_NAME_12: 'joined'
 PLAYER_NAME_13: ''
 PLAYER_NAME_14: ''
+PLAYER_NAME_15: ''
+PLAYER_NAME_16: ''
+
+PROXY_COMMAND_HELP:
+- '§7/proxy info §f- information for your connected to proxies'
+PROXY_INFO: |-
+ §6Proxy §8| §fInformation for your connected:
+ §8 • §fProxy: §a%s
+ §8 • §fIP address: §a%s
+ §8 • §fTotal online: §a%s §f%s
+PROXY_INFO_TO: |-
+ §6Proxy §8| §fInformation for connected player %s§f:
+ §8 • §fProxy: §a%s
+ §8 • §fIP address: §a%s
+ §8 • §fTotal online: §a%s §f%s
+ 
+PLAYERINFO_FORMAT: '/playerinfo <player name>'
+PLAYERINFO_YT: '§f- YouTube channel: §a%s'
+PLAYERINFO_STAFF: '§f- Boost percent: §a%s'
+PLAYERINFO: |-
+ §eInformation for player %s§e:
+ §f- Player ID: §a%s
+ §f- Rank: §a%s
+ §f- Ktems: §a%s
+ §f- Money: §a%s
+ §f- Golds: §a%s
+ §f- Player level: §a%s
+ §f- Player experience: §a%s
+ §f- Keys: §a%s
+ §f- uuid: §a%s
+
+FINDID_FORMAT: '/findid <id>'
+FINDID_NOT_FOUND: '§cPlayer of id %s, never played on our project'
+FINDID_INVALID_ID: '§cid %s, is not a number'
+FINDID_CONFIRM: '§6Сервер §8| §fInformation for id §a%s§f: Player: %s'
 
 CORE_COMMAND_HELP:
- - '§7/ktemcore money §f- control economy'
- - '§7/ktemcore npc §f- control NPC'
- - '§7/ktemcore whois <name> §f- detalied information for player'
- - '§7/ktemcore hide §f- hide your'
- - '§7/ktemcore servers §f- conrtol servers'
- - '§7/ktemcore delstats <key> <name> §f- понижение статуса персонала'
- - '§7/ktemcore setstats <key> <name> <stats> §f- set stats for player'
- - '§7/ktemcore removeadministrator <key> <administrator name> §f- take off administrator'
- - '§7/ktemcore setadministrator <key> <player name> §f- to appoint administrator'
+ - '§7/core memory §f- Information of core memory'
+ - '§7/core servers menu §f- servers control menu'
+ - '§7/core proxys §f- total connected proxies'
+ - '§7/core servers §f- total connected servers'
+ - '§7/core hide §f- hide your'
 CORE_NPC_COMMAND_HELP:
  - '§6NPC §8| §fCommands list:'
- - '§7/ktemcore npc create <id> <type> <name> §f- create npc'
- - '§7/ktemcore npc delete <id> §f- delete npc'
- - '§7/ktemcore npc update <id> §f- update npc'
- - '§7/ktemcore npc setname <id> <name> §f- change name for npc'
- - '§7/ktemcore npc setglow <id> <true/false> §f- change glow'
- - '§7/ktemcore npc tphere <id> §f- teleport npc to your'
- - '§7/ktemcore npc clearcmds <id> §f- clear all commands for npc'
- - '§7/ktemcore npc setcommand <id> <command> §f- add command'
- - '§7/ktemcore npc info <id> §f- info for npc'
- - '§7/ktemcore npc tp <id> §f- teleport to npc'
- - '§7/ktemcore npc list §f- npc list'
+ - '§7/core npc create <id> <type> <name> §f- create npc'
+ - '§7/core npc delete <id> §f- delete npc'
+ - '§7/core npc update <id> §f- update npc'
+ - '§7/core npc setname <id> <name> §f- change name for npc'
+ - '§7/core npc setglow <id> <true/false> §f- change glow'
+ - '§7/core npc tphere <id> §f- teleport npc to your'
+ - '§7/core npc clearcmds <id> §f- clear all commands for npc'
+ - '§7/core npc setcommand <id> <command> §f- add command'
+ - '§7/core npc info <id> §f- info for npc'
+ - '§7/core npc tp <id> §f- teleport to npc'
+ - '§7/core npc list §f- npc list'
 
-NPC_CREATE_FORMAT: '/ktemnpc create <id> <type> <name>'
+CORE_MEMORY: |-
+ §6Core §8| §fInformation of memory:
+ §8 ▪ §fMax memory §a%s§f MB
+ §8 ▪ §fAllowed memory §a%s§f MB
+ §8 ▪ §fFree memory §a%s§f MB
+
+CORE_PROXYS_NOT_EXISTS: '§6Core §8| §fNow at moment not connected proxies'
+CORE_PROXYS_TOTAL: '§6Core §8| §fTotal connected proxies (§a%s§f):'
+CORE_PROXYS_FORMAT: ' §8• §a%s §e[%s] §7(§a%s §f%s§7)'
+
+NPC_CREATE_FORMAT: '/npc create <id> <type> <name>'
 NPC_ALREADY_EXIST: '§cError, npc for id %s already created'
 NPC_CREATE_ERROR: |-
- §cОшибка, доступные типы:
+ §cError, available types:
  %s
 NPC_CREATE_SUCCESS: '§6NPC §8| §fYou created npc for name §a%s§f or id - §e%s'
-NPC_DELETE_FORMAT: '/ktemnpc delete <id>'
+NPC_DELETE_FORMAT: '/npc delete <id>'
 NPC_NOT_FOUND: '§cError, npc for id %s not found'
 NPC_REMOVED: '§6NPC §8| §fnpc с id - §e%s§f deleted'
-NPC_CLEARCMD_FORMAT: '/ktemnpc clearcmds <id>'
+NPC_CLEARCMD_FORMAT: '/npc clearcmds <id>'
 NPC_SUCCESS_REMOVED_CMDS: '§6NPC §8| §fYou clear commands for npc in id - §e%s'
-NPC_TPHERE_FORMAT: '/ktemnpc tphere <id>'
+NPC_TPHERE_FORMAT: '/npc tphere <id>'
 NPC_SUCCESS_TPHERE: '§6NPC §8| §fYou teleported npc in id - §e%s§f to your'
-NPC_INFO_FORMAT: '/ktemnpc info <id>'
+NPC_INFO_FORMAT: '/npc info <id>'
 NPC_INFORMATION: |-
  §eInformation at NPC:
  §f- NPC ID: §a%s
@@ -503,17 +637,17 @@ NPC_INFORMATION: |-
  §8§l ▹ §fYaw: §e%s
  §8§l ▹ §fPitch: §e%s
  §8§l ▹ §fWorld: §e%s
-NPC_TP_FORMAT: '/ktemnpc tp <id>'
+NPC_TP_FORMAT: '/npc tp <id>'
 NPC_SUCCESS_TELEPORTED: '§6NPC §8| §fYou teleported to npc - %s'
 NPC_LIST: '§6NPC §8| §fNpc total list:'
 NPC_LIST_FORMAT: '§f- §6#%s §fID: §a%s'
-NPC_UPDATE_FORMAT: '/ktemnpc update <id>'
+NPC_UPDATE_FORMAT: '/npc update <id>'
 NPC_SUCCESS_UPDATE: '§6NPC §8| §fYou update npc - %s'
-NPC_SETGLOW_FORMAT: '/ktemnpc setglow <id> <true/false>'
+NPC_SETGLOW_FORMAT: '/npc setglow <id> <true/false>'
 NPC_SETGLOW: '§6NPC §8| §fNpc - §a%s§f set glowing §e%s'
-NPC_SETNAME_FORMAT: '/ktemnpc setname <id> <name>'
+NPC_SETNAME_FORMAT: '/npc setname <id> <name>'
 NPC_SETNAME: '§6NPC §8| §fNpc for id - §a%s§f §frenamed to %s'
-NPC_SETCOMMAND_FORMAT: '/ktemnpc setcommand <id> <command>'
+NPC_SETCOMMAND_FORMAT: '/npc setcommand <id> <command>'
 NPC_SETCOMMAND: '§6NPC §8| §fYou set command §a%s§f for npc id - §e%s'
 
 CORE_HIDE_ENABLE: '§6Core §8| §fYour enable hide for your'
@@ -521,49 +655,36 @@ CORE_HIDE_DISABLE: '§6Core §8| §fYour disable hide'
 
 CORE_MONEY_COMMAND_HELP:
  - '§6Money §8| §fCommands list:'
- - '§7/ktemcore money <key> check <name> §f- chack balance'
- - '§7/ktemcore money <key> add <name> <money> §f- give money'
- - '§7/ktemcore money <key> rem <name> <money> §f- take money'
+ - '§7/core money <key> check <name> §f- chack balance'
+ - '§7/core money <key> add <name> <money> §f- give money'
+ - '§7/core money <key> rem <name> <money> §f- take money'
 CORE_MONEY_CHECK: '§6Balance §8| §fFor account %s §a%s §fmoney'
-CORE_MONEY_CHECK_FORMAT: '/ktemcore money <key> check <name>'
+CORE_MONEY_CHECK_FORMAT: '/core money <key> check <name>'
 CORE_MONEY_ERROR: '§cSum incorrect'
 CORE_MONEY_ADD: '§6Balance §8| §fFor account %s§f added §a%s §fmoney'
-CORE_MONEY_ADD_FORMAT: '/ktemcore money <key> add <name> <money>'
+CORE_MONEY_ADD_FORMAT: '/core money <key> add <name> <money>'
 CORE_MONEY_REMOVE: '§6Balance §8| §fFor account %s§f take §a%s §fmoney'
-CORE_MONEY_REMOVE_FORMAT: '/ktemcore money <key> rem <name> <money>'
+CORE_MONEY_REMOVE_FORMAT: '/core money <key> rem <name> <money>'
 
 CORE_WRONGKEY: '§cError, key is incorrect'
 CORE_REASON_WRONGKEY: '§4Error #14 §cWriten a invalid key.'
 
-CORE_WHOIS_FORMAT: '/ktemcore whois <name>'
-CORE_WHOIS_YT: '§f- YouTube channel: §a%s'
-CORE_WHOIS_KTEMXP: '§f- Percent boost: §a%s'
-CORE_WHOIS: |-
- §eInfo for player %s
- §f- player ID: §a%s
- §f- Rank: §a%s
- §f- Ktems: §a%s
- §f- Money: §a%s
- §f- Golds: §a%s
- §f- Player level: §a%s
- §f- Experience: §a%s
- §f- Keys: §a%s
-
 CORE_ALREADY_ADMINISTRATOR: '§cPlayer already administrator'
 CORE_SETADMINISTRATOR: '§eИгроку %s§e was set stats administrator'
-CORE_SETADMINISTRATOR_FORMAT: '/ktemcore setadministrator <key> <name>'
+CORE_SETADMINISTRATOR_FORMAT: '/core setadministrator <key> <name>'
 CORE_REMOVEADMINISTRATOR: '§eAdministrator %s§e was removed'
 CORE_NO_ADMINISTRATOR: '§cPlayer %s §cis not administrator'
-CORE_REMOVEADMINISTRATOR_FORMAT: '/ktemcore removeadministrator <key> <administrator name>'
+CORE_REMOVEADMINISTRATOR_FORMAT: '/core removeadministrator <key> <administrator name>'
 CORE_DELSTATS: '§eFor player %s §eremoved all ranked'
 CORE_NO_PERSONAL: '§cPlayer %s §cnot composed for rank or stats'
-CORE_DELSTATS_FORMAT: '/ktemcore delstats <key> <name>'
+CORE_DELSTATS_FORMAT: '/core delstats <key> <name>'
 CORE_SETSTATS: '§ePlayer %s§e set stats %s'
 CORE_STATS_INVALID: '§cYour indicated incorrent stats. Avainable stats: §fTester, Builder, YouTube, Junior, Helper, Moder'
-CORE_SETSTATS_FORMAT: '/ktemcore setstats <key> <name> <stats>'
+CORE_SETSTATS_FORMAT: '/core setstats <key> <name> <stats>'
 
 HACK_REASON: '§4Error #3 §cSuspicion of hacking'
 VZLOM_REASON: '§cError #14 Please, contact group » §a§nvk.com/Ktem_Projects'
+DOWNLOAD_MAP_REASON: '§cОшибка #19 §cПодозрение в скачивании карты'
 
 PARTY_ALREADY: '§6Party §8| §fYou are already in the group'
 PARTY_PLAYER_ALREADY: '§cPlayer %s is already in the group'
@@ -695,6 +816,7 @@ FRIEND_ADD_FORMAT: '/f add <player name>'
 FRIEND_ADD: '§6Friends §8| §fFriend request was sent to %s'
 FRIEND_ADD_ME: "§cYou can't send friend request yourself"
 FRIEND_ADD_NO: '§cThis player forbad to send him(her) friend requests'
+FRIEND_ADD_ALREADY: '§cYou have already sent friend request to that player...'
 
 FRIEND_CHAT_FORMAT: '/f chat <message>'
 FRIEND_CHAT: '§6Friends §8| §f%s §8» §7%s'
@@ -743,6 +865,7 @@ BOX_KEYS: '§dKeys §f(§6+%s§f)'
 BOX_EXP: '§eexperience §f(§a+%s§f)'
 BOX_MONEY: '§aCoins §f(§6+%s§f)'
 BOX_KTEMS: '§5Ktems §f(§4+%s§f)'
+BOX_GOLDS: '§eGolds §f(§a+%s§f)'
 BOX_LEGENDARY: '§6Legendary'
 BOX_EPIC: '§5Epic'
 BOX_RARE: '§bRare'
@@ -756,7 +879,7 @@ GROUP_BROADCAST: '§6Group §8| %s §f%s'
 CORE_BROADCAST: '§6Core §8| %s §f%s'
 VERIFY_BROADCAST: '§6Verify §8| %s %s'
 VERIFY_INFO_BROADCAST: '§6Verify §8| %s'
-KTEM_BROADCAST: '§6Ktem §8| %s §f%s has writen you message: §a%s'
+DEVELOPER_BROADCAST: '§6Server §8| %s §f%s has writen you message: §a%s'
 MODERATION_BROADCAST: '§cМoderation §8| %s §7%s'
 INFO_BROADCAST: '§7%s'
 ANSWER_BROADCAST: '§cModeration §8| %s §7%s player %s §8(§a%s§8) §7 -> §e%s'
@@ -1004,7 +1127,7 @@ PERSONALUP_KEY_REASON: '§4Ошибка #23 §cВведен не действи�
 
 DISABLE_COMMAND_IN_GAME: '%s§cThis feature is disabled'
 
-KTEMRULES_NEW: '§fНовее правила можете найти здесь §aforum.filkworld.cf/ktemrules'
+STAFFRULES_NEW: '§fНовее правила можете найти здесь §aforum.filkworld.cf/staffrules'
 BAN_INFO_NO: '§cИгрок %s не наказан'
 BAN_NAME_1: 'Заблокировала чат'
 BAN_NAME_2: 'Заблокировал чат'
@@ -1015,16 +1138,16 @@ BAN_NAME_6: 'Заблокировал IP адрес'
 BAN_INFO_COOLDOWN: '§f- Кончится через: §e%s'
 BAN_INFO_NEVER: '§f- Заблокирован навсегда'
 BAN_INFO_BY: '§f- По просьбе %s'
-BAN_INFO: |-
+BANINFO: |-
  §6Ban §8| §fInfo:
  §f- Player: %s
  §f- %s %s
  §f- Type: §7%s
  §f- Reason: §e%s
  §f- Date: §6%s
-BAN_INFO_IP: |-
+BANINFO_IP: |-
  §6Ban §8| §fInfo:
- §f- Addres: %s
+ §f- IP addres: %s
  §f- %s %s
  §f- Type: §7%s
  §f- Reason: §e%s
@@ -1038,7 +1161,7 @@ BAN_HELP: '§cUse синтаксис -v, для обхода'
 BAN_ME: '§cВы не можете наказать сами себя'
 UNBAN_NO: '§cPlayer %s, not blocked'
 UNMUTE_NO: '§cPlayer chat %s, not blocked'
-UNBANIP_NO: '§cAddress %s, not blocked'
+UNBANIP_NO: '§cIP address %s, not blocked'
 KICK_REASON: "§b§lFilk§a§lWorld§7\n\n§cВас выкинули с сервера\n\n§fДата: §7%s\n\n§fВы: %s\n§fКикнул: %s\n§fПричина: §7%s\n\n§fОбжаловатьнаказание можно на форуме:\n§b§nforum.filkworld.cf"
 BAN_NEVER_NEW_REASON: "§b§lFilk§a§lWorld§7\n\n§cВаш аккаунт был заблокирован навсегда\n\n§fДата блокировки: §7%s\n\n§fВы: %s\n§fЗаблокировал: %s\n§fПричина: §7%s\n\n§7Обжаловать наказание можно на форуме:\n§b§nforum.filkworld.cf"
 BAN_NEVER_REASON: "§b§lFilk§a§lWorld§7\n\n§cВаш аккаунт заблокирован навсегда\n\n§fДата блокировки: §7%s\n\n§fВы: %s\n§fЗаблокировал: %s\n§fПричина: §7%s\n\n§7Обжаловать наказание можно на форуме:\n§b§nforum.filkworld.cf"
@@ -1052,17 +1175,31 @@ MUTE_NEVER_NEW_REASON: "§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 MUTE_NEVER_REASON: "§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n §cДоступ к чату заблокирован за %s\n \n §7До истечения осталось %s\n §7Заблокировал: %s\n \n §7Обжаловать наказание можно на форуме:\n §b§nforum.filkworld.cf\n§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
 MUTE_NEW_REASON: "§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n §cДоступ к чату был заблокирован за %s\n \n §7До истечения осталось %s\n §7Заблокировал: %s\n \n §7Обжаловать наказание можно на форуме:\n §b§nforum.filkworld.cf\n§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
 MUTE_REASON: "§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n §cДоступ к чату заблокирован за %s\n \n §7Заблокировал: %s\n \n §7Обжаловать наказание можно на форуме:\n §b§nforum.filkworld.cf\n§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+BAN_INFO: '§cМодерация §8| %s§7 заблокировал игрока §e%s§7 по причине: §e%s'
+BAN_TIME_INFO: '§cМодерация §8| %s§7 заблокировал игрока §e%s§7 на %s§7по причине: §e%s'
+BANIP_INFO: '§cМодерация §8| %s §7заблокировал IP адрес §a%s§7 по причине: §e'
+BANIP_TIME_INFO: '§cМодерация §8| %s§7 заблокировал IP адрес §a%s§7 на %s§7по причине: §e%s'
+MUTE_INFO: '§cМодерация §8| %s§7 заблокировал чат игрока §e%s§7 по причине: §e%s'
+MUTE_TIME_INFO: '§cМодерация §8| %s§7 заблокировал чат игрока §e%s§7 на %s§7по причине: §e%s'
+KICK_INFO: '§cМодерация §8| %s§7 кикнул игрока §e%s§7 по причине: §e%s'
+UNMUTE_INFO: '§cМодерация §8| %s§7 разблокировал чат игрока §e%s'
+UNBAN_INFO: '§cМодерация §8| %s§7 разблокировал игрока §e%s'
+UNBANIP_INFO: '§cМодерация §8| %s§7 разблокировал IP адрес §a%s'
+UNMUTE_MSG: '§6Сервер §8| §fДоступ к чату был разблокирован'
 BAN_ALREADY: '§cPlayer %s already blocked'
-BANIP_ALREADY: '§cAddres %s already blocked'
+BANIP_ALREADY: '§cIP addres %s already blocked'
 MUTE_ALREADY: '§cFrom player %s already blocked chat'
-BANIP_INCORRECT: '§cPlayer %s not found, or specified invalid address'
+BANIP_INCORRECT: '§cPlayer %s not found, or specified invalid ip address'
 REPORT_ALREADY_SENT: '§cYou already sent from this player'
 REPORT_ME: '§cВы не можете пожаловатся на самого себя'
 REPORT_FOR_PERSONAL:
  - '§cВы не можете пожаловатся на персонал сервера'
  - '§cДля этого существует обсуждение в группе https://vk.com/topic-155142790_38895715'
+REPORT_FOR_TESTER: '§6Античит §8| §fДанный игрок не читер'
 REPORT_SENT: '§eЖалоба отправлена. Чтобы ее рассмотрели модераторы необходимо, чтобы еще один человек подал жалобу на игрока'
 REPORT_TWO_SENT: '§cЖалобы §8| §fЖалоба отправлена. Вы не первый, кто жаловался на этого игрока, наши §9модераторы§f были оповещены'
+REPORT_INFO_ONE: '§cЖалобы §8| §fНа игрока %s§f поступила §c%s§f %s'
+REPORT_INFO_TWO: '§cЖалобы §8| §fНа игрока %s§f поступило уже §c%s§f %s'
 REPORT_PLAYER_GUILTY: '§cЖалобы §8| §fИгрок %s, на которого Вы подавали жалобу был наказан. Спасибо за содействие в поимке!'
 REPORT_PLAYER_INNOCENT: '%s §fотклонил вашу жалобу на %s'
 REPORT_BROADCAST_PLAYER_GUILTY: '§cМодерация §8| §7%s §7посчитал, что §e%s §f- §cвиновен'
@@ -1070,6 +1207,7 @@ REPORT_BROADCAST_PLAYER_INNOCENT: '§cМодерация §8| §7%s §7посч�
 REPORT_PLAYER_STARTED_SPECTATE: '§cМодерация §8| §7%s §7отправился следить за §7%s'
 REPORT_NO_PERM_ACTIONS: '§cЖалобы §8| §fПринимать решения по жалобам могут только модераторы и выше.'
 SETTINGS_DONATECHAT_DISABLE: '§cВы отключили чат донатеров. Чтобы написать туда, включите его в личных настройках'
+ASK_NO_STAFF_ONLINE: '§6Question §8| §fNo staff online, On your question no one to answer :('
 ASK_DELAY: '§cError, отправить новый вопрос можно будет через %s'
 ASK_ALREADY_SENT: '§cВы уже задавали вопрос, дождитесь ответа на него'
 ASK_SENT:
@@ -1088,7 +1226,7 @@ ANS_MSG: |-
 ANS_JOIN_MSG: |-
  §6Question §8| §fПока вы были оффлайн, на Ваш вопрос %s %s
   §a• §fСообщение: §e%s
-ANS_LIMIT: '§6Question §8| §fВаш ответ должен содержать не менее §e1§f и не более §c100§f символов'
+ANS_LIMIT: '§6Question §8| §fВаш ответ должен содержать не менее §e1§f символа'
 ANS_NO: '§cError, игрок %s §cне задавал вопрос или ему уже ответили'
 
 IGNORE_REMOVE: '§cYou removed player %s§c from ignore list.'
@@ -1107,20 +1245,22 @@ WHOIS: |-
   §f- Rank: §a%s
 WHOIS_ONLINE: |-
  §a§lOnline now
- §f - Proxy §a%s
- §f - Server §a%s
- §f - Version §a%s
- §f - Language §a%s
- §f - Connected from §a%s
- §f - Server data §a%s
+ §f - IP address: §a%s
+ §f - Proxy: §a%s
+ §f - Server: §a%s
+ §f - Version: §a%s
+ §f - Language: §a%s
+ §f - Connected from: §a%s
+ §f - Server data: §a%s
 WHOIS_OFFLINE: |-
  §c§lOffline now
  §f - Lase seen §e%s ago
- §f - Proxy §c%s
- §f - Server §c%s
- §f - Version §c%s
- §f - Language §c%s
- §f - Server data §c%s
+ §f - IP address: §c%s
+ §f - Proxy: §c%s
+ §f - Server: §c%s
+ §f - Version: §c%s
+ §f - Language: §c%s
+ §f - Server data: §c%s
 RULES: '§6Server §8| §fFull list of server rules -'
 RULES_2: '§dhttp://forum.filkworld.cf/rules'
 RULES_HOVER: '§fClick here,\n§fto open url'
@@ -1170,7 +1310,7 @@ YT_REMLINK: '§6YouTube §8| §fВы удалили ссылку §a%s'
 
 YT_GETLINK: '§6YouTube §8| §fСейчас у вас ссылка §a%s'
 
-TRAINING_FORMAT: '/ktemtraining <yes/no>'
+TRAINING_FORMAT: '/training <yes/no>'
 TRAINING_SKIP_HOVER_YES: 'Нажмите, чтобы пройти урезанное обучение'
 TRAINING_SKIP_HOVER_NO: 'Нажмите, чтобы удалить урезенное обучение'
 TRAINING_SKIP_TITLE: '§fВы хотите пройти §cурезанное §eобучения§f?'
@@ -1215,7 +1355,7 @@ TRAINING_SKIP_MSG_17_SUBTITLE: '§fтогда Вы можете приобрес
 TRAINING_SKIP_MSG_18_TITLE: ''
 TRAINING_SKIP_MSG_18_SUBTITLE: '§7И конечно самое главное...'
 TRAINING_SKIP_MSG_19_TITLE: '§fИнтересны §5разработки§f, или есть вопросы по плагинам§f/§6форуму§f?'
-TRAINING_SKIP_MSG_19_SUBTITLE: '§fТогда просто оставьте все сообщеие §5разработчику§f- §5/Ktem <сообщение>'
+TRAINING_SKIP_MSG_19_SUBTITLE: '§fТогда просто оставьте все сообщеие §5разработчику§f- §5/dev <сообщение>'
 TRAINING_SKIP_MSG_20_TITLE: '§fА на этом наше §6обучение§f подходит к концу :-('
 TRAINING_SKIP_MSG_20_SUBTITLE: '§fЕсли вы хотите узнать все доступные команды, используйте §5/+TAB'
 
@@ -1223,7 +1363,7 @@ TRAINING_STAGE_0_YES: '§6Server §8| §fВы подтвердили язык §
 TRAINING_STAGE_0_NTITLE: '§aОтлично! §6Вы выбрали язык'
 TRAINING_STAGE_0_NSUBTITLE: ''
 
-TRAINING_STAGE_1_NO: '§6Training §8| §fВы отказались от обучения, позже можно будет пройти в §c/ktemtraining'
+TRAINING_STAGE_1_NO: '§6Training §8| §fВы отказались от обучения, позже можно будет пройти в §c/training'
 
 TRAINING_ALREADY: '§6Training §8| §cВы уже проходили обучение'
 TRAINING_NOT_FOUND: '§6Training §8| §cОбучение для Вас не найдено, оно было удалено'
@@ -1246,8 +1386,8 @@ SKIN_NO_PREMIUM: '§cError, %s не имеет лицензии'
 SERVER_DENIED: '§6Server §8| §fДанный сервер запрещен для телепортации'
 SERVER_NOT_FOUND: '§cError, указанный сервер не найден'
 SERVER_CONNECT: '§6Server §8| §fВы телепортированы на сервер §a%s'
-SERVER_CONNECT_BROADCAST: '§cМодерация §8| §7%s §7зашел на сервер %s'
-SERVER_CONNECT_IP: '[IP: %s]'
+STAFF_CONNECTED: '§cModeration §8| §7%s%s§7 join to server %s'
+STAFF_CONNECTED_IP: '[IP: %s]'
 
 SERVER_ALREADY: '§cВы уже на одном сервере'
 SERVER_TELEPORTED: '§6Server §8| §fВы были телепортированы на сервер игрока %s'
@@ -1255,22 +1395,22 @@ SERVER_BROADCAST: '§6Server §8| %s §fтелепортировался к ва
 
 TIME: '§6Server §8| §fTime spent on the server - §a%s'
 
-KTEMS: '§6Ktems §8| §fYou have §a%s §fktems'
+KTEMS: '§6Ktems §8| §fYou have §a%s §f%s'
 
-MONEY: '§6Баланс §8| §fYou have §a%s §fcoins'
+MONEY: '§6Баланс §8| §fYou have §a%s §f%s'
 
 BUY_BROADCAST: '§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n               §c§lВНИМАНИЕ!\n    §fИгрок %s §fподдержал нас!\n    §bСпасибо за покупку %s\n    §fХочешь помочь? §6filkworld.cf §7[жми]\n§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
 
 BUY_HOVER_BROADCAST: '§fНажмите сюда для\n§fперехода по ссылке'
 
-PLAYER_IS_BANNED: '§cError #5, Пожалуйста сделайте скриншот, и сообщите vk.com/ktem_projects'
+PLAYER_IS_BANNED: '§cError #5, Пожалуйста сделайте скриншот, и сообщите vk.com/Ktem_Projects'
 
 ALERT_FORMAT: '/alert <message>'
 
 KTEMSPY_COMMAND_HELP: |-
  §6Spy §8| §fCommands list:
- §7/ktemspy on §f- enable слежку
- §7/ktemspy off §f- disable слежку
+ §7/spy on §f- enable слежку
+ §7/spy off §f- disable слежку
 SPY_ON: '§6Spy §8| §fТеперь вы следите за всем'
 SPY_ALREADY_ON: '§cУ вас уже включена слежка'
 SPY_OFF: '§6Spy §8| §fВы больше не следите за командами'
@@ -1503,24 +1643,25 @@ CHAT_YOUTUBE: |-
   §cℹ Рекламировать каналы могут только игроки с привилегией §6§lYouTube
  
 
+AUTH_PLAYER_ALREADY: '§cPlayer already on server'
 AUTH_COMMAND_HELP: |-
- §7/ktemauth register <key> <player name> <password> §f- player register
- §7/ktemauth unregister <key> <player name> §f- delete account
- §7/ktemauth changepassword <key> <player name> <password> §f- change password for player
- §7/ktemauth changemail <key> <player name> <email> §f- change mail for player
- §7/ktemauth lastlogin <key> <player name> §f- last time login for player
+ §7/auth register <key> <player name> <password> §f- player register
+ §7/auth unregister <key> <player name> §f- delete account
+ §7/auth changepassword <key> <player name> <password> §f- change password for player
+ §7/auth changemail <key> <player name> <email> §f- change mail for player
+ §7/auth lastlogin <key> <player name> §f- last time login for player
 AUTH_RELOAD: '§6Auth §8| §fConfiguration reloaded'
-AUTH_CHANGEMAIL_FORMAT: '/ktemauth changemail <key> <player name> <password>'
+AUTH_CHANGEMAIL_FORMAT: '/auth changemail <key> <player name> <password>'
 AUTH_CHANGEMAIL: '§6Auth §8| §fPlayer mail %s§f changed to §a%s'
-AUTH_REGISTER_FORMAT: '/ktemauth register <key> <player name> <password>'
+AUTH_REGISTER_FORMAT: '/auth register <key> <player name> <password>'
 AUTH_REGISTER: '§6Auth §8| §fAccount %s registred from password - §e%s'
-AUTH_UNREGISTER_FORMAT: '/ktemauth unregister <key> <player name>'
+AUTH_UNREGISTER_FORMAT: '/auth unregister <key> <player name>'
 AUTH_NO_ACCESS: '§сВы не можете управлять аккаунтом данного игрока'
 AUTH_UNREGISTRED: '§6Auth §8| §fAccount %s §fdeleted'
 AUTH_ERROR: '§cError - %s'
-AUTH_CHANGEPASSWORD_FORMAT: '/ktemauth changepassword <key> <player name> <password>'
+AUTH_CHANGEPASSWORD_FORMAT: '/auth changepassword <key> <player name> <password>'
 AUTH_PASSWORD_CHANGED: '§6Auth §8| §fPlayer password %s§f changed to §a%s'
-AUTH_INFO_FORMAT: '/ktemauth info <ник>'
+AUTH_INFO_FORMAT: '/auth info <ник>'
 AUTH_INFO: |-
  §6Авторизация §8| §fИнформация об игроке §e%s:
  §f Почта: §a%s
@@ -1606,12 +1747,55 @@ BETATEST_CHAT: |-
  §cВ данный момент ничего не тестируется
 BETATEST_SERVER: |-
  §6BetaTest §8| §fТестируем античит
-NEWS: 'Languages: §dБеларускі§f, §3日本語'
-NEWS_BEDWARS: 'Languages: §dБеларускі§f, §3日本語'
-NEWS_LUCKYWARS: 'Languages: §dБеларускі§f, §3日本語'
-NEWS_PARKOUR: 'Languages: §dБеларускі§f, §3日本語'
-NEWS_CREATIVE: 'Languages: §dБеларускі§f, §3日本語'
-NEWS_ANARCHY: 'Languages: §dБеларускі§f, §3日本語'
+NEWS: 'New heads §afrom all§3 menu'
+NEWS_BEDWARS: 'New heads §afrom all§3 menu'
+NEWS_LUCKYWARS: 'New heads §afrom all§3 menu'
+NEWS_PARKOUR: 'New heads §afrom all§3 menu'
+NEWS_CREATIVE: 'New heads §afrom all§3 menu'
+NEWS_ANARCHY: 'New heads §afrom all§3 menu'
+
+MESSAGES_21_BROADCAST: "\n §8| §fВсе арены §cпереполнены§f, не хватает слотов?\n §8| §fПриобретите §3§lLEGEND§f на сайте §dfilkworld.cf\n §8| §fи данная проблема будет решена\n"
+MESSAGES_21_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_20_BROADCAST: "\n §8| §fПокупай §6§lPREMIUM§f по очень §dпривлекательной§f цене\n §8| §fУже с ней вы получите достойное количество §eвозможностей\n §8| §fкоторые сделают вашу игру §aинтереснее\n"
+MESSAGES_20_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_19_BROADCAST: "\n §8| §fПривилегия §3§lLEGEND§f дает большое\n §8| §fколичество §bбонусов§f и §eвозможностей§f за умеренную цену.\n §8| §fЗаинтересовало? Покупай на сайте §dfilkworld.cf\n"
+MESSAGES_19_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_18_BROADCAST: "\n §8| §fДля того, чтобы играть с друзьями\n §8| §fдостаточно просто написать команду §c/party <ник>\n §8| §fИ всех игроков будет перемещать за лидером\n"
+MESSAGES_18_HOVER_BROADCAST: "§fНажмите сюда"
+MESSAGES_17_BROADCAST: "\n §8| §fНа сервере есть много разных §eвозможностей\n §8| §fи §dбонусов§f доступ к которым имеют только донатеры,\n §8| §fинформация о донате §c/donate\n"
+MESSAGES_17_HOVER_BROADCAST: "§fНажмите сюда для\n§fчтобы открыть меню"
+MESSAGES_16_BROADCAST: "\n §8| §5§lENDERMAN§f - лучшая привилегия сервера,\n §8| §fсочетает в себе максимальное количество\n §8| §eвозможностей§f и §dбонусов§f для комфортной игры\n"
+MESSAGES_16_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_15_BROADCAST: "\n §8| §f§3§lLEGEND§f - самая популярная привилегия\n §8| §fкоторая сочетает в себе §aоптимальную цену§f и\n §8| §eвозможности§f, покупка на сайте §dfilkworld.cf\n"
+MESSAGES_15_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_14_BROADCAST: "\n §8| §fВы уже купили §eдонат§f, а теперь хотите статус §bповыше§f?\n §8| §CТолько у нас§f вы можете приобрести новую\n §8| §fпривилегию с доплатой на сайте §dfilkworld.cf\n"
+MESSAGES_14_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_13_BROADCAST: "\n §8| §fЕсли вы увидели §cнарушителя§f или §cчитера§f, то\n §8| §fВоспользуйтесь командой §c/report <ник>\n §8| §fи вашу §eжалобу§f рассмотрят в режиме реального времени\n"
+MESSAGES_13_HOVER_BROADCAST: "§fНажмите сюда"
+MESSAGES_12_BROADCAST: "\n §8| §C⚠ Внимание §fХотите сменить скин?\n §8| §fДля §3§lLEGEND§f и выше доступна\n §8| §fкоманда §c/skin <ник игрока со скином>\n"
+MESSAGES_12_HOVER_BROADCAST: "§fНажмите сюда"
+MESSAGES_11_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cобзоры§f, любишь §cпостримить\n §8| §fс друзьями? Привилегия §6§lYouTube§f специально для тебя!\n §8| §fЗаинтересовало? Покупай на сайте §dfilkworld.cf\n"
+MESSAGES_11_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_10_BROADCAST: "\n §8| §fХотите обеспечить §aбезопасность§f своему аккаунту?\n §8| §fТогда привяжите его к вашей почте\n §8| §fкомандой §c/email add <почта> <повтор почты>\n"
+MESSAGES_10_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_9_BROADCAST: "\n §8| §fПоявились §eвопросы§f, на которые Вы §cне знаете ответ?\n §8| §fНапишите команду §c/ask <ваш вопрос>\n §8| §aОнлайн администрация§f поможет Вам §bв реальном времени\n"
+MESSAGES_9_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_8_BROADCAST: "\n §8| §fХотите §dуникальные§f, скрытые §eфункции§f и §aвозможности§f?\n §8| §fПокупайте донат у нас и получайте доступ к\n §8| §fдонат-меню командой §c/donatemenu\n"
+MESSAGES_8_HOVER_BROADCAST: "§fНажмите сюда для\n§fчтобы открыть меню"
+MESSAGES_7_BROADCAST: "\n §8| §fУ вас §cпроблемы§f или вы нашли какой-то §cбаг§f?\n §8| §fНапишите нам в группу §bvk.com/topic-155142790_38911037\n §8| §fи вам §aобязательно§f ответят в ближайшее время\n"
+MESSAGES_7_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_6_BROADCAST: "\n §8| §fПосетите нашу группу §9VK§f и ты будишь всегда\n §8| §fв курсе последних новостей §eсервера\n §8| §fПереходи по ссылке §bvk.com/filkworld\n"
+MESSAGES_6_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_5_BROADCAST: "\n §8| §fХочешь обсудить свою §aпобеду§f или оспорить §cпроигрыш§f,\n §8| §fа может ты хочешь найти новых §eдрузей§f?\n §8| §fЗаходи на наш форум §dforum.filkworld.cf\n"
+MESSAGES_5_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_4_BROADCAST: "\n §8| §e✰ Конкурс ✰ §fГолосуй за сервер\n §8| §fпо ссылкам: §dmonitoringminecraft.ru/top/FilkWorld §fи §dmc-servera.ru/79129\n §8| §fПодробности в нашей группе §avk.com/filkworld\n"
+MESSAGES_4_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_3_BROADCAST: "\n §8| §fЕсли вы увидели §cнарушителя§f или §cчитера§f, то\n §8| §fВоспользуйтесь командой §c/report <ник>\n §8| §fи вашу §eжалобу§f рассмотрят в режиме реального времени\n"
+MESSAGES_3_HOVER_BROADCAST: "§fНажмите сюда"
+MESSAGES_2_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cобзоры§f, любишь §cпостримить\n §8| §fс друзьями? Привилегия §6§lYouTube§f специально для тебя!\n §8| §fЗаинтересовало? Покупай на сайте §dfilkworld.cf\n"
+MESSAGES_2_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_1_BROADCAST: "\n §8| §fПосетите нашу группу §9VK§f и ты будишь всегда\n §8| §fв курсе последних новостей §eсервера\n §8| §fПереходи по ссылке §bvk.com/filkworld\n"
+MESSAGES_1_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 
 #Guis en
 GUI_BACK_NAME: '§cBack'
@@ -1865,6 +2049,7 @@ GUI_LEGEND_ALL_LORE:
 - ' §8▪ §7Pleasant music in the waiting lobby'
 - ' §8▪ §7Available item to disable or enable delay menu'
 - ' §8▪ §7Coin multiplier §fx1.75'
+- ' §8▪ §7You can change your skin - §f/skin <name>'
 - ' §8▪ §7Available launch of fireworkds - §f/fw'
 - ' §8▪ §7You can have up to §c40§7 friends'
 - ''
@@ -2196,7 +2381,8 @@ GUI_DONATE_INFO_LORE:
 - '' 
 - '§7For example, if you want to buy a status'
 - '§a§lEMERALD§7, and you already have §e§lGOLD§7,'
-- '§7then you have to pay §c72 rubbles§7.'
+- '§7then you have to pay §c48 rubbles§7.'
+GUI_DONATE_ITEM: '§bRank %s'
 GUI_DONATE_ITEM_LORE:
 - ''
 - '§7Cost: §6%s Rubles'
@@ -2539,6 +2725,7 @@ GUI_EMERALD: 'Emeralds'
 GUI_GOLEM: 'Golems'
 GUI_DIAMOND: 'Diamonds'
 GUI_ENDERMAN: 'Endermans'
+GUI_ELITE: 'Elite'
 GUI_TESTER: 'Testers'
 GUI_BUILDER: 'Builders'
 GUI_YOUTUBE: 'Youtubers'
@@ -2554,6 +2741,7 @@ GUI_NO_EMERALD: 'Emeralds'
 GUI_NO_GOLEM: 'Golems'
 GUI_NO_DIAMOND: 'Diamonds'
 GUI_NO_ENDERMAN: 'Endermans'
+GUI_NO_ELITE: 'Elites'
 GUI_NO_TESTER: 'Testers'
 GUI_NO_BUILDER: 'Builders'
 GUI_NO_YOUTUBE: 'Youtubers'
@@ -2782,7 +2970,7 @@ GUI_FRIENDS_OFFLINE_LORE:
 - '§7Last time seen%s'
 - '§e%s ago'
 - ''
-- ' &c✗ Player is offline '
+- ' §c✗ Player is offline '
 GUI_EFFECTS_KILLED: '§aПредсмертные хрипы'
 GUI_EFFECTS_ARROWS: '§aЭффекты стрел'
 GUI_EFFECTS_KILLS: '§aЭффекты убийств'
