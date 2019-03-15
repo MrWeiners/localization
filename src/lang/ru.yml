@@ -2643,10 +2643,16 @@ GUI_SERVERS_TOTAL_LORE:
 GUI_SERVERS_TOTAL: '§eСписок серверов'
 GUI_SERVERS_NAME: 'Список серверов'
 
-GUI_GAMES_DEVELOPMENT: '§c▸ В разработке'
 GUI_GAMES_NAME: 'Выбор режима'
-GUI_GAMES_OFFLINE: ' §cСервер перезапускается..'
-GUI_GAMES_CONNECT: '§e▸ Нажмите, чтобы подключится'
+GUI_GAMES_DEVELOPMENT_1: '§c  В разработке'
+GUI_GAMES_DEVELOPMENT_2: '§c▶ В разработке'
+GUI_GAMES_DEVELOPMENT_3: '§c▶ В разработке.'
+GUI_GAMES_DEVELOPMENT_4: '§c▶ В разработке..'
+GUI_GAMES_OFFLINE_1: ' §cСервер перезагружается.'
+GUI_GAMES_OFFLINE_2: ' §cСервер перезагружается..'
+GUI_GAMES_OFFLINE_3: ' §cСервер перезагружается...'
+GUI_GAMES_CONNECT_1: '§e▶ Нажмите, чтобы подключится'
+GUI_GAMES_CONNECT_2: '§e  Нажмите, чтобы подключится'
 GUI_GAMES_SKYWARS: '§bSkyWars'
 GUI_GAMES_LUCKYWARS: '§bLuckyWars'
 GUI_GAMES_BEDWARS: '§bBedWars'
@@ -3234,3 +3240,35 @@ GUI_REWARDS_ALREADY:
 GUI_REWARDS_GET:
 - ''
 - ' §e▸ Нажмите, чтобы получить награду'
+
+GUI_LOBBY_NAME: 'Выбор лобби'
+GUI_LOBBY_ALREADY:
+- ''
+- '§7Вы находитесь здесь'
+GUI_LOBBY_CONNECT_1:
+- ''
+- '§7Онлайн: &a%s'
+- ''
+- '§e  Нажмите для телепортации'
+GUI_LOBBY_CONNECT_2:
+- ''
+- '§7Онлайн: &a%s'
+- ''
+- '§e▶ Нажмите для телепортации'
+GUI_LOBBY_FRIENDS_1:
+- ''
+- '§7Онлайн: §a%s'
+- ''
+- '§7Друзья на лобби:'
+- '%s'
+- '§e  Нажмите для телепортации'
+GUI_LOBBY_FRIENDS_2:
+- ''
+- '§7Онлайн: §a%s'
+- ''
+- '§7Друзья на лобби:'
+- '%s'
+- '§e▶ Нажмите для телепортации'
+GUI_LOBBY_FRIENDS_FORMAT: ' §8• %s'
+GUI_LOBBY_FRIENDS_MAX:
+- '§7и другие...'
