@@ -166,9 +166,9 @@ SERVER_LINKS: |-
   §7Почта: §dhappy_mc@list.ru
 
 REWARDS_1: '§fВы получили §b%s§f %s:'
-REWARDS_2: '§7+§6%s§f монет'
+REWARDS_2: '§7+§6%s§f %s'
 REWARDS_3: '§7+§a%s§f опыта'
-REWARDS_4: '§7+§d%s§f ключа'
+REWARDS_4: '§7+§d%s§f %s'
 
 ANS_REASON: '1.16. (Оффтоп)'
 ANS_REASON_MSG: 'Данный чат предназначен исключительно для помощи игрокам с адекватными вопросами, помните это'
@@ -1361,7 +1361,7 @@ TRAINING_SKIP_MSG_17_SUBTITLE: '§fтогда Вы можете приобрес
 TRAINING_SKIP_MSG_18_TITLE: ''
 TRAINING_SKIP_MSG_18_SUBTITLE: '§7И конечно самое главное...'
 TRAINING_SKIP_MSG_19_TITLE: '§fИнтересны §5разработки§f, или есть вопросы по плагинам§f/§6форуму§f?'
-TRAINING_SKIP_MSG_19_SUBTITLE: '§fТогда просто оставьте все сообщеие §5разработчику§f- §5/dev <сообщение>'
+TRAINING_SKIP_MSG_19_SUBTITLE: '§fТогда просто оставьте сообщеие §5разработчику§f- §5/dev <сообщение>'
 TRAINING_SKIP_MSG_20_TITLE: '§fА на этом наше §6обучение§f подходит к концу :-('
 TRAINING_SKIP_MSG_20_SUBTITLE: '§fЕсли вы хотите узнать все доступные команды, используйте §5/+TAB'
 
@@ -1655,6 +1655,12 @@ REJOIN: '§aВы повторно вошли в игру на сервере %s'
 CHAT_DOUBLE: ' §cℹ Пожалуйста, не повторяйте одинаковые сообщения'
 CHAT_SPAM: ' §cℹ Не флудите.'
 CHAT_YOUTUBE: "\n§cℹ Рекламировать каналы могут только игроки с привилегией §6§lYouTube\n"
+CHAT_PIAR: "\n§cℹ У нас запрещено рекламировать сайты и сторонние ресурсы\n"
+CHAT_MAT: "\n§cℹ У нас запрещено обзываться, и оскорблять других (Предупреждение %s/%s)\n"
+CHAT_MAT_REASON: '1.2. (Оскорбления)'
+
+ANTICHEAT: '§cАнтичит'
+ANTIMAT: '§cАнтимат'
 
 AUTH_PLAYER_ALREADY: '§cИгрок уже на сервере'
 AUTH_COMMAND_HELP: |-
