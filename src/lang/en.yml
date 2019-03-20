@@ -34,14 +34,10 @@ BAN_REQUEST_FOR_PERSONAL:
  - "§cYou can't send a lock request to the server staff"
  - '§cДля этого существует обсуждение в группе https://vk.com/topic-155142790_38895715'
 
-CONVERT_FORMAT: '/convert <валюта> <gold>'
+CONVERT_FORMAT: '/convert <валюта> <sum>'
 CONVERT_ERROR: '§cError, you must specify only a positive number!'
-CONVERT_DONT: "§cYou don't have enough %s."
 CONVERT: '§6Shop §8| §fYou have successfully exchanged §e%s §f%s on §a%s §f%s'
-CONVERT_AVAILABLE: '§cОшибка, доступные вклюты: golds, ktems'
-CONVERT_GOLDS: 'gold'
-CONVERT_KTEMS: 'ktems'
-CONVERT_COINS: 'coins'
+CONVERT_AVAILABLE: '§cError, доступные вклюты: golds, ktems'
 
 SERVER_CONNECTED: '§6Proxy §8| §fServer §a%s§f connected from addres §e%s'
 SERVER_DISCONNECTED: '§6Proxy §8| §fServer §a%s§f §cdisconnected§f of reason §a%s'
@@ -86,6 +82,21 @@ KEY_0: 'key'
 KEY_1: ''
 KEY_2: ''
 KEY_3: 's'
+
+DONATKEY_0: 'donat-key'
+DONATKEY_1: ''
+DONATKEY_2: ''
+DONATKEY_3: 's'
+
+SERVER_0: 'Server'
+SERVER_1: ''
+SERVER_2: ''
+SERVER_3: 's'
+
+MAP_0: 'Map'
+MAP_1: ''
+MAP_2: ''
+MAP_3: 's'
 
 BONUSE_0: 'reward'
 BONUSE_1: ''
@@ -169,18 +180,51 @@ DONATKEYS_ADD: '§b+%s'
 EFFECTSHOP_EFFECT_NOT_LEVEL: '§cДля покупки данного effect, вам нужен level §d%s§c или выше'
 EFFECTSHOP_SOUND_NOT_LEVEL: '§cДля покупки данного sound, вам нужен level §d%s§c или выше'
 
+PLAYER_NO_KTEMS:
+- ''
+- '§6Server §8| §fОшибка! У вас недостаточно §5ктемов§f для покупки! Купить немного ктемов можно на нашем сайте §dwww.filkworld.cf §7(жми)'
+- ''
+PLAYER_NO_MONEY:
+- ''
+- '§6Server §8| §fОшибка! У вас недостаточно §aмонет§f для покупки! Купить еще монеток можно на нашем сайте §dwww.filkworld.cf §7(жми)'
+- ''
+PLAYER_NO_GOLD:
+- ''
+- '§6Server §8| §fОшибка! У вас недостаточно §6золота§f для покупки! Покупка золота осуществляется только на сайте §dwww.filkworld.cf §7(жми)'
+- ''
+PLAYER_NO_LEVEL:
+- ''
+- '§6Server §8| §fОшибка! У вас недостаточно §bуровеня§f для открытия меню!'
+- ''
+
+AVAILABLE_SERVER_NOT_FOUND: '§6Server §8| §fНе удалось найти подходящий сервер'
+
+SITESHOP_BUY: '§6Магазин §8| §fВы купили §a%s'
+SITESHOP_INFO: '§6Server §8| §fИгрок %s§f купил §a%s§f, купить можно в §6/siteshop'
+SITESHOP_TITLE: '§fИгрок %s§f купил §a%s'
+SITESHOP_SUBTITLE: '§fКупить можно в §6/siteshop'
+
+SITESHOP_FLY: 'Fly'
+SITESHOP_CREATIVE_MODE: 'Creative mode'
+SITESHOP_KIT_START: 'Kit start'
+SITESHOP_KIT_MEGA: 'Kit mega'
+SITESHOP_LUCKYCHEST: 'LuckyChest'
+SITESHOP_KTEMS: 'Ktems'
+SITESHOP_DONATKEY: 'Donat-key'
+
 PERSONALUP_CONFIRM: '§cПодтвердите свой ключ /personalup <ключ>'
 
-SERVER_LINKS: |-
-  §7Адрес сервера: §eplay.filkworld.cf
-  
-  §7Группа Вконтакте: §fvk.com/filkworld
-  
-  §7Сайт: §ffilkworld.cf
-  §7Форум: §fforum.filkworld.cf
-  
-  §7Почта: §dhappy_mc@list.ru
-REWARDS_1: '§fВы получили §b%s§f %s:'
+SERVER_LINKS:
+- '§7Server address: §eplay.filkworld.cf'
+- ''
+- '§7VK Group: §fvk.com/filkworld'
+- ''
+- '§7Site: §fwww.filkworld.cf'
+- '§7Forum: §fforum.filkworld.cf'
+- ''
+- '§7Email: §dhappy_mc@list.ru'
+
+REWARDS_1: '§fYou got §b%s§f %s:'
 REWARDS_2: '§7+§6%s§f %s'
 REWARDS_3: '§7+§a%s§f EXP'
 REWARDS_4: '§7+§d%s§f %s'
@@ -196,12 +240,13 @@ REPORT_REASON_3: '1.5 (Попрашайнечество)'
 REPORT_REASON_4: '(Возможно аккаунт взломан, сообщите vk.com/filkworld)'
 REPORT_REASON_5: '1.6 (Читы)'
 
-SERVER_STOP: '§6Сервер §8| §fОтключение сервера §a%s§f...'
-SERVER_START: '§6Сервер §8| §fВключение сервера §a%s§f..'
-SERVER_KILL: '§6Сервер §8| §fУбийство сервера §a%s§f. . '
+SERVER_STOP: '§6Server §8| §fОтключение сервера §a%s§f...'
+SERVER_START: '§6Server §8| §fВключение сервера §a%s§f..'
+SERVER_KILL: '§6Server §8| §fУбийство сервера §a%s§f. . '
 
-LEVEL_NOT: '§cОшибка, награды можно получать только с 5 уровня'
-NPC_TELRPORT: '§aТелепортирую на сервер %s'
+LEVEL_NOT: '§cError, награды можно получать только с 5 уровня'
+REDIRECT_TO_SERVER: '§aТелепортирую на сервер %s'
+SERVER_QUEUE: '§aТелепортирую на сервер %s'
 
 TAB_HEADER: "§2§lFilk§3§lWorld §8(§2%s§8)\n\n§fOnline-store:\n§ewww.filkworld.cf\n"
 TAB_FOOTER: "\n§fYou are on the server:\n§e%s"
@@ -369,9 +414,9 @@ TRAINING_STAGE_3_MSG_20_SUBTITLE: '§cкогда откроется меню, н
 
 #Stage 5
 TRAINING_STAGE_5_TITLE: '§aОтлично!'
-TRAINING_STAGE_5_SUBTITLE: '§fА теперь давайте выйдем в лобби командой §e/hub'
-TRAINING_STAGE_5_HUBMESSAGE: '§6Training §8| §fWrite a command §e/hub'
-TRAINING_STAGE_5_HOVER: '§fClick to write a command /hub'
+TRAINING_STAGE_5_SUBTITLE: '§fА теперь давайте выйдем в лобби командой §e/lobby'
+TRAINING_STAGE_5_HUBMESSAGE: '§6Training §8| §fWrite a command §e/lobby'
+TRAINING_STAGE_5_HOVER: '§fClick to write a command /lobby'
 
 #Stage 6
 TRAINING_STAGE_6_TITLE: '§fА на этом наше §6обучение§f подходит к концу :-('
@@ -593,7 +638,7 @@ PLAYERINFO: |-
 FINDID_FORMAT: '/findid <id>'
 FINDID_NOT_FOUND: '§cPlayer of id %s, never played on our project'
 FINDID_INVALID_ID: '§cid %s, is not a number'
-FINDID_CONFIRM: '§6Сервер §8| §fInformation for id §a%s§f: Player: %s'
+FINDID_CONFIRM: '§6Server §8| §fInformation for id §a%s§f: Player: %s'
 
 CORE_COMMAND_HELP:
  - '§7/core memory §f- Information of core memory'
@@ -666,6 +711,10 @@ NPC_SETNAME: '§6NPC §8| §fNpc for id - §a%s§f §frenamed to %s'
 NPC_SETCOMMAND_FORMAT: '/npc setcommand <id> <command>'
 NPC_SETCOMMAND: '§6NPC §8| §fYou set command §a%s§f for npc id - §e%s'
 
+CORE_SERVERS_NOT_EXISTS: '§6Core §8| §cВ данный момент, нет подключенных серверов'
+CORE_SERVERS_TOTAL: '§6Core §8| §fTotal servers (§a%s§f):'
+CORE_SERVERS_FORMAT: ' §8• §a%s §e[%s]'
+
 CORE_HIDE_ENABLE: '§6Core §8| §fYour enable hide for your'
 CORE_HIDE_DISABLE: '§6Core §8| §fYour disable hide'
 
@@ -700,7 +749,7 @@ CORE_SETSTATS_FORMAT: '/core setstats <key> <name> <stats>'
 
 HACK_REASON: '§4Error #3 §cSuspicion of hacking'
 VZLOM_REASON: '§cError #14 Please, contact group » §a§nvk.com/Ktem_Projects'
-DOWNLOAD_MAP_REASON: '§cОшибка #19 §cПодозрение в скачивании карты'
+DOWNLOAD_MAP_REASON: '§cError #19 §cПодозрение в скачивании карты'
 
 PARTY_ALREADY: '§6Party §8| §fYou are already in the group'
 PARTY_PLAYER_ALREADY: '§cPlayer %s is already in the group'
@@ -800,6 +849,7 @@ PARTY_INVITE_ALREADY: '§cPlayer %s already has invite to the group'
 PARTY_INVITE_LIMIT: '§cLimit of the group exceeded, limit - %s'
 PARTY_INVITE: '§6Party §8| §fInvite to the group sent to %s'
 PARTY_INVITE_OWNER: '§6Party §8| §fSend invites to the group can only the group owner'
+PARTY_INVITE_NO_PERMISSION: '§cСоздавать группы могут только игроки со статусом %s§c и выше'
 
 PARTY_GUILD: '§6Party §8| §fYou joined to the group of the player %s §fguild'
 PARTY_GUILD_ALERT: '§6Party §8| %s §fjoined to the guild group'
@@ -833,6 +883,7 @@ FRIEND_ADD: '§6Friends §8| §fFriend request was sent to %s'
 FRIEND_ADD_ME: "§cYou can't send friend request yourself"
 FRIEND_ADD_NO: '§cThis player forbad to send him(her) friend requests'
 FRIEND_ADD_ALREADY: '§cYou have already sent friend request to that player...'
+FRIEND_ADD_NO_PERMISSION: '§cДобавлять в друзья могут только игроки со статусом %s§c и выше'
 
 FRIEND_CHAT_FORMAT: '/f chat <message>'
 FRIEND_CHAT: '§6Friends §8| §f%s §8» §7%s'
@@ -878,7 +929,7 @@ BOX_OPEN_YOU: '§bLuckyChest §8| §fYou started open a chest...'
 BOX_WINNER: '§bLuckyChest §8| §fYou won %s§f item %s'
 BOX_WINNER_OTHER: '§bLuckyChest §8| %s §fWon %s§f item %s'
 BOX_KEYS: '§dKeys §f(§6+%s§f)'
-BOX_EXP: '§eexperience §f(§a+%s§f)'
+BOX_EXP: '§eExperience §f(§a+%s§f)'
 BOX_MONEY: '§aCoins §f(§6+%s§f)'
 BOX_KTEMS: '§5Ktems §f(§4+%s§f)'
 BOX_GOLDS: '§eGolds §f(§a+%s§f)'
@@ -889,17 +940,13 @@ BOX_RARE: '§bRare'
 BOX_DEFAULT: '§eDefault'
 BOX_STATS: '%s §f(Stats)'
 BOX_GADGET_ALREADY: '§bLuckyChest §8| §fYou has already this gadget, you got §6+%s §f%s'
-BOX_STATS_ALREADY: '§bСундук удачи §8| §fYou has already this stats, you got §e+%s §f%s'
+BOX_STATS_ALREADY: '§bLuckyChest §8| §fYou has already this stats, you got §e+%s §f%s'
 
 STAFFCHAT_MSG: '§eStaff chat §8| §f%s §8» §f%s'
 DONATECHAT_MSG: '§6Donate chat §8| §f%s §8» §7%s'
 
-GROUP_BROADCAST: '§6Group §8| %s §f%s'
 CORE_BROADCAST: '§6Core §8| %s §f%s'
-VERIFY_BROADCAST: '§6Verify §8| %s %s'
-VERIFY_INFO_BROADCAST: '§6Verify §8| %s'
 DEVELOPER_BROADCAST: '§6Server §8| %s §f%s has writen you message: §a%s'
-MODERATION_BROADCAST: '§cМoderation §8| %s §7%s'
 INFO_BROADCAST: '§7%s'
 ANSWER_BROADCAST: '§cModeration §8| %s §7%s player %s §8(§a%s§8) §7 -> §e%s'
 NEW_ASK: '§cModeration §8| %s §7asked -> §e%s'
@@ -1154,9 +1201,9 @@ BAN_NAME_3: 'Заблокировала'
 BAN_NAME_4: 'Заблокировал'
 BAN_NAME_5: 'Заблокировала IP адрес'
 BAN_NAME_6: 'Заблокировал IP адрес'
-BAN_INFO_COOLDOWN: '§f- Кончится через: §e%s'
-BAN_INFO_NEVER: '§f- Заблокирован навсегда'
-BAN_INFO_BY: '§f- По просьбе %s'
+BANINFO_COOLDOWN: '§f- Кончится через: §e%s'
+BANINFO_NEVER: '§f- Заблокирован навсегда'
+BANINFO_BY: '§f- По просьбе %s'
 BANINFO: |-
  §6Ban §8| §fInfo:
  §f- Player: %s
@@ -1204,7 +1251,7 @@ KICK_INFO: '§cМодерация §8| %s§7 кикнул игрока §e%s§7 
 UNMUTE_INFO: '§cМодерация §8| %s§7 разблокировал чат игрока §e%s'
 UNBAN_INFO: '§cМодерация §8| %s§7 разблокировал игрока §e%s'
 UNBANIP_INFO: '§cМодерация §8| %s§7 разблокировал IP адрес §a%s'
-UNMUTE_MSG: '§6Сервер §8| §fДоступ к чату был разблокирован'
+UNMUTE_MSG: '§6Server §8| §fДоступ к чату был разблокирован'
 BAN_ALREADY: '§cPlayer %s already blocked'
 BANIP_ALREADY: '§cIP addres %s already blocked'
 MUTE_ALREADY: '§cFrom player %s already blocked chat'
@@ -1295,9 +1342,9 @@ MAIL_HOVER_SEND: '§fНажмите, чтобы получить команду 
 MAIL_HOVER_LIST: '§fНажмите, чтобы открыть список писем'
 MAIL_SEND_ME: '§cНельзя писать самому себе письма'
 MAIL_SEND_DELAY: '§6Mail §8| §fПодождите еще §a%s §fдля отправки нового письма'
-MAIL_INCORRECT: '§cОшибка, ваше сообщение %s содержит запрещенные символы, разрешено использовать только цифры и символы латинского алфавита'
+MAIL_INCORRECT: '§cError, ваше сообщение %s содержит запрещенные символы, разрешено использовать только цифры и символы латинского алфавита'
 MAIL_SEND: '§6Mail §8| §fИгроку %s §fбыло отправлено сообщение ▬ §e%s'
-MAIL_MSG_FRIENDS: '§cОшибка, данный игрок принимает mail сообщения только от своих друзей'
+MAIL_MSG_FRIENDS: '§cError, данный игрок принимает mail сообщения только от своих друзей'
 MAIL_EMPTY: '§cУ вас нет писем'
 MAIL_MSG: |-
  §6Mail §8| §fВам поступило новое сообщение от %s
@@ -1338,7 +1385,7 @@ TRAINING_SKIP_NAME: '   §8 -| §6§lОбучение §8|-'
 TRAINING_SKIP: '§fХотите пройти §dобучение§f?'
 
 TRAINING_SKIP_MSG_1_TITLE: '§fДавайте ознакомимся,'
-TRAINING_SKIP_MSG_1_SUBTITLE: '§fс самыми полезными командами.'
+TRAINING_SKIP_MSG_1_SUBTITLE: '§fс полезными возможностями и командами.'
 TRAINING_SKIP_MSG_2_TITLE: '§fС которыми игра на сервер станет проще, и легче'
 TRAINING_SKIP_MSG_2_SUBTITLE: ''
 TRAINING_SKIP_MSG_3_TITLE: '§fНачнем с §aВопросов§f'
@@ -1350,33 +1397,33 @@ TRAINING_SKIP_MSG_5_SUBTITLE: '§fто Вы сразу можете подать
 TRAINING_SKIP_MSG_6_TITLE: '§fХотите узнать на каком §bсервере§f находится игрок?'
 TRAINING_SKIP_MSG_6_SUBTITLE: '§fТогда воспользуйтесь командой - §4/find <ник>'
 TRAINING_SKIP_MSG_7_TITLE: '§2Потерялись§f, или не знаете как §2выйти§f?'
-TRAINING_SKIP_MSG_7_SUBTITLE: '§fПросто выйдите в лобби командой - §6/hub'
+TRAINING_SKIP_MSG_7_SUBTITLE: '§fПросто выйдите в лобби командой - §6/hub §fили §6/lobby'
 TRAINING_SKIP_MSG_8_TITLE: '§fЗабыли §3правила сервера§f, или хотите узнать их?'
 TRAINING_SKIP_MSG_8_SUBTITLE: '§fТогда воспользуйтесь командой - §9/rules'
 TRAINING_SKIP_MSG_9_TITLE: '§fЕсли Вы хотите узнать сколько всего игроков на сервере,'
-TRAINING_SKIP_MSG_9_SUBTITLE: '§fтогда воспользуйтесь командой - §2/glist'
+TRAINING_SKIP_MSG_9_SUBTITLE: '§fтогда воспользуйтесь командой - §2/online'
 TRAINING_SKIP_MSG_10_TITLE: '§fЕсли Вы хотите создать свою §6группу§f из игроков,'
 TRAINING_SKIP_MSG_10_SUBTITLE: '§fтогда просто пригласите игрока в свою группу - §6/party <ник>'
-TRAINING_SKIP_MSG_11_TITLE: '§fЕсли Вы хотите создать свою §3Гильдию§f,'
-TRAINING_SKIP_MSG_11_SUBTITLE: '§fтогда для этого Вы можете воспользоваться командой - §4/guild create'
+TRAINING_SKIP_MSG_11_TITLE: '§fЕсли Вы хотите узнать свою §3Статистику§f,'
+TRAINING_SKIP_MSG_11_SUBTITLE: '§fтогда для этого Вы можете воспользоваться командой - §4/stats'
 TRAINING_SKIP_MSG_12_TITLE: '§fЕсли Вы хотите зависти себе друзей,'
-TRAINING_SKIP_MSG_12_SUBTITLE: '§fто просто отправьте приглашение в друзья - §4/friend add <ник>'
-TRAINING_SKIP_MSG_13_TITLE: '§fХотите увидить все §3Гильдии§f, или §6Party§f?,'
+TRAINING_SKIP_MSG_12_SUBTITLE: '§fто просто отправьте приглашение в друзья - §4/f add <ник>'
+TRAINING_SKIP_MSG_13_TITLE: '§fХотите просмотреть все §3Гильдии§f, или §6Party§f?,'
 TRAINING_SKIP_MSG_13_SUBTITLE: '§fТогда воспользуйтесь  - §3/guild all§f, §6/party all'
 TRAINING_SKIP_MSG_14_TITLE: '§fА теперь давайте поговорим о §6Меню§f'
 TRAINING_SKIP_MSG_14_SUBTITLE: '§7. . .'
 TRAINING_SKIP_MSG_15_TITLE: '§fЕсли Вы хотите изменить §dнастройки§f своего аккаунта,'
 TRAINING_SKIP_MSG_15_SUBTITLE: '§fтогда войдите в §2Профиль ▸ Настройки'
-TRAINING_SKIP_MSG_16_TITLE: '§fЕсли Вы хотите изменить цвет своего префикса,'
-TRAINING_SKIP_MSG_16_SUBTITLE: '§fтогда зайдите в §2Меню Донатера ▸ Префикс'
-TRAINING_SKIP_MSG_17_TITLE: '§fВам нравится сервер, или Вы хотите его поддержать?'
-TRAINING_SKIP_MSG_17_SUBTITLE: '§fтогда Вы можете приобрести привилегию на нашем сайте §dfilkworld.cf'
+TRAINING_SKIP_MSG_16_TITLE: '§fЕсли Вы хотите прочитать информацию о сервере,'
+TRAINING_SKIP_MSG_16_SUBTITLE: '§fтогда зайдите в §2Профиль ▸ Информация'
+TRAINING_SKIP_MSG_17_TITLE: '§fВам понравился сервер, или Вы хотите его поддержать?'
+TRAINING_SKIP_MSG_17_SUBTITLE: '§fтогда Вы можете приобрести привилегию на нашем сайте §dwww.filkworld.cf'
 TRAINING_SKIP_MSG_18_TITLE: ''
 TRAINING_SKIP_MSG_18_SUBTITLE: '§7И конечно самое главное...'
 TRAINING_SKIP_MSG_19_TITLE: '§fИнтересны §5разработки§f, или есть вопросы по плагинам§f/§6форуму§f?'
 TRAINING_SKIP_MSG_19_SUBTITLE: '§fТогда просто оставьте сообщеие §5разработчику§f- §5/dev <сообщение>'
 TRAINING_SKIP_MSG_20_TITLE: '§fА на этом наше §6обучение§f подходит к концу :-('
-TRAINING_SKIP_MSG_20_SUBTITLE: '§fЕсли вы хотите узнать все доступные команды, используйте §5/+TAB'
+TRAINING_SKIP_MSG_20_SUBTITLE: '§fПрочитать информацию или помощь по серверу, можно командой §5/help'
 
 TRAINING_STAGE_0_YES: '§6Server §8| §fВы подтвердили язык §a%s'
 TRAINING_STAGE_0_NTITLE: '§aОтлично! §6Вы выбрали язык'
@@ -1420,7 +1467,7 @@ MONEY: '§6Баланс §8| §fYou have §a%s §f%s'
 
 BUY_BROADCAST: '§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n               §c§lВНИМАНИЕ!\n    §fИгрок %s §fподдержал нас!\n    §bСпасибо за покупку %s\n    §fХочешь помочь? §6filkworld.cf §7[жми]\n§8§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
 BUY_THANKS: |-
- §6Сервер §8| §fСпасибо за приобритение привилегии %s
+ §6Server §8| §fСпасибо за приобритение привилегии %s
  §fна нашем сервере. Теперь Вам открыты новые возможности;
  §fи плюшки на сервере. Также теперь Вам доступено создание;
  §fвторого §nмульти-аккаунта§7 (второй аккаунт)§f, также Ваша;
@@ -1477,7 +1524,7 @@ SEND_NOT_FOUND: '§cError, current server not found'
 SEND_PLAYER: '§6Server §8| §fИгрок %s §fуспешно телепортирован на сервер §c%s'
 SEND_SERVER_PLAYERS: '§6Server §8| §fВы телепортировали всех игроков с сервера §a%s§f на сервер §c%s'
 SEND_SERVER_CURRENT: '§6Server §8| §fВы телепортировали всех игроков с текущего сервера на сервер §c%s'
-SEND_ALL: '§6Сервер §8| §fВсе игроки сервера были телепортированы на §c%s'
+SEND_ALL: '§6Server §8| §fВсе игроки сервера были телепортированы на §c%s'
 SEND_ALERT: '§6Server §8| %s §fteleported you to server §c%s'
 
 PING_TO: '§6Server §8| §fPing for player %s §f- §a%s §fms'
@@ -1661,8 +1708,11 @@ YOUTUBE_INFO: '§6§lYouTube §fchannel » §3§l%s'
 JOIN_TO_LOBBY: ' §a▸ %s §6joined to server'
 
 VERIFY_CONFIRM: '§6Verify §8| §fДанные совпадают, сессия восстановлена'
+VERIFY_CONFIRM_BROADCAST: '§6Verify §8| §fСессия %s§f восстановлена'
 VERIFY_NOT_DONE: '§6Verify §8| §cДанные не совпали, сессия не восстановлена'
+VERIFY_NOT_DONE_BROADCAST: '§6Verify §8| §cДанные сессии %s§c не совпадают §8(§a%s§8)'
 VERIFY_LASTTIMED: '§6Verify §8| §cСессия истекла'
+VERIFY_LASTTIMED_BROADCAST: '§6Verify §8| §fДанные сессии %s§f истекли'
 
 LANGUAGE_SELECT: '§6Server §8| §fYou Language is change to §c%s'
 PREFIX_SELECT: '§6Server §8| §fYour prefix changed to %s'
@@ -1674,6 +1724,12 @@ REJOIN: '§aYou join second to the game %s'
 CHAT_DOUBLE: ' §cℹ Please, не повторяйте одинаковые сообщения'
 CHAT_SPAM: ' §cℹ Не флудите.'
 CHAT_YOUTUBE: '\n§cℹ Рекламировать каналы могут только игроки с привилегией §6§lYouTube\n'
+CHAT_PIAR: "\n§cℹ У нас запрещено рекламировать сайты и сторонние ресурсы\n"
+CHAT_MAT: "\n§cℹ У нас запрещено обзываться, и оскорблять других (Предупреждение %s/%s)\n"
+CHAT_MAT_REASON: '1.2. (Оскорбления)'
+
+ANTICHEAT: '§cАнтичит'
+ANTIMAT: '§cАнтимат'
 
 AUTH_PLAYER_ALREADY: '§cPlayer already on server'
 AUTH_COMMAND_HELP: |-
@@ -1700,7 +1756,7 @@ AUTH_INFO: |-
  §f Последний ип: §a%s
  §f Ип при регистрации: §a%s
  §f Последний сервер: §a%s
-AUTH_WRONGKEY: '§cОшибка, не верный ключ'
+AUTH_WRONGKEY: '§cError, не верный ключ'
 AUTH_REASON_WRONGKEY: '§4Ошибка #14 §cВведен не верный ключ.'
 LOGIN_ALREADY: '§cYou already authorized!'
 LOGIN_FORMAT: '/login <password>'
@@ -1786,11 +1842,11 @@ NEWS_PARKOUR: 'New heads §afrom all§3 menu'
 NEWS_CREATIVE: 'New heads §afrom all§3 menu'
 NEWS_ANARCHY: 'New heads §afrom all§3 menu'
 
-MESSAGES_21_BROADCAST: "\n §8| §fВсе арены §cпереполнены§f, не хватает слотов?\n §8| §fПриобретите §3§lLEGEND§f на сайте §dfilkworld.cf\n §8| §fи данная проблема будет решена\n"
+MESSAGES_21_BROADCAST: "\n §8| §fВсе арены §cпереполнены§f, не хватает слотов?\n §8| §fПриобретите §e§lGOLD§f на сайте §dwww.filkworld.cf\n §8| §fи данная проблема будет решена\n"
 MESSAGES_21_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_20_BROADCAST: "\n §8| §fПокупай §6§lPREMIUM§f по очень §dпривлекательной§f цене\n §8| §fУже с ней вы получите достойное количество §eвозможностей\n §8| §fкоторые сделают вашу игру §aинтереснее\n"
 MESSAGES_20_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
-MESSAGES_19_BROADCAST: "\n §8| §fПривилегия §3§lLEGEND§f дает большое\n §8| §fколичество §bбонусов§f и §eвозможностей§f за умеренную цену.\n §8| §fЗаинтересовало? Покупай на сайте §dfilkworld.cf\n"
+MESSAGES_19_BROADCAST: "\n §8| §fПривилегия §3§lLEGEND§f дает большое\n §8| §fколичество §bбонусов§f и §eвозможностей§f за умеренную цену.\n §8| §fЗаинтересовало? Покупай на сайте §dwww.filkworld.cf\n"
 MESSAGES_19_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_18_BROADCAST: "\n §8| §fДля того, чтобы играть с друзьями\n §8| §fдостаточно просто написать команду §c/party <ник>\n §8| §fИ всех игроков будет перемещать за лидером\n"
 MESSAGES_18_HOVER_BROADCAST: "§fНажмите сюда"
@@ -1798,15 +1854,15 @@ MESSAGES_17_BROADCAST: "\n §8| §fНа сервере есть много ра�
 MESSAGES_17_HOVER_BROADCAST: "§fНажмите сюда для\n§fчтобы открыть меню"
 MESSAGES_16_BROADCAST: "\n §8| §5§lENDERMAN§f - лучшая привилегия сервера,\n §8| §fсочетает в себе максимальное количество\n §8| §eвозможностей§f и §dбонусов§f для комфортной игры\n"
 MESSAGES_16_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
-MESSAGES_15_BROADCAST: "\n §8| §f§3§lLEGEND§f - самая популярная привилегия\n §8| §fкоторая сочетает в себе §aоптимальную цену§f и\n §8| §eвозможности§f, покупка на сайте §dfilkworld.cf\n"
+MESSAGES_15_BROADCAST: "\n §8| §f§3§lLEGEND§f - самая популярная привилегия\n §8| §fкоторая сочетает в себе §aоптимальную цену§f и\n §8| §eвозможности§f, покупка на сайте §dwww.filkworld.cf\n"
 MESSAGES_15_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
-MESSAGES_14_BROADCAST: "\n §8| §fВы уже купили §eдонат§f, а теперь хотите статус §bповыше§f?\n §8| §CТолько у нас§f вы можете приобрести новую\n §8| §fпривилегию с доплатой на сайте §dfilkworld.cf\n"
+MESSAGES_14_BROADCAST: "\n §8| §fВы уже купили §eдонат§f, а теперь хотите статус §bповыше§f?\n §8| §CТолько у нас§f вы можете приобрести новую\n §8| §fпривилегию с доплатой на сайте §dwww.filkworld.cf\n"
 MESSAGES_14_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_13_BROADCAST: "\n §8| §fЕсли вы увидели §cнарушителя§f или §cчитера§f, то\n §8| §fВоспользуйтесь командой §c/report <ник>\n §8| §fи вашу §eжалобу§f рассмотрят в режиме реального времени\n"
 MESSAGES_13_HOVER_BROADCAST: "§fНажмите сюда"
-MESSAGES_12_BROADCAST: "\n §8| §C⚠ Внимание §fХотите сменить скин?\n §8| §fДля §3§lLEGEND§f и выше доступна\n §8| §fкоманда §c/skin <ник игрока со скином>\n"
+MESSAGES_12_BROADCAST: "\n §8| §C⚠ Внимание §fХотите сменить скин?\n §8| §fДля §e§lGOLD§f и выше доступна\n §8| §fкоманда §c/skin <ник игрока со скином>\n"
 MESSAGES_12_HOVER_BROADCAST: "§fНажмите сюда"
-MESSAGES_11_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cобзоры§f, любишь §cпостримить\n §8| §fс друзьями? Привилегия §6§lYouTube§f специально для тебя!\n §8| §fЗаинтересовало? Покупай на сайте §dfilkworld.cf\n"
+MESSAGES_11_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cобзоры§f, любишь §cпостримить\n §8| §fс друзьями? Привилегия §6§lYouTube§f специально для тебя!\n §8| §fЗаинтересовало? Покупай на сайте §dwww.filkworld.cf\n"
 MESSAGES_11_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_10_BROADCAST: "\n §8| §fХотите обеспечить §aбезопасность§f своему аккаунту?\n §8| §fТогда привяжите его к вашей почте\n §8| §fкомандой §c/email add <почта> <повтор почты>\n"
 MESSAGES_10_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
@@ -1824,7 +1880,7 @@ MESSAGES_4_BROADCAST: "\n §8| §e✰ Конкурс ✰ §fГолосуй за 
 MESSAGES_4_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_3_BROADCAST: "\n §8| §fЕсли вы увидели §cнарушителя§f или §cчитера§f, то\n §8| §fВоспользуйтесь командой §c/report <ник>\n §8| §fи вашу §eжалобу§f рассмотрят в режиме реального времени\n"
 MESSAGES_3_HOVER_BROADCAST: "§fНажмите сюда"
-MESSAGES_2_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cобзоры§f, любишь §cпостримить\n §8| §fс друзьями? Привилегия §6§lYouTube§f специально для тебя!\n §8| §fЗаинтересовало? Покупай на сайте §dfilkworld.cf\n"
+MESSAGES_2_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cобзоры§f, любишь §cпостримить\n §8| §fс друзьями? Привилегия §6§lYouTube§f специально для тебя!\n §8| §fЗаинтересовало? Покупай на сайте §dwww.filkworld.cf\n"
 MESSAGES_2_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_1_BROADCAST: "\n §8| §fПосетите нашу группу §9VK§f и ты будишь всегда\n §8| §fв курсе последних новостей §eсервера\n §8| §fПереходи по ссылке §bvk.com/filkworld\n"
 MESSAGES_1_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
@@ -1972,6 +2028,7 @@ GUI_PROFILE_SHOP_LORE:
 - '§e▸ Open shop'
 GUI_PROFILE_NAME: 'Profile'
 GUI_DONATE_NAME: 'Privileges'
+GUI_DONATE_NAME_TO: '%s ▸ Privileges'
 GUI_DONATE_TITLE: 'Capabilities %s'
 GUI_DONATE_ALL: '§bGeneral bonuses'
 GUI_DONATE_BEDWARS: '§bBedWars'
@@ -2431,6 +2488,11 @@ GUI_INFO_HELP_LORE:
 - '§e/ask <your question> §7- Create question'
 - '§e/report <player name> <reason> §7- Report for player'
 - '§e/convert §7- Conversation currencies'
+- ''
+- '§7Также для получения списка всех доступных Вам команд,'
+- '§7введите в поле ввода §e/§7 и нажмите на кнопку Tab'
+- '§7Команды добавяться автоматически. Также можно начать'
+- '§7вводить команду, и она также будет добавлена.'
 GUI_INFO_DONATE_LORE:
 - '§7List of paid statuses:'
 - ' §8▪ §6§lPREMIUM §7- §f15 Rubbles'
@@ -2564,6 +2626,7 @@ GUI_INFO_REWARD: '§bAwards for victory'
 GUI_INFO_PARTY: '§bCollective game'
 GUI_INFO_GUILD: '§bGuilds'
 GUI_INFO_NAME: 'Information'
+GUI_INFO_NAME_TO: '%s ▸ Information'
 GUI_IGNORE_ITEM:
 - ''
 - ' §e▸ Click here to remove'
@@ -2600,7 +2663,7 @@ SERVER_DONT_LORE:
 - '§c▸ Недоступен для входа'
 SERVER_AVAILABLE_LORE:
 - '§e▸ Клик, чтобы войти на сервер с Vanish'
-- '§e▸ ЛКМ, чтобы войти на сервер'
+- '§e▸ Left click, to join server'
 GUI_SERVERS_ONLINE: '§eServer §a%s'
 GUI_SERVERS_DONT: '§eServer §a%s'
 GUI_SERVERS_OFFLINE: '§7Server §4%s'
@@ -3040,7 +3103,7 @@ KILL_ROMEO: 'Ромео'
 KILL_SYMPHONY: 'Убийственная симфония'
 WIN_NA: '§cNo select'
 WIN_GOLDENKING: 'Золотой царь'
-WIN_DIAMONDMAGNATE: 'Алмазный магнат'
+WIN_DIAMONDMAGNATE: 'Diamond магнат'
 WIN_LOVER: 'Любовник'
 WIN_BASTARD: 'Ублюдок'
 GUI_EFFECTS_KILLED_LORE:
@@ -3114,7 +3177,7 @@ GUI_GUILD_MODERS_OFFLINE_LORE:
 - '§7Last seen%s'
 - '§e%s ago'
 - ''
-- ' §c〤 Player is offline '
+- ' §c✗ Player is offline '
 GUI_GUILD_MODERS_ONLINE_LORE:
 - ''
 - '§7На посту с: §e%s'
@@ -3133,7 +3196,7 @@ GUI_GUILD_DEPUTYS_OFFLINE_LORE:
 - '§7Lase seen%s'
 - '§e%s ago'
 - ''
-- ' §c〤 Player is offline '
+- ' §c✗ Player is offline '
 GUI_GUILD_DEPUTYS_ONLINE_LORE:
 - ''
 - '§7На посту с: §e%s'
@@ -3222,31 +3285,31 @@ GUI_LOBBY_ALREADY:
 - '§7Вы находитесь здесь'
 GUI_LOBBY_CONNECT_1:
 - ''
-- '§7Онлайн: &a%s'
+- '§7Online: §a%s'
 - ''
-- '§e  Нажмите для телепортации'
+- '§e  Click to teleport'
 GUI_LOBBY_CONNECT_2:
 - ''
-- '§7Онлайн: &a%s'
+- '§7Online: §a%s'
 - ''
-- '§e▶ Нажмите для телепортации'
+- '§e▶ Click to teleport'
 GUI_LOBBY_FRIENDS_1:
 - ''
-- '§7Онлайн: §a%s'
+- '§7Online: §a%s'
 - ''
-- '§7Друзья на лобби:'
+- '§7Friends on lobby:'
 - '%s'
-- '§e  Нажмите для телепортации'
+- '§e  Click to teleport'
 GUI_LOBBY_FRIENDS_2:
 - ''
 - '§7Online: §a%s'
 - ''
-- '§7Друзья на лобби:'
+- '§7Friends on lobby:'
 - '%s'
-- '§e▶ Нажмите для телепортации'
+- '§e▶ Click to teleport'
 GUI_LOBBY_FRIENDS_FORMAT: ' §8• %s'
 GUI_LOBBY_FRIENDS_MAX:
-- '§7и другие...'
+- '§7and others...'
 
 GUI_ITEMS_NAME: 'Profile ▸ Items'
 GUI_ITEMS_ITEM_NAME: '§eItems'
@@ -3259,5 +3322,90 @@ GUI_ITEMS_ITEM_LORE:
 - '§7Date: §a%s'
 - '§e%s ago'
 - ''
-- '§e ЛКМ, to get'
-- '§e ПКМ, to remove'
+- '§e▶ Left click, to get'
+- '§e▶ Right click, to remove'
+
+GUI_SITESHOP_NAME: 'Shop'
+GUI_SITESHOP_NAME_TO: '%s ▸ Shop'
+GUI_SITESHOP_ITEM_LORE:
+- '§7Получить следующие предметы:'
+GUI_SITESHOP_BUY_LORE:
+- ''
+- '§7Стоимость: %s §7%s'
+- ''
+- ' §e▸ Нажмите, чтобы купить'
+GUI_SITESHOP_NO_BUY_LORE:
+- ''
+- '§7Count: §c%s §7%s'
+- ''
+- ' §c▸ Не достаточно золота для покупки'
+GUI_SITESHOP_FLY_LORE:
+- ' §8• §7Fly mode'
+GUI_SITESHOP_CREATIVE_MODE_LORE:
+- ' §8• §7Creative mode'
+GUI_SITESHOP_KIT_START_LORE:
+- ' §8• §7Diamond меч §8x1'
+- ' §8• §7Diamond нагрудник §8x1'
+- ' §8• §7Diamond нагрудник §8x1'
+- ' §8• §7Алмазные поножи §8x1'
+GUI_SITESHOP_KIT_MEGA_LORE:
+- ' §8• §7Diamond меч §8x1'
+- ' §8• §7Diamond шлем §8x1'
+- ' §8• §7Diamond нагрудник §8x1'
+- ' §8• §7Алмазные поножи §8x1'
+- ' §8• §7Алмазные ботинки §8x1'
+- ' §8• §7Золотое зачарованное яблоко §8x9'
+- ' §8• §7Enderpearls §8x16'
+GUI_SITESHOP_LUCKYCHEST_LORE:
+- ' §8• §7Key §8x3'
+GUI_SITESHOP_KTEMS_LORE:
+- ' §8• §7Ktems §8x1,000'
+GUI_SITESHOP_DONATKEY_LORE:
+- ' §8• §7Donat-Key §8x1'
+
+GUI_GAMESERVERS_NAME: 'Select type'
+GUI_GAMESERVERS_NAME_MAP: 'Select map'
+GUI_GAMESERVERS_BEST: '§eBest server'
+GUI_GAMESERVERS_NOT_AVAILABLE: '§cNot available server'
+GUI_GAMESERVERS_NOT_AVAILABLE_LORE:
+- '§7This moment not'
+- '§7no one free server'
+GUI_GAMESERVERS_NOT_FOUND_LORE:
+- ''
+- '§cError, не могу найти'
+- '§cподходящие сервера'
+GUI_GAMESERVERS_AVAILABLE_LORE:
+- '§7On game available:'
+- ' §c▪ §f%s §7%s'
+- ' §c▪ §f%s §7%s'
+- ''
+- '§7Best arena:'
+GUI_GAMESERVERS_BEST_NOT_FOUND_LORE:
+- '§cNot available arena'
+GUI_GAMESERVERS_BEST_SELECT_LORE:
+- '§7The choice of the most optimal'
+- '§7server for game.'
+- ''
+- '§7Now this is:'
+GUI_GAMESERVERS_BEST_CONNECT_LORE:
+- ' §7Server: §b%s'
+- ' §7Online: §a%s§7/§c%s'
+- ' §7Map: §e%s'
+- ''
+- '§e▸ Click to connect %s'
+GUI_GAMESERVERS_BEST_AVAILABLE_LORE:
+- ' §7Server: §b%s'
+- ' §7Online: §a%s§7/§c%s'
+- ' §7Map: §e%s'
+GUI_GAMESERVERS_BEST_INFO_LORE:
+- ''
+- '§7On mode played §b%s §7%s'
+- ''
+- '§e▸ Open servers list'
+GUI_GAMESERVERS_MAPS_LORE:
+- '§7Total arenas: §a%s'
+- '§7Free arenas: §c%s'
+GUI_GAMESERVERS_SOLO_MODE: '§8Solo mode'
+GUI_GAMESERVERS_TEAM_MODE: '§8Team mode'
+GUI_GAMESERVERS_DUO_MODE: '§8Double mode'
+GUI_GAMESERVERS_FAST_MODE: '§8Rush mode'
