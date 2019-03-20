@@ -72,6 +72,16 @@ DONATKEY_1: ''
 DONATKEY_2: 'а'
 DONATKEY_3: 'ей'
 
+SERVER_0: 'Сервер'
+SERVER_1: ''
+SERVER_2: 'а'
+SERVER_3: 'ов'
+
+MAP_0: 'Карт'
+MAP_1: 'а'
+MAP_2: 'ы'
+MAP_3: ''
+
 BONUSE_0: 'наград'
 BONUSE_1: 'у'
 BONUSE_2: 'ы'
@@ -219,7 +229,8 @@ SERVER_START: '§6Сервер §8| §fВключение сервера §a%s§
 SERVER_KILL: '§6Сервер §8| §fУбийство сервера §a%s§f. . '
 
 LEVEL_NOT: '§cОшибка, награды можно получать только с 5 уровня'
-NPC_TELRPORT: '§aТелепортирую на сервер %s'
+REDIRECT_TO_SERVER: '§aТелепортирую на сервер %s'
+SERVER_QUEUE: '§aТелепортирую на сервер %s'
 
 TAB_HEADER: "§2§lFilk§3§lWorld §8(§2%s§8)\n\n§fОнлайн-магазин:\n§ewww.filkworld.cf\n"
 TAB_FOOTER: "\n§fВы находитесь на сервере:\n§e%s"
@@ -3425,3 +3436,50 @@ GUI_SITESHOP_KTEMS_LORE:
 - ' §8• §7Ктемы §8x1,000'
 GUI_SITESHOP_DONATKEY_LORE:
 - ' §8• §7Донат-ключ §8x1'
+
+GUI_GAMESERVERS_NAME: 'Выберите тип игры'
+GUI_GAMESERVERS_NAME_MAP: 'Выбор карты'
+GUI_GAMESERVERS_BEST: '§eЛучший сервер'
+GUI_GAMESERVERS_NOT_AVAILABLE: '§cНет доступных серверов'
+GUI_GAMESERVERS_NOT_AVAILABLE_LORE:
+- '§7В данный момент нет'
+- '§7ни одного свободного сервера'
+GUI_GAMESERVERS_NOT_FOUND_LORE:
+- ''
+- '§cОшибка, не могу найти'
+- '§cподходящие сервера'
+GUI_GAMESERVERS_AVAILABLE_LORE:
+- '§7Для игры доступно:'
+- ' §c▪ §f%s §7%s'
+- ' §c▪ §f%s §7%s'
+- ''
+- '§7Наилучшая арена:'
+GUI_GAMESERVERS_BEST_NOT_FOUND_LORE:
+- '§cНет наилучшей арены'
+GUI_GAMESERVERS_BEST_SELECT_LORE:
+- '§7Выбор самого оптимального'
+- '§7сервера для игры.'
+- ''
+- '§7В данный момент это:'
+GUI_GAMESERVERS_BEST_CONNECT_LORE:
+- ' §7Сервер: §b%s'
+- ' §7Онлайн: §a%s§7/§c%s'
+- ' §7Карта: §e%s'
+- ''
+- '§e▸ Перейти на сервер %s'
+GUI_GAMESERVERS_BEST_AVAILABLE_LORE:
+- ' §7Сервер: §b%s'
+- ' §7Онлайн: §a%s§7/§c%s'
+- ' §7Карта: §e%s'
+GUI_GAMESERVERS_BEST_INFO_LORE:
+- ''
+- '§7На режиме играет §b%s §7%s'
+- ''
+- '§e▸ Открыть список серверов'
+GUI_GAMESERVERS_MAPS_LORE:
+- '§7Всего арен: §a%s'
+- '§7Свободных арен: §c%s'
+GUI_GAMESERVERS_SOLO_MODE: '§8Одиночный режим'
+GUI_GAMESERVERS_TEAM_MODE: '§8Командный режим'
+GUI_GAMESERVERS_DUO_MODE: '§8Парный режим'
+GUI_GAMESERVERS_FAST_MODE: '§8Быстрый режим'
