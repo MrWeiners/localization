@@ -49,8 +49,15 @@ ADMIN: '§4Админ'
 DEVELOPER: '§5Разработчик'
 ELITE: '§aЭлита'
 RESTARTING_BROADCAST: '§cДо перезагрузки осталось, §e%s§c %s'
-NO_CONNECT_REASON: '§cОшибка #13, Синхронизация не выполнена. Если ошибка повторилась, сообщите » §a§nvk.com/FilkWorld'
-CORE_NO_FOUND_PLAYER: '§cОшибка #7, Ваш сервер был не найден в ядре. Если ошибка повторилась, сообщите » §a§nvk.com/FilkWorld\n\n§cКод ошибки (%s)'
+NO_CONNECT_REASON: "§cОшибка #13, Синхронизация не выполнена. Если ошибка повторилась, сообщите » §a§nvk.com/FilkWorld"
+CORE_NO_FOUND_PLAYER_SERVER_MSG: '§6Сервер §8| §fОшибка, Ваш сервер был не найден в главном ядре, Вы были телепортированы в §a%s'
+CORE_NO_FOUND_PLAYER_SERVER: "§fОшибка, Ваш сервер был не найден в главном ядре. Если ошибка повторилась, сообщите » §a§nvk.com/FilkWorld\n\n§fКод ошибки (§c%s§f)"
+PROXY_CORE_LOST_CONNECTION:
+- '§6Сервер §8| §cПрокси-сервер, на котором вы сейчас находились, был отключен от главного ядра.'
+- '§6Сервер §8| §fСейчас вам временно будут недоступны некоторые команды и переход между серверами.'
+- '§6Сервер §8| §fПросим набратся немного терпения и подождать, мы оповестим вас когда все стабилизируется :)'
+PROXY_RECONNECTED_PLAYER:
+- '§6Сервер §8| §fПереподключение к серверу... [§a%s§f/§a%s§f]'
 
 SECOND_0: 'секунд'
 SECOND_1: 'а'
@@ -143,12 +150,7 @@ TIME_26: 'а'
 
 ITEMS_REMOVE_STATS: '§6Предметы §8| §fВы удалили статус %s'
 ITEMS_REMOVE_DONATE: '§6Предметы §8| §fВы удалили привилегию %s'
-ITEMS_REMOVE_COINS: '§6Предметы §8| §fВы удалили предмет §aМонеты §f(§6+%s§f)'
-ITEMS_REMOVE_KEYS: '§6Предметы §8| §fВы удалили предмет §dКлючи §f(§d+%s§f)'
-ITEMS_REMOVE_XP: '§6Предметы §8| §fВы удалили предмет §eXP §f(§e+%s§f)'
-ITEMS_REMOVE_KTEMS: '§6Предметы §8| §fВы удалили предмет §5Ктемы §f(§6+%s§f)'
-ITEMS_REMOVE_GOLDS: '§6Предметы §8| §fВы удалили предмет §eЗолото §f(§a+%s§f)'
-ITEMS_REMOVE_DONATKEYS: '§6Предметы §8| §fВы удалили предмет §3Донат-ключи §f(§b+%s§f)'
+ITEMS_REMOVE_ITEM: '§6Предметы §8| §fВы удалили предмет %s'
 
 ITEMS_ADD_STATS: '§6Предметы §8| §fВы забрали статус %s'
 ITEMS_ADD_DONATE: '§6Предметы §8| §fВы забрали привилегию %s'
@@ -160,6 +162,7 @@ EXP_ADD: '§3+%s EXP'
 KTEMS_ADD: '§5+%s'
 GOLDS_ADD: '§e+%s'
 DONATKEYS_ADD: '§b+%s'
+NULL_ADD: '§c+%s'
 
 EFFECTSHOP_EFFECT_NOT_LEVEL: '§cДля покупки данного эффекта, Вам нужен уровень §d%s§c или выше'
 EFFECTSHOP_SOUND_NOT_LEVEL: '§cДля покупки данного звука, Вам нужен уровень §d%s§c или выше'
@@ -219,6 +222,8 @@ PLAYER_BOOST_PLEASE_MADE_SCREENSHOT:
 - '§cДанная проверка сделана исключительно для вашей безопасности'
 
 AVAILABLE_SERVER_NOT_FOUND: '§6Сервер §8| §fНе удалось найти подходящий сервер'
+
+SERVER_NOT_AVAILABLE_GROUP: '§cОшибка, вход доступен только для %s§c и выше'
 
 SITESHOP_BUY: '§6Магазин §8| §fВы купили §a%s'
 SITESHOP_INFO: '§6Сервер §8| §fИгрок %s§f купил §a%s§f, купить можно в §6/siteshop'
@@ -988,6 +993,7 @@ BOX_MONEY: '§aМонеты §f(§6+%s§f)'
 BOX_KTEMS: '§5Ктемы §f(§4+%s§f)'
 BOX_GOLDS: '§eЗолото §f(§a+%s§f)'
 BOX_DONATKEYS: '§3Донат-ключи §f(§b+%s§f)'
+BOX_NULL: '§c??? §f(§c%s§c +%s§f)'
 BOX_LEGENDARY: '§6Легендарный'
 BOX_EPIC: '§5Эпический'
 BOX_RARE: '§bРедкий'
@@ -1096,7 +1102,7 @@ GUILD_MONEY_INVALID: '§cВведена неверная сумма'
 GUILD_LIMIT: '§cДанная гильдия не может принять игроков, поскольку её лимит привышен'
 GUILD_LEADER: '§cВы не лидерер гильдии'
 GUILD_MODER: '§cВы не модератор гильдии'
-GUILD_NAME_MEMBER: ''
+GUILD_NAME_MEMBER: 'Участник'
 GUILD_NAME_MODER: 'Модератор'
 GUILD_NAME_DEPUTY: 'Заместитель'
 GUILD_NAME_OWNER: 'Владелец'
@@ -1365,11 +1371,11 @@ REPORT_DECLINE_FORMAT: '/report decline <ник>'
 REPORT_INVALID_ID_REASON: '§cНеверный id причины'
 REPORT_IDLIST: |-
  §cЖалобы §8| §fДоступные id причин:
- §6№1.4 §f- §e%s
- §6№1.3 §f- §e%s
- §6№1.5 §f- §e%s
- §6№Vzlom §f- §e%s
- §6№1.6 §f- §e%s
+ §6 №1.4 §f- §e%s
+ §6 №1.3 §f- §e%s
+ §6 №1.5 §f- §e%s
+ §6 №1.12 §f- §e%s
+ §6 №1.6 §f- §e%s
 ASK_NO_STAFF_ONLINE: '§6Вопросы §8| §fПерсонала онлайн нет, на Ваш вопрос некому отвечать :('
 ASK_DELAY: '§cОшибка, отправить новый вопрос можно будет через %s'
 ASK_ALREADY_SENT: '§cВы уже задавали вопрос, дождитесь ответа на него'
@@ -1966,7 +1972,7 @@ MESSAGES_11_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехо
 MESSAGES_10_BROADCAST: "\n §8| §fХотите обеспечить §aбезопасность§f своему аккаунту?\n §8| §fТогда привяжите его к вашей почте\n §8| §fкомандой §c/email add <почта> <повтор почты>\n"
 MESSAGES_10_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_9_BROADCAST: "\n §8| §fПоявились §eвопросы§f, на которые Вы §cне знаете ответ?\n §8| §fНапишите команду §c/ask <ваш вопрос>\n §8| §aОнлайн администрация§f поможет Вам §bв реальном времени\n"
-MESSAGES_9_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_9_HOVER_BROADCAST: "§fНажмите сюда"
 MESSAGES_8_BROADCAST: "\n §8| §fХотите §dуникальные§f, скрытые §eфункции§f и §aвозможности§f?\n §8| §fПокупайте донат у нас и получайте доступ к\n §8| §fдонат-меню командой §c/donatemenu\n"
 MESSAGES_8_HOVER_BROADCAST: "§fНажмите сюда для\n§fчтобы открыть меню"
 MESSAGES_7_BROADCAST: "\n §8| §fУ вас §cпроблемы§f или вы нашли какой-то §cбаг§f?\n §8| §fНапишите нам в группу §bvk.com/topic-155142790_38911037\n §8| §fи вам §aобязательно§f ответят в ближайшее время\n"
@@ -2983,7 +2989,12 @@ GUI_YOUTUBERS_NAME: 'Список ютуберов'
 GUI_BUILDERS_NAME: 'Список строителей'
 GUI_STAFF_NAME: 'Список персонала (%s)'
 GUI_GROUP_NAME: 'Список игроков с группой - %s'
-GUI_GROUP_NO_FOUND: '§cНет людей состоящих в %s'
+GUI_GROUP_NO_FOUND: '§cВ данный момент нет людей состоящих в %s'
+GUI_GROUP_NO_FOUND_LORE:
+- ''
+- '§7В данный момент,'
+- '§7нет ни одного человека,'
+- '§7состоящего в %s.'
 GUI_YOUTUBERS_ITEM: '§eСписок ютуберов'
 GUI_BUILDERS_ITEM: '§eСписок строителей'
 GUI_STAFF_ITEM: '§eСписок персонала'
@@ -3679,13 +3690,13 @@ GUI_GAMESERVERS_BEST_SELECT_LORE:
 - '§7В данный момент это:'
 GUI_GAMESERVERS_BEST_CONNECT_LORE:
 - ' §7Сервер: §b%s'
-- ' §7Онлайн: §a%s§7/§c%s'
+- ' §7Онлайн: §a%s§8/§c%s'
 - ' §7Карта: §e%s'
 - ''
 - '§e▸ Перейти на сервер %s'
 GUI_GAMESERVERS_BEST_AVAILABLE_LORE:
 - ' §7Сервер: §b%s'
-- ' §7Онлайн: §a%s§7/§c%s'
+- ' §7Онлайн: §a%s§8/§c%s'
 - ' §7Карта: §e%s'
 GUI_GAMESERVERS_BEST_INFO_LORE:
 - ''
@@ -4063,9 +4074,54 @@ GUI_GADGETS_HAT_26: 'Я'
 GUI_GADGETS_HAT_26_LORE:
 - '§7Вы получите себя!'
 - '§7..на самом деле да.'
-GUI_GADGETS_BANNER_1: 'Обычный баннер'
+GUI_GADGETS_BANNER_1: 'Белый баннер'
 GUI_GADGETS_BANNER_1_LORE:
-- '§7У Вас будет обычный баннер'
+- '§7У Вас будет белый баннер'
+GUI_GADGETS_BANNER_2: 'Черный баннер'
+GUI_GADGETS_BANNER_2_LORE:
+- '§7У Вас будет черный баннер'
+GUI_GADGETS_BANNER_3: 'Красный баннер'
+GUI_GADGETS_BANNER_3_LORE:
+- '§7У Вас будет красный баннер'
+GUI_GADGETS_BANNER_4: 'Зеленый баннер'
+GUI_GADGETS_BANNER_4_LORE:
+- '§7У Вас будет зеленый баннер'
+GUI_GADGETS_BANNER_5: 'Коричневый баннер'
+GUI_GADGETS_BANNER_5_LORE:
+- '§7У Вас будет коричневый баннер'
+GUI_GADGETS_BANNER_6: 'Синий баннер'
+GUI_GADGETS_BANNER_6_LORE:
+- '§7У Вас будет синий баннер'
+GUI_GADGETS_BANNER_7: 'Фиолетовый баннер'
+GUI_GADGETS_BANNER_7_LORE:
+- '§7У Вас будет фиолетовый баннер'
+GUI_GADGETS_BANNER_8: 'Бирюзовый баннер'
+GUI_GADGETS_BANNER_8_LORE:
+- '§7У Вас будет бирюзовый баннер'
+GUI_GADGETS_BANNER_9: 'Светло-серый баннер'
+GUI_GADGETS_BANNER_9_LORE:
+- '§7У Вас будет светло-серый баннер'
+GUI_GADGETS_BANNER_10: 'Серый баннер'
+GUI_GADGETS_BANNER_10_LORE:
+- '§7У Вас будет серый баннер'
+GUI_GADGETS_BANNER_11: 'Розовый баннер'
+GUI_GADGETS_BANNER_11_LORE:
+- '§7У Вас будет розовый баннер'
+GUI_GADGETS_BANNER_12: 'Лаймовый баннер'
+GUI_GADGETS_BANNER_12_LORE:
+- '§7У Вас будет лаймовый баннер'
+GUI_GADGETS_BANNER_13: 'Жёлтый баннер'
+GUI_GADGETS_BANNER_13_LORE:
+- '§7У Вас будет жёлтый баннер'
+GUI_GADGETS_BANNER_14: 'Голубой баннер'
+GUI_GADGETS_BANNER_14_LORE:
+- '§7У Вас будет голубой баннер'
+GUI_GADGETS_BANNER_15: 'Пурпуровый баннер'
+GUI_GADGETS_BANNER_15_LORE:
+- '§7У Вас будет пурпуровый баннер'
+GUI_GADGETS_BANNER_16: 'Ораньжевый баннер'
+GUI_GADGETS_BANNER_16_LORE:
+- '§7У Вас будет ораньжевый баннер'
 
 GUI_PREFIX_NAME: 'Меню донатера ▸ префикс'
 GUI_PREFIX_SELECTED_LORE:
@@ -4101,22 +4157,20 @@ GUI_ARROWEFFECTS_MUSIC_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект музыкальных нот'
+- ''
 GUI_EFFECTS_TYPE_EFFECT: 'эффект'
 GUI_EFFECTS_TYPE_SOUND: 'звук'
 GUI_EFFECTS_ACTIVATE: '§e▸ Нажмите, чтобы активировать'
 GUI_EFFECTS_SELECTED: '§a▸ Активировано'
 GUI_EFFECTS_UNAVAILABLE_LORE:
+- '§cДля покупки данного предмета Вам нужн §d%s уровень§c или выше!'
 - ''
-- '§cДля покупки данного эффекта вам нужн §d%s уровень§c или выше!'
-- ''
-- '§cДанный предмет вам недоступен'
+- '§cДанный предмет Вам недоступен'
 GUI_EFFECTS_BUY_LORE:
-- ''
 - '§7Цена §6%s§7 %s'
 - ''
 - '§eНажмите, чтобы купить %s'
 GUI_EFFECTS_NO_KTEMS_LORE:
-- ''
 - '§7Цена §6%s§7 %s'
 - ''
 - '§cУ вас недостаточно ктемов'
@@ -4125,109 +4179,133 @@ GUI_ARROWEFFECTS_SMOKE_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект дыма'
+- ''
 GUI_ARROWEFFECTS_FIRE: 'Огненный след'
 GUI_ARROWEFFECTS_FIRE_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект пламени'
+- ''
 GUI_ARROWEFFECTS_HEART: 'Любимчик удачи'
 GUI_ARROWEFFECTS_HEART_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект сердечек'
+- ''
 GUI_ARROWEFFECTS_HAPPY: 'Дождь радости'
 GUI_ARROWEFFECTS_HAPPY_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект радости'
+- ''
 GUI_ARROWEFFECTS_NEWYEAR: 'Новогоднее веселье'
 GUI_ARROWEFFECTS_NEWYEAR_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект искр'
+- ''
 GUI_ARROWEFFECTS_REDSTONE: 'Елочная гирлядна'
 GUI_ARROWEFFECTS_REDSTONE_LORE:
 - '§7За каждой стрелой,'
 - '§7которой вы выстрелите,'
 - '§7будет следовать эффект разноцветного редстоуна'
+- ''
 
 GUI_SOUNDKILLS_NAME: 'Профиль ▸ Магазин эффектов ▸ Предсмертие'
 GUI_SOUNDKILLS_CREEPER: 'Смерть крипера'
 GUI_SOUNDKILLS_CREEPER_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки крипера!'
+- ''
 GUI_SOUNDKILLS_BLAZE: 'Смерть ифрита'
 GUI_SOUNDKILLS_BLAZE_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки ифрита!'
+- ''
 GUI_SOUNDKILLS_ENDERMAN: 'Смерть эндермена'
 GUI_SOUNDKILLS_ENDERMAN_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки эндермена!'
+- ''
 GUI_SOUNDKILLS_GHAST: 'Смерть гаста'
 GUI_SOUNDKILLS_GHAST_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки гаста!'
+- ''
 GUI_SOUNDKILLS_GOLEM: 'Смерть голема'
 GUI_SOUNDKILLS_GOLEM_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки голема!'
+- ''
 GUI_SOUNDKILLS_SKELETON: 'Смерть скелета'
 GUI_SOUNDKILLS_SKELETON_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки скелета!'
+- ''
 GUI_SOUNDKILLS_ZOMBIE: 'Смерть зомби'
 GUI_SOUNDKILLS_ZOMBIE_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки зомби!'
+- ''
 GUI_SOUNDKILLS_MULE: 'Смерть осла'
 GUI_SOUNDKILLS_MULE_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки крипера!'
+- ''
 GUI_SOUNDKILLS_ZOMBIEHORSE: 'Смерть лошади-зомби'
 GUI_SOUNDKILLS_ZOMBIEHORSE_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки крипера!'
+- ''
 GUI_SOUNDKILLS_WITHER: 'Смерть визера'
 GUI_SOUNDKILLS_WITHER_LORE:
 - '§7Всякий раз, когда Вы умираете'
 - '§7Вы умрете, под звуки крипера!'
+- ''
 
 GUI_KILLEFFECTS_NAME: 'Профиль ▸ Магазин эффектов ▸ Убийства'
 GUI_KILLEFFECTS_FIREWORK: 'Прощальный фейверк'
 GUI_KILLEFFECTS_FIREWORK_LORE:
 - '§7Всякий раз, когда Вы убиваете игрока,'
 - '§7на его могиле появляется прощальный фейерверк!'
+- ''
 GUI_KILLEFFECTS_LIGHTNING: 'Повелитель молний'
 GUI_KILLEFFECTS_LIGHTNING_LORE:
 - '§7Всякий раз, когда Вы убиваете игрока,'
 - '§7на его труп снисходит гнев с небес!'
+- ''
 GUI_KILLEFFECTS_ROMEO: 'Ромео'
 GUI_KILLEFFECTS_ROMEO_LORE:
 - '§7Всякий раз, когда Вы убиваете игрока,'
 - '§7Вы даете ему понять, что любите его!'
+- ''
 GUI_KILLEFFECTS_SYMPHONY: 'Убийственная симфония'
 GUI_KILLEFFECTS_SYMPHONY_LORE:
 - '§7Всякий раз, когда Вы убиваете игрока,'
 - '§7Вы делаете это, под эффект музыкальных нот!'
+- ''
 
 GUI_WINEFFECTS_NAME: 'Профиль ▸ Магазин эффектов ▸ Победа'
 GUI_WINEFFECTS_GOLDENKING: 'Золотой царь'
 GUI_WINEFFECTS_GOLDENKING_LORE:
 - '§7Когда Вы выигрываете игру,'
 - '§7из вашей головы вылетает поток золота!'
+- ''
 GUI_WINEFFECTS_DIAMONDMAGNATE: 'Алмазный магнат'
 GUI_WINEFFECTS_DIAMONDMAGNATE_LORE:
 - '§7Когда Вы выигрываете игру,'
 - '§7из вашей головы вылетает потом алмазов!'
+- ''
 GUI_WINEFFECTS_LOVER: 'Любовник'
 GUI_WINEFFECTS_LOVER_LORE:
 - '§7Когда Вы выигрываете игру,'
 - '§7из вашей головы вылетает поток роз и одуванчиков!'
+- ''
 GUI_WINEFFECTS_BASTARD: 'Ублюдок'
 GUI_WINEFFECTS_BASTARD_LORE:
 - '§7Когда Вы выигрываете игру,'
 - '§7Ваши противники Вас возненавидят...'
+- ''
 
 GUI_REPORTS_NAME: 'Список жалоб'
 GUI_REPORTS_EMPTY: '§cВ данный момент нет жалоб'
@@ -4364,7 +4442,7 @@ GUI_PARTY_LORE:
 - '§7Создана: §a%s'
 - ''
 - '§7Существует: §e%s'
-- '§7Участников: §a%s§7/§c%s'
+- '§7Участников: §a%s§8/§c%s'
 - '§7Онлайн: §a%s'
 - ''
 - '§7Публичность: %s'
@@ -4380,7 +4458,7 @@ GUI_GUILDALL_FOUNDER: '§7Основатель: %s'
 GUI_GUILDALL_LORE:
 - ''
 - '%s'
-- '§7Участники: §a%s§7/§c%s'
+- '§7Участники: §a%s§8/§c%s'
 - '§7Дата основания: §e%s'
 - ''
 - '%s'
@@ -4461,7 +4539,7 @@ GUI_PARTYALL_LORE:
 - '§7Создана: §a%s'
 - ''
 - '§7Существует: §e%s'
-- '§7Участников: §a%s§7/§c%s'
+- '§7Участников: §a%s§8/§c%s'
 - ''
 GUI_PARTYALL_ONLINE:
 - '§7%s группы §aонлайн'
@@ -4488,7 +4566,7 @@ GUI_GUILD_GUILD_LORE:
 - '§7Дата создания:'
 - '§a%s'
 - ''
-- '§7Участников: §a%s§7/§c%s'
+- '§7Участников: §a%s§8/§c%s'
 - '§7Онлайн: §a%s'
 - ''
 - '§7Баланс гильдии: §e%s'
