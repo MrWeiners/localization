@@ -234,9 +234,9 @@ SITESHOP_FLY: 'Полет'
 SITESHOP_CREATIVE_MODE: 'Творческий режим'
 SITESHOP_KIT_START: 'Стартовый набор'
 SITESHOP_KIT_MEGA: 'Mega набор'
-SITESHOP_LUCKYCHEST: 'Сундук удачи'
+SITESHOP_LUCKYCHEST: 'Обычный ключ'
 SITESHOP_KTEMS: 'Ктемы'
-SITESHOP_DONATKEY: 'Донат-ключ'
+SITESHOP_DONATKEY: 'Донатный ключ'
 
 PERSONALUP_CONFIRM: '§cПодтвердите свой ключ /personalup <ключ>'
 
@@ -463,8 +463,9 @@ TRAINING_STAGE_5_HOVER: '§fНажмите, чтобы написать кома
 TRAINING_STAGE_6_TITLE: '§fА на этом наше §6обучение§f подходит к концу :-('
 TRAINING_STAGE_6_SUBTITLE: '§fПрочитать информацию или помощь по серверу, можно командой §5/help'
 
-
-COMMAND_LOBBY: '§6Сервер §8| §fИзвините, но вы не можете писать в §aчат§f. Вернуться в главное лобби §7/hub§f или §7/lobby'
+DISABLE_CHAT_IN_LIMBO: '§6Сервер §8| §fИзвините, но Вы не можете писать в §aчат§f. Вернуться в главное лобби §7/hub§f или §7/lobby'
+DISABLE_COMMAND_IN_LIMBO: '§6Сервер §8| §fИзвините, но Вы не можете §aиспользовать команды§f. Вернуться в главное лобби §7/hub§f или §7/lobby'
+DISABLE_INTERACT_IN_LOBBY: '§6Сервер §8| §fИзвините, но Вы не можете §aвзаимодействовать с предметами§f. Вернуться в главное лобби §7/hub§f или §7/lobby'
 ERROR_COMMAND: '§cОшибка, пишите %s'
 
 VERIFY_ALERT: '§cПодтвердите свой аккаунт -> /verify <код>'
@@ -625,6 +626,7 @@ GROUP_MIGRATE: '§eИгроку %s §eперенесена привилегия 
 GROUP_MIGRATE_BROADCAST: '§6Group §8| %s§7 перенес привилегию с игрока %s§7 на %s'
 
 NO_FOUND_PLAYER: '§cИгрок %s§c не найден или он оффлайн'
+NO_FOUND_PLAYER_IN_GAMEMODE: '§cИгрок %s§c не найден на данном режиме'
 NO_NEVER_PLAYER: '§cИгрок %s никогда прежде не играл на нашем проекте'
 
 NOT_FOUND_PLAYER: '§c%s %s§c не %s или %s оффлайн'
@@ -686,10 +688,12 @@ FINDID_INVALID_ID: '§cid %s, не является числом'
 FINDID_CONFIRM: '§6Сервер §8| §fИнформация об id §a%s§f: Игрок: %s'
 
 CORE_COMMAND_HELP:
- - '§7/core memory §f- Информация о памяти ядра'
- - '§7/core datainfo <ник> §f- Информация об игроке'
+ - '§7/core memory §f- информация о памяти ядра'
+ - '§7/core datainfo <ник> §f- информация об игроке'
+ - '§7/core setserver <сервер> <группа> §f- установить минимальную группу для захода на сервер'
+ - '§7/core servers group §f- список установленных групп для серверов'
  - '§7/core servers menu §f- управление серверами'
- - '§7/core proxys §f- Список подключенных прокси'
+ - '§7/core proxys §f- список подключенных прокси'
  - '§7/core servers §f- список подключенных серверов'
  - '§7/core hide §f- скрыть себя'
 CORE_NPC_COMMAND_HELP:
@@ -711,6 +715,11 @@ CORE_MEMORY: |-
  §8 ▪ §fМаксимум памяти §a%s§f MB
  §8 ▪ §fДоступно памяти §a%s§f MB
  §8 ▪ §fСвободно памяти §a%s§f MB
+ 
+CORE_SETSERVER_FORMAT: '/core setserver <сервер> <группа>'
+CORE_SETSERVER_NOT_FOUND: '§cОшибка, сервер %s не найден в ядре'
+CORE_SETSERVER_CONFIRM: '§6Сервер §8| §fДля сервера §a%s§f успешна установлена минимальная группа - %s'
+CORE_SETSERVER_GROUP_INVALID: '§cОшибка, доступные группы: %s'
 
 CORE_PROXYS_NOT_EXISTS: '§6Core §8| §fВ данный момент нет подключенных прокиси'
 CORE_PROXYS_TOTAL: '§6Core §8| §fВсего подключенных прокси (§a%s§f):'
@@ -762,6 +771,10 @@ NPC_SETNAME_FORMAT: '/npc setname <id> <имя>'
 NPC_SETNAME: '§6NPC §8| §fNpc с id - §a%s§f §fпереименован в %s'
 NPC_SETCOMMAND_FORMAT: '/npc setcommand <id> <команда>'
 NPC_SETCOMMAND: '§6NPC §8| §fВы установили команду §a%s§f npc с id - §e%s'
+
+CORE_SERVERS_GROUP_NOT_EXISTS: '§6Core §8| §cВ данный момент, нет установленных серверов'
+CORE_SERVERS_GROUP_TOTAL: '§6Core §8| §fВсего установленных серверов (§a%s§f):'
+CORE_SERVERS_GROUP_FORMAT: ' §8• §a%s §fдоступен от %s§f и выше'
 
 CORE_SERVERS_NOT_EXISTS: '§6Core §8| §cВ данный момент, нет подключенных серверов'
 CORE_SERVERS_TOTAL: '§6Core §8| §fВсего серверов (§a%s§f):'
@@ -987,12 +1000,12 @@ BOX_WORK: '§bСундук удачи §8| §cПодождите... Сундук
 BOX_OPEN_YOU: '§bСундук удачи §8| §fВы начали открывать кейс...'
 BOX_WINNER: '§bСундук удачи §8| §fВы выиграли %s§f предмет %s'
 BOX_WINNER_OTHER: '§bСундук удачи §8| %s §fвыиграл %s§f предмет %s'
-BOX_KEYS: '§dКлючи §f(§6+%s§f)'
+BOX_KEYS: '§dОбычные ключи §f(§6+%s§f)'
 BOX_EXP: '§eОпыт §f(§a+%s§f)'
 BOX_MONEY: '§aМонеты §f(§6+%s§f)'
 BOX_KTEMS: '§5Ктемы §f(§4+%s§f)'
 BOX_GOLDS: '§eЗолото §f(§a+%s§f)'
-BOX_DONATKEYS: '§3Донат-ключи §f(§b+%s§f)'
+BOX_DONATKEYS: '§3Донатные ключи §f(§b+%s§f)'
 BOX_NULL: '§c??? §f(§c%s§c +%s§f)'
 BOX_LEGENDARY: '§6Легендарный'
 BOX_EPIC: '§5Эпический'
@@ -2016,8 +2029,8 @@ GUI_PROFILE_LORE:
 - '§7Ктемов: §f%s'
 - '§7Уровень: §d%s'
 - '§7До следующего уровня: §a%s XP'
-- '§7Ключей: §b%s'
-- '§7Донат-ключей: §3%s'
+- '§7Донатных ключей: §b%s'
+- '§7Обычных ключей: §3%s'
 - '§7Друзей: §e%s§7/§a%s'
 
 GUI_PROFILE_SETTING_LORE:
@@ -2624,7 +2637,7 @@ GUI_DONATE_INFO_LORE:
 - ''
 - '§7Например, если вы хотите купить статус'
 - '§7§a§lEMERALD§7, но у вас уже есть §e§lGOLD§7,'
-- '§7то вам придется заплатить только §c48 рублей§7.'
+- '§7то вам придется заплатить только §c101 рублей§7.'
 
 GUI_DONATE_ITEM: '§bПривилегия %s'
 GUI_DONATE_ITEM_LORE:
@@ -2652,13 +2665,13 @@ GUI_INFO_HELP_LORE:
 
 GUI_INFO_DONATE_LORE:
 - '§7Список привилегий:'
-- ' §8▪ §6§lPREMIUM §7- §f15 Рублей'
-- ' §8▪ §e§lGOLD §7- §f34 Рублей'
-- ' §8▪ §3§lLEGEND §7- §f56 Рублей'
-- ' §8▪ §a§lEMERALD §7- §f82 Рублей'
-- ' §8▪ §7§lGOLEM §7- §f121 Рублей'
-- ' §8▪ §b§lDIAMOND §7- §f152 Рублей'
-- ' §8▪ §5§lENDERMAN §7- §f190 Рублей'
+- ' §8▪ §6§lPREMIUM §7- §f37 Рублей'
+- ' §8▪ §e§lGOLD §7- §f72 Рублей'
+- ' §8▪ §3§lLEGEND §7- §f130 Рублей'
+- ' §8▪ §a§lEMERALD §7- §f173 Рублей'
+- ' §8▪ §7§lGOLEM §7- §f210 Рублей'
+- ' §8▪ §b§lDIAMOND §7- §f320 Рублей'
+- ' §8▪ §5§lENDERMAN §7- §f490 Рублей'
 - ''
 - '§7Подробное описание привилегий можно'
 - '§7найти в разделе §fПрофиль ▸ Привилегии'
@@ -2773,6 +2786,30 @@ GUI_INFO_GUILD_LORE:
 - '§c20.000 монеток и доступно только от §b§lDIAMOND'
 - '§cДля встуупления в гильдию донат не нужен.'
 
+GUI_INFO_LUCKYCHEST_LORE:
+- '§7Используйте ключи чтобы,'
+- '§7выбивать различные предметы из кейсов.'
+- ''
+- '§7Типы редкости:'
+- ' §8• §eОбычные§f(§e☆§f)'
+- ' §8• §bРедкие§f(§b☆☆§f)'
+- ' §8• §5Эпические§f(§5☆☆☆§f)'
+- ' §8• §6Легендарные§f(§6☆☆☆☆§f)'
+- ''
+- '§7Есть 2 типа ключей:'
+- ' §8• §eДонатный ключ§7;'
+- ' §8• §bОбычный ключ§7;'
+- ''
+- '§7Из донатного ключа,'
+- '§7Вам может выпасть статус от §6§lPREMIUM§7 до §5§lENDERMAN'
+- '§7При выпадении уже существующего статуса,'
+- '§7Вы получите от 5 до 40 золота'
+- ''
+- '§7Из ообычного ключа,'
+- '§7Вам могут выпасть гаджеты, монеты, опыт'
+- '§7При выпадении уже существующего гаджета,'
+- '§7Вы получите от 100 до 250 монет'
+
 GUI_INFO_HELP: '§bНавигация'
 GUI_INFO_DONATE: '§bПривилегии'
 GUI_INFO_FRIEND: '§bИгра с друзьями'
@@ -2783,8 +2820,9 @@ GUI_INFO_LINKS: '§bСсылки'
 GUI_INFO_REWARD: '§bНаграды за победу'
 GUI_INFO_PARTY: '§bКоллективная игра'
 GUI_INFO_GUILD: '§bГильдии'
+GUI_INFO_LUCKYCHEST: '§bСундук удачи'
 GUI_INFO_NAME: 'Информация'
-GUI_INFO_NAME_TO: '%s ▸ Информация'
+GUI_INFO_NAME_TO: '%s ▸ %s'
 
 GUI_PAGE_NEXT_LORE:
 - '§7Нажмите для перехода'
@@ -3667,11 +3705,11 @@ GUI_SITESHOP_KIT_MEGA_LORE:
 - ' §8• §7Золотое зачарованное яблоко §8x9'
 - ' §8• §7Эндерперлы §8x16'
 GUI_SITESHOP_LUCKYCHEST_LORE:
-- ' §8• §7Ключи §8x3'
+- ' §8• §7Обычный ключ §8x3'
 GUI_SITESHOP_KTEMS_LORE:
 - ' §8• §7Ктемы §8x1,000'
 GUI_SITESHOP_DONATKEY_LORE:
-- ' §8• §7Донат-ключ §8x1'
+- ' §8• §7Донатный ключ §8x1'
 
 GUI_GAMESERVERS_NAME: 'Выберите тип игры'
 GUI_GAMESERVERS_NAME_MAP: 'Выбор карты'
