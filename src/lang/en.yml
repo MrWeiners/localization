@@ -18,8 +18,8 @@ BAN_REQUEST_SENT: '§eYour request to block this player has been sent to all onl
 BAN_REQUEST_ALREADY_SENT: '§cPlease block this player has already been sent, wait for decision'
 
 BAN_REQUEST_BROADCAST: '§cModeration §8| §7%s §7lock requests %s §7on §7%s §7because of §e%s'
-BAN_REQUEST_ACCEPT: '§cModeration §8| %s§a accept §7a request on blocked to §e%s'
-BAN_REQUEST_REJECT: '§cModeration §8| %s§c decline §7a request on blocked to §e%s'
+BAN_REQUEST_ACCEPT_BROADCAST: '§cModeration §8| %s§a accept §7a request on blocked to §e%s'
+BAN_REQUEST_REJECT_BROADCAST: '§cModeration §8| %s§c decline §7a request on blocked to §e%s'
 BAN_ACCEPT_FORMAT: '/banrequests accept <the nickname of the offender>'
 BAN_REJECT_FORMAT: '/banrequests reject <the nickname of the offender>'
 
@@ -66,7 +66,14 @@ ELITE: '§aElite'
 
 RESTARTING_BROADCAST: '§cBefore a restart remained, §e%s§c %s'
 NO_CONNECT_REASON: '§cError#13, Synchronization is not executed. Report, if error to repeated » §a§nvk.com/FilkWorld'
-CORE_NO_FOUND_PLAYER: '§cError #7, Player not found. Report, if error to repeated » §a§nvk.com/FilkWorld\n\n§cError code (%s)'
+CORE_NO_FOUND_PLAYER_SERVER_MSG: '§6Server §8| §fError, you server not found in main core, you redirected to §a%s'
+CORE_NO_FOUND_PLAYER_SERVER: "§fError, you server not found in main core. If error repeated, report » §a§nvk.com/FilkWorld\n\n§fError code (§c%s§f)"
+PROXY_CORE_LOST_CONNECTION:
+- '§6Server §8| §cProxy-server, на котором вы сейчас находились, был отключен от главного ядра.'
+- '§6Server §8| §fСейчас вам временно будут недоступны некоторые команды и переход между серверами.'
+- '§6Server §8| §fПросим набратся немного терпения и подождать, мы оповестим вас когда все стабилизируется :)'
+PROXY_RECONNECTED_PLAYER:
+- '§6Server §8| §fReconnected to server... [§a%s§f/§a%s§f]'
 
 SECOND_0: 'second'
 SECOND_1: ''
@@ -171,6 +178,7 @@ EXP_ADD: '§3+%s EXP'
 KTEMS_ADD: '§5+%s'
 GOLDS_ADD: '§e+%s'
 DONATKEYS_ADD: '§b+%s'
+NULL_ADD: '§c+%s'
 
 EFFECTSHOP_EFFECT_NOT_LEVEL: '§cFor buying this effect, your need level §d%s§c or higher'
 EFFECTSHOP_SOUND_NOT_LEVEL: '§cFor buying this sound, your need level §d%s§c or higher'
@@ -196,12 +204,47 @@ PLAYER_GADGETS_BANNER_NO_GROUP: '§cFor buying this banner, your need privilege 
 PLAYER_GADGETS_HAT_NO_GROUP: '§cFor buying this hat, your need privilege %s§c or higher'
 PLAYER_GADGETS_EFFECT_NO_GROUP: '§cFor buying this effect, your need privilege %s§c or higher'
 
+PLAYER_GUILDSHOP_NO_MONEY: '§6Гильдия §8| §fНа счету гильдии недостаточно монет для приобретения данного улучшения'
+PLAYER_GUILDSHOP_ALREADY: '§6Гильдия §8| §fДанное улучшение уже приобретено'
+PLAYER_GUILD_BUY: '§6Гильдии §8| §fВы приобрели %s'
+PLAYER_GUILD_BUY_MOTD:
+- ''
+- '                §8-| §6§lГИЛЬДИИ §8|-'
+- ' §fПоздравляем! Вы приобрели улучшение §eприветствие гильдии'
+- ' §fДля задания сообщения при входе используйте следующие команды:'
+- ' §7/guild motd set <текст> §f- изменить приветствие гильдии'
+- ' §7/guild motd info §f- просмотреть текущее приветствие гильдии'
+- ' §fДля переноса строчки, используйте символ §6;n§f в приветствии'
+- ''
+PLAYER_GUILD_BUY_TAG:
+- ''
+- '                §8-| §6§lГИЛЬДИИ §8|-'
+- ' §fПоздравляем! Вы приобрели улучшение §eтэг гильдии'
+- ' §fТеперь Вы можете задать §7суффикс§f, который будет отображен'
+- ' §fпосле ника каждого участника Вашей гильдии'
+- ' §fДля этого используйте команду §7/guild tag'
+- ''
+
+PLAYER_BOOST_NEED_XP: '§cВам нехватает %s, для повышения до %s'
+PLAYER_BOOST_BROADCAST: '§6Повышение §8| %s §fповысился до звания %s §aПоздравьте его!'
+PLAYER_BOOST_TO_MAX_BROADCAST: '§6Повышение §8| %s §fповысился до §a§nмаксимального§f звания %s §aПоздравьте его!'
+PLAYER_BOOST_YOUR_UP_1: '%s§l§kX§f §5Вы повысились до %s %s§l§kX§f'
+PLAYER_BOOST_YOUR_UP_2: '§fи получили:'
+PLAYER_BOOST_YOUR_UP_COINS: '§7+§6%s §f%s'
+PLAYER_BOOST_YOUR_UP_EXP: '§7+§3%s §fEXP'
+PLAYER_BOOST_YOUR_UP_KEY: '§7+§d%s §f%s'
+PLAYER_BOOST_PLEASE_MADE_SCREENSHOT:
+- '§6Повышение §8| §cПожалуйста отправьте скриншот этого сообщения в группу §a§nvk.com/Ktem_Projects§c для получения повышения.'
+- '§cДанная проверка сделана исключительно для вашей безопасности'
+
 AVAILABLE_SERVER_NOT_FOUND: '§6Server §8| §fНе удалось найти подходящий server'
+
+SERVER_NOT_AVAILABLE_GROUP: '§cError, вход доступен только для %s§c и выше'
 
 SITESHOP_BUY: '§6Shop §8| §fYou buying §a%s'
 SITESHOP_INFO: '§6Server §8| §fPlayer %s§f buying §a%s§f, can buy in §6/siteshop'
-SITESHOP_TITLE: '§fИгрок %s§f купил §a%s'
-SITESHOP_SUBTITLE: '§fКупить можно в §6/siteshop'
+SITESHOP_TITLE: '§fPlayer %s§f buying §a%s'
+SITESHOP_SUBTITLE: '§fCan buy in §6/siteshop'
 
 SITESHOP_FLY: 'Fly'
 SITESHOP_CREATIVE_MODE: 'Creative mode'
@@ -622,6 +665,12 @@ PLAYER_NAME_13: ''
 PLAYER_NAME_14: ''
 PLAYER_NAME_15: ''
 PLAYER_NAME_16: ''
+PLAYER_NAME_17: 'Played'
+PLAYER_NAME_18: 'Played'
+PLAYER_NAME_19: 'Leader'
+PLAYER_NAME_20: 'Leader'
+PLAYER_NAME_21: ''
+PLAYER_NAME_22: ''
 
 PROXY_COMMAND_HELP:
 - '§7/proxy info §f- information for your connected to proxies'
@@ -957,6 +1006,7 @@ BOX_MONEY: '§aCoins §f(§6+%s§f)'
 BOX_KTEMS: '§5Ktems §f(§4+%s§f)'
 BOX_GOLDS: '§eGolds §f(§a+%s§f)'
 BOX_DONATKEYS: '§3Donate-keys §f(§b+%s§f)'
+BOX_NULL: '§c??? §f(§c%s§c +%s§f)'
 BOX_LEGENDARY: '§6Legendary'
 BOX_EPIC: '§5Epic'
 BOX_RARE: '§bRare'
@@ -973,9 +1023,14 @@ BOX_STATS_ALREADY: '§bLuckyChest §8| §fYou has already this stats, You got §
 STAFFCHAT_MSG: '§eStaff chat §8| §f%s §8» §f%s'
 DONATECHAT_MSG: '§6Donate chat §8| §f%s §8» §7%s'
 
-CORE_BROADCAST: '§6Core §8| %s §f%s'
+SERVER_DISABLE_BROADCAST: '§6Server §8| %s §fотключил сервер ▬ §a%s'
+SERVER_RELOAD_BROADCAST: '§6Server §8| %s §fперезагрузил сервер ▬ §a%s'
+SERVER_ENABLE_BROADCAST: '§6Server §8| %s §fвключил сервер ▬ §a%s'
+SERVER_KILL_BROADCAST: '§6Server §8| %s §4убил§f сервер ▬ §a%s'
+SERVER_MEMORY_ENDS_BROADCAST: '§6Server §8| §fУ сервера §a%s§f кончается §cсвободная память §7(FREEMEMORY:%s)'
+SERVER_MEMORY_ENDS_DISABLE_BROADCAST: '§6Server §8| §fСервер §a%s§f был отключен, из-за §cнехватки памяти §7(Свободной памяти было: %s)'
+
 DEVELOPER_BROADCAST: '§6Server §8| %s §f%s has writen you message: §a%s'
-INFO_BROADCAST: '§7%s'
 ANSWER_BROADCAST: '§cModeration §8| %s §7%s player %s §8(§a%s§8) §7 -> §e%s'
 NEW_ASK: '§cModeration §8| %s §7asked -> §e%s'
 
@@ -1037,7 +1092,7 @@ GUILD_COMMAND_DEPUTY_HELP:
  - '§7/guild shop §f- open guild shop'
  - '§7/guild tag <тег> §f- set guild tag'
  - '§7/guild party §f- put together the guild group'
- - '§7/guild motd <text> §f- set guild welcome'
+ - '§7/guild motd §f- set control for motd of guild'
  - '§7/guild rank <nickname> <rank> §f- set player rank'
  - '§7/guild deposit <nickname> <amount of coins> §f- withdraw money from guild balance'
 GUILD_COMMAND_OWNER_HELP:
@@ -1068,7 +1123,7 @@ GUILD_MONEY_INVALID: '§cWritten wrong amount'
 GUILD_LIMIT: "§cThis guild can't accept players, because its limit is exceeded"
 GUILD_LEADER: "§cYou aren't guild leader"
 GUILD_MODER: "§cYou aren't guild moderator"
-GUILD_NAME_MEMBER: ''
+GUILD_NAME_MEMBER: 'Member'
 GUILD_NAME_MODER: 'Moderator'
 GUILD_NAME_DEPUTY: 'Deputy'
 GUILD_NAME_OWNER: 'Owner'
@@ -1113,6 +1168,14 @@ GUILD_TAG_ALERT: '§2Guild §8| %s §fset guild tag -> §e%s'
 GUILD_TAG: '§6Guild §8| §fGuild tag set to §a%s'
 GUILD_TAG_NO_MONEY: '§cGuild lacks %s coins to change tag'
 GUILD_TAG_NO_BUY: "§cYou haven't got guild tag, buy it in /guild shop"
+
+GUILD_MOTD_COMMAND_HELP:
+- '§7/guild motd info §f- view motd of guild'
+- '§7/guild motd set <greeting> §f- set motd of guild'
+GUILD_MOTD_INFO: '§6Guild §8| §fGuild greeting:'
+GUILD_MOTD_SET_FORMAT: '/guild motd set <greeting>'
+GUILD_MOTD_SET_ALERT: '§2Guild §8| §fPlayer %s §fupdated the guild greeting'
+GUILD_MOTD_SET: '§6Guild §8| §fGuild greeting changed to §a%s'
 
 GUILD_MOTD_FORMAT: '/guild motd <text>'
 GUILD_MOTD_ALERT: '§2Guild §8| §fPlayer %s §fupdated the guild welcome'
@@ -1229,6 +1292,18 @@ BAN_NAME_3: 'Blocked'
 BAN_NAME_4: 'Blocked'
 BAN_NAME_5: 'Blocked IP address'
 BAN_NAME_6: 'Blocked IP address'
+BAN_NAME_7: 'Unblocked chat'
+BAN_NAME_8: 'Unblocked chat'
+BAN_NAME_9: 'Unblocked'
+BAN_NAME_10: 'Unblocked'
+BAN_NAME_11: 'Unblocked IP address'
+BAN_NAME_12: 'Unblocked IP address'
+BAN_NAME_13: 'Blocked guild chat'
+BAN_NAME_14: 'Blocked guild chat'
+BAN_NAME_15: 'Unblocked guild chat'
+BAN_NAME_16: 'Unblocked guild chat'
+BAN_NAME_17: 'Kicked'
+BAN_NAME_18: 'Kicked'
 BANINFO_COOLDOWN: '§f- Кончится через: §e%s'
 BANINFO_NEVER: '§f- Never blocked'
 BANINFO_BY: '§f- By request %s'
@@ -1300,7 +1375,30 @@ REPORT_BROADCAST_PLAYER_GUILTY: '§cModeration §8| §7%s §7посчитал, �
 REPORT_BROADCAST_PLAYER_INNOCENT: '§cModeration §8| §7%s §7посчитал, что §e%s §f- §aневиновен'
 REPORT_PLAYER_STARTED_SPECTATE: '§cModeration §8| §7%s §7отправился следить за §7%s'
 REPORT_NO_PERM_ACTIONS: '§cReports §8| §fПринимать решения по жалобам могут только модераторы и выше.'
-SETTINGS_DONATECHAT_DISABLE: '§cВы отключили чат донатеров. Чтобы написать туда, включите его в личных настройках'
+REPORT_NO_REPORT_PLAYER: '§cНа игрока %s не поступало жалоб'
+REPORT_COMMAND_HELP:
+- '§7/report list §f- list of reports'
+- '§7/report info <player name> §f- information of report'
+- '§7/report accept <player name> <id reason> §f- accept report and ban player'
+- '§7/report decline <player name> §f- decline for report'
+- '§7/report idlist §f- list id reason'
+REPORT_INFO_FORMAT: '/report info <player name>'
+REPORT_INFO: |-
+ §cReports §8| §fInformation for player §e%s§f:
+ §f - §fЖаловались: §a%s
+ §f - §fСейчас следят: §a%s
+ §f - §fПоследняя жалоба: §a%s назад
+REPORT_ACCEPT_FORMAT: '/report accept <ник> <id причины>'
+REPORT_DECLINE_FORMAT: '/report decline <ник>'
+REPORT_INVALID_ID_REASON: '§cInvalid id reason'
+REPORT_IDLIST: |-
+ §cReports §8| §fAvailable id reason:
+ §6 №1.4 §f- §e%s
+ §6 №1.3 §f- §e%s
+ §6 №1.5 §f- §e%s
+ §6 №1.12 §f- §e%s
+ §6 №1.6 §f- §e%s
+SETTINGS_DONATECHAT_DISABLE: '§cYou disabled donate chat. Чтобы написать туда, включите его в личных settings'
 ASK_NO_STAFF_ONLINE: '§6Question §8| §fNo staff online, On your question no one to answer :('
 ASK_DELAY: '§cError, отправить новый вопрос можно будет через %s'
 ASK_ALREADY_SENT: '§cВы уже задавали вопрос, дождитесь ответа на него'
@@ -1741,6 +1839,7 @@ VERIFY_NOT_DONE: '§6Verify §8| §cДанные не совпали, сесси
 VERIFY_NOT_DONE_BROADCAST: '§6Verify §8| §cДанные сессии %s§c не совпадают §8(§a%s§8)'
 VERIFY_LASTTIMED: '§6Verify §8| §cСессия истекла'
 VERIFY_LASTTIMED_BROADCAST: '§6Verify §8| §fДанные сессии %s§f истекли'
+VERIFY_CODE_CHANGED_BROADCAST: '§6Verify §8| %s%s§f свой код'
 
 LANGUAGE_SELECT: '§6Server §8| §fYou Language is change to §c%s'
 PREFIX_SELECT: '§6Server §8| §fYour prefix changed to %s'
@@ -1765,7 +1864,7 @@ AUTH_COMMAND_HELP: |-
  §7/auth unregister <key> <player name> §f- delete account
  §7/auth changepassword <key> <player name> <password> §f- change password for player
  §7/auth changemail <key> <player name> <email> §f- change mail for player
- §7/auth lastlogin <key> <player name> §f- last time login for player
+ §7/auth info <player name> §f- information for player
 AUTH_RELOAD: '§6Auth §8| §fConfiguration reloaded'
 AUTH_CHANGEMAIL_FORMAT: '/auth changemail <key> <player name> <password>'
 AUTH_CHANGEMAIL: '§6Auth §8| §fPlayer mail %s§f changed to §a%s'
@@ -1895,7 +1994,7 @@ MESSAGES_11_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехо
 MESSAGES_10_BROADCAST: "\n §8| §fХотите обеспечить §aбезопасность§f своему аккаунту?\n §8| §fТогда привяжите его к вашей почте\n §8| §fкомандой §c/email add <почта> <повтор почты>\n"
 MESSAGES_10_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_9_BROADCAST: "\n §8| §fПоявились §eвопросы§f, на которые Вы §cне знаете ответ?\n §8| §fНапишите команду §c/ask <ваш вопрос>\n §8| §aОнлайн администрация§f поможет Вам §bв реальном времени\n"
-MESSAGES_9_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+MESSAGES_9_HOVER_BROADCAST: "§fНажмите сюда"
 MESSAGES_8_BROADCAST: "\n §8| §fХотите §dуникальные§f, скрытые §eфункции§f и §aвозможности§f?\n §8| §fПокупайте донат у нас и получайте доступ к\n §8| §fдонат-меню командой §c/donatemenu\n"
 MESSAGES_8_HOVER_BROADCAST: "§fНажмите сюда для\n§fчтобы открыть меню"
 MESSAGES_7_BROADCAST: "\n §8| §fУ вас §cпроблемы§f или вы нашли какой-то §cбаг§f?\n §8| §fНапишите нам в группу §bvk.com/topic-155142790_38911037\n §8| §fи вам §aобязательно§f ответят в ближайшее время\n"
@@ -2843,6 +2942,11 @@ GUI_BUILDERS_NAME: 'Builders list'
 GUI_STAFF_NAME: 'Staff list (%s)'
 GUI_GROUP_NAME: 'List of players with thr group - %s'
 GUI_GROUP_NO_FOUND: '§cThere is no players with %s'
+GUI_GROUP_NO_FOUND_LORE:
+- ''
+- '§7В данный момент,'
+- '§7нет ни одного человека,'
+- '§7состоящего в %s.'
 GUI_YOUTUBERS_ITEM: '§eYoutubers list'
 GUI_BUILDERS_ITEM: '§eBuilders list'
 GUI_STAFF_ITEM: '§eStaff list'
@@ -2891,13 +2995,13 @@ GUI_STAFF_OFFLINE:
 - '§7Last seen%s'
 - '§e%s ago'
 - ''
-- ' §c✗ Player is offline '
+- ' §c✗ Player is offline'
 GUI_STAFF_NO_FOUND:
 - ''
 - '§7Last seen%s'
 - '§e%s ago'
 - ''
-- ' §c✗ Player is offline '
+- ' §c✗ Player is not found'
 GUI_STAFFLIST_LORE:
 - '%s'
 - ''
@@ -3178,73 +3282,78 @@ GUI_EFFECTS_KILLS: '§aKill effects'
 GUI_EFFECTS_WINS: '§aWin effects'
 GUI_EFFECTS_NAME: 'Profile ▸ Cosmetics'
 SOUND_NA: '§cNo select'
-SOUND_CREEPER: 'Смерть крипера'
-SOUND_BLAZE: 'Смерть ифрита'
-SOUND_ENDERMAN: 'Смерть эндермена'
-SOUND_GHAST: 'Смерть гаста'
-SOUND_SKELETON: 'Смерть скелета'
-SOUND_MULE: 'Смерть осла'
-SOUND_ZOMBIEHORSE: 'Смерть лошади-зомби'
-SOUND_ZOMBIE: 'Смерть зомби'
-SOUND_WITHER: 'Смерть визера'
+SOUND_CREEPER: 'Creeper death'
+SOUND_BLAZE: 'Blaze death'
+SOUND_ENDERMAN: 'Enderman death'
+SOUND_GHAST: 'Ghast death'
+SOUND_GOLEM: 'Goldem death'
+SOUND_SKELETON: 'Skeleton death'
+SOUND_MULE: 'Mule death'
+SOUND_ZOMBIEHORSE: 'Zombie-horse death'
+SOUND_ZOMBIE: 'Zombie death'
+SOUND_WITHER: 'Wither death'
 EFFECT_NA: '§cNo select'
-EFFECT_SOUND: 'Звуковой путь'
+EFFECT_MUSIC: 'Звуковой путь'
 EFFECT_SMOKE: 'Дымовая шашка'
 EFFECT_FIRE: 'Огненный след'
-EFFECT_LOVE: 'Любимчик удачи'
-EFFECT_RAIN: 'Дождь радости'
-EFFECT_NEWYEAR: 'Новогоднее веселье'
-EFFECT_TREE: 'Елочная гирлянда'
+EFFECT_HEART: 'Любимчик удачи'
+EFFECT_HAPPY: 'Happy rain'
+EFFECT_NEWYEAR: 'Newyear веселье'
+EFFECT_REDSTONE: 'Елочная гирлянда'
 KILL_NA: '§cNo select'
-KILL_FIREWORK: 'Прощальный фейверк'
-KILL_LIGHTNING: 'Повелитель молний'
-KILL_ROMEO: 'Ромео'
-KILL_SYMPHONY: 'Убийственная симфония'
+KILL_FIREWORK: 'Прощальный firework'
+KILL_LIGHTNING: 'Повелитель lightning'
+KILL_ROMEO: 'Romeo'
+KILL_SYMPHONY: 'Symphony killed'
 WIN_NA: '§cNo select'
-WIN_GOLDENKING: 'Золотой царь'
-WIN_DIAMONDMAGNATE: 'Diamond магнат'
-WIN_LOVER: 'Любовник'
-WIN_BASTARD: 'Ублюдок'
+WIN_GOLDENKING: 'Golden king'
+WIN_DIAMONDMAGNATE: 'Diamond magnate'
+WIN_LOVER: 'Lover'
+WIN_BASTARD: 'Bastard'
 GUI_EFFECTS_KILLED_LORE:
+- ''
 - '§7Покупка и активация звуков'
-- '§7при вашей смерти, которые'
-- '§7действуют на аренах всех mini-games'
+- '§7которые будут воспроизводится'
+- '§7около Вас при вашей смерти'
 - ''
 - '§7Open: §a%s/%s §6%s'
 - '§7Sound selected:'
 - '§a%s'
 - ''
-- '§e▸ Open shop'
+- '§e▸ Open menu'
 GUI_EFFECTS_ARROWS_LORE:
+- ''
 - '§7Покупка и активация эффектов'
-- '§7полета стрел, которые'
-- '§7действуют на аренах всех mini-games
+- '§7которые будут появлятся у стрел,'
+- '§7которые Вы пустите'
 - ''
 - '§7Open: §a%s/%s §6%s'
 - '§7Effect selected:'
 - '§a%s'
 - ''
-- '§e▸ Open shop'
+- '§e▸ Open menu'
 GUI_EFFECTS_KILLS_LORE:
-- '§7Покупка и активация зффектов'
-- '§7убийства врага, которые'
-- '§7действуют на аренах всех mini-games'
+- ''
+- '§7Покупка и активация эффектов'
+- '§7которые будут воспроизводиться'
+- '§7около убитого Вами игрока.'
 - ''
 - '§7Open: §a%s/%s §6%s'
 - '§7Effect seleccted:'
 - '§a%s'
 - ''
-- '§e▸ Open shop'
+- '§e▸ Open menu'
 GUI_EFFECTS_WINS_LORE:
-- '§7Покупка и активация звуков'
-- '§7победителя после игры, которые'
-- '§7действуют на аренах всех mini-games'
+- ''
+- '§7Покупка и активация эффектов'
+- '§7которые будут воспроизводится'
+- '§7рядом с Вами, после Вашей победы'
 - ''
 - '§7Open: §a%s/%s §6%s'
 - '§7Effect selected:'
 - '§a%s'
 - ''
-- '§e▸ Open shop'
+- '§e▸ Open menu'
 GUI_CHANGELANGUAGE_NAME: 'Profile ▸ Switch language'
 GUI_CHANGELANGUAGE_LORE:
 - '§7Change language to %s'
@@ -3441,6 +3550,10 @@ GUI_LOBBY_FRIENDS_MAX:
 GUI_ITEMS_NAME: 'Profile ▸ Items'
 GUI_ITEMS_ITEM_NAME: '§eItems'
 GUI_ITEMS_EMPTY: '§cВ данный момент не найдено ваших предметов'
+GUI_ITEMS_EMPTY_LORE:
+- ''
+- '§7В данный момент,'
+- '§7у вас нет ни одного предмета.'
 GUI_ITEMS_LORE:
 - ''
 - '§7Total items: §e%s'
@@ -3603,7 +3716,7 @@ GUI_STATS_GLOBAL_LORE:
 - '§fCommon stats:'
 - ' §8▪ §7Stats: §e%s'
 - ' §8▪ §7Kills: §e%s'
-- ' §8▪ §6Deaths: §e%s'
+- ' §8▪ §7Deaths: §e%s'
 
 GUI_GADGETS_NAME: 'Cosmetics'
 GUI_GADGETS_NAME_OTHER: 'Cosmetics ▸ %s'
@@ -3900,9 +4013,54 @@ GUI_GADGETS_HAT_26: 'I'
 GUI_GADGETS_HAT_26_LORE:
 - '§7Вы получите себя!'
 - '§7..на самом деле yes.'
-GUI_GADGETS_BANNER_1: 'Default banner'
+GUI_GADGETS_BANNER_1: 'White banner'
 GUI_GADGETS_BANNER_1_LORE:
-- '§7У Вас будет default banner'
+- '§7У Вас будет белый banner'
+GUI_GADGETS_BANNER_2: 'Черный banner'
+GUI_GADGETS_BANNER_2_LORE:
+- '§7У Вас будет черный banner'
+GUI_GADGETS_BANNER_3: 'Красный banner'
+GUI_GADGETS_BANNER_3_LORE:
+- '§7У Вас будет красный banner'
+GUI_GADGETS_BANNER_4: 'Зеленый banner'
+GUI_GADGETS_BANNER_4_LORE:
+- '§7У Вас будет зеленый banner'
+GUI_GADGETS_BANNER_5: 'Коричневый banner'
+GUI_GADGETS_BANNER_5_LORE:
+- '§7У Вас будет коричневый banner'
+GUI_GADGETS_BANNER_6: 'Синий banner'
+GUI_GADGETS_BANNER_6_LORE:
+- '§7У Вас будет синий banner'
+GUI_GADGETS_BANNER_7: 'Фиолетовый banner'
+GUI_GADGETS_BANNER_7_LORE:
+- '§7У Вас будет фиолетовый banner'
+GUI_GADGETS_BANNER_8: 'Бирюзовый banner'
+GUI_GADGETS_BANNER_8_LORE:
+- '§7У Вас будет бирюзовый banner'
+GUI_GADGETS_BANNER_9: 'Светло-серый banner'
+GUI_GADGETS_BANNER_9_LORE:
+- '§7У Вас будет светло-серый banner'
+GUI_GADGETS_BANNER_10: 'Серый banner'
+GUI_GADGETS_BANNER_10_LORE:
+- '§7У Вас будет серый banner'
+GUI_GADGETS_BANNER_11: 'Розовый banner'
+GUI_GADGETS_BANNER_11_LORE:
+- '§7У Вас будет розовый banner'
+GUI_GADGETS_BANNER_12: 'Лаймовый banner'
+GUI_GADGETS_BANNER_12_LORE:
+- '§7У Вас будет лаймовый banner'
+GUI_GADGETS_BANNER_13: 'Жёлтый banner'
+GUI_GADGETS_BANNER_13_LORE:
+- '§7У Вас будет жёлтый banner'
+GUI_GADGETS_BANNER_14: 'Голубой banner'
+GUI_GADGETS_BANNER_14_LORE:
+- '§7У Вас будет голубой banner'
+GUI_GADGETS_BANNER_15: 'Пурпуровый banner'
+GUI_GADGETS_BANNER_15_LORE:
+- '§7У Вас будет пурпуровый banner'
+GUI_GADGETS_BANNER_16: 'Ораньжевый banner'
+GUI_GADGETS_BANNER_16_LORE:
+- '§7У Вас будет ораньжевый banner'
 
 GUI_PREFIX_NAME: 'Donate menu ▸ prefix'
 GUI_PREFIX_SELECTED_LORE:
@@ -3925,9 +4083,514 @@ GUI_PREFIX_COLOR_TURQUOISE: '§3Turquoise'
 GUI_PREFIX_COLOR_PINK: '§dPink'
 GUI_PREFIX_COLOR_PURPLE: '§5Pueplw'
 GUI_PREFIX_COLOR_BLUE: '§9Blue'
-GUI_PREFIX_COLOR_DARK_BLUE: '§1Темно синий'
+GUI_PREFIX_COLOR_DARK_BLUE: '§1Dark blue'
 GUI_PREFIX_COLOR_WHITE: '§fWhite'
 GUI_PREFIX_COLOR_DARK_RED: '§4Dark red'
 GUI_PREFIX_COLOR_DARK_GRAY: '§8Dark gray'
 GUI_PREFIX_COLOR_BLACK: '§0Black'
 GUI_PREFIX_COLOR_NULl: 'Unknown'
+
+GUI_ARROWEFFECTS_NAME: 'Profile ▸ Cosmetics ▸ Arrows'
+GUI_ARROWEFFECTS_MUSIC: 'Звуковой путь'
+GUI_ARROWEFFECTS_MUSIC_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект музыкальных нот'
+- ''
+GUI_EFFECTS_TYPE_EFFECT: 'effect'
+GUI_EFFECTS_TYPE_SOUND: 'sound'
+GUI_EFFECTS_ACTIVATE: '§e▸ Click, to activate'
+GUI_EFFECTS_SELECTED: '§a▸ Activate'
+GUI_EFFECTS_UNAVAILABLE_LORE:
+- '§cFor buying this item, your need level §d%s§c or higher'
+- ''
+- '§cThis item you not available'
+GUI_EFFECTS_BUY_LORE:
+- '§7Count §6%s§7 %s'
+- ''
+- '§eClick, to buy %s'
+GUI_EFFECTS_NO_KTEMS_LORE:
+- '§7Count §6%s§7 %s'
+- ''
+- '§cYou need ktems'
+GUI_ARROWEFFECTS_SMOKE_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект дыма'
+- ''
+GUI_ARROWEFFECTS_FIRE_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект пламени'
+- ''
+GUI_ARROWEFFECTS_HEART_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект сердечек'
+- ''
+GUI_ARROWEFFECTS_HAPPY_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект радости'
+- ''
+GUI_ARROWEFFECTS_NEWYEAR_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект искр'
+- ''
+GUI_ARROWEFFECTS_REDSTONE_LORE:
+- '§7За каждой стрелой,'
+- '§7которой вы выстрелите,'
+- '§7будет следовать эффект разноцветного редстоуна'
+- ''
+
+GUI_SOUNDKILLS_NAME: 'Profile ▸ Cosmetics ▸ Предсмертие'
+GUI_SOUNDKILLS_CREEPER_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки крипера!'
+- ''
+GUI_SOUNDKILLS_BLAZE_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки ифрита!'
+- ''
+GUI_SOUNDKILLS_ENDERMAN_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки эндермена!'
+- ''
+GUI_SOUNDKILLS_GHAST_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки гаста!'
+- ''
+GUI_SOUNDKILLS_GOLEM_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки голема!'
+- ''
+GUI_SOUNDKILLS_SKELETON_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки скелета!'
+- ''
+GUI_SOUNDKILLS_ZOMBIE_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки зомби!'
+- ''
+GUI_SOUNDKILLS_MULE_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки крипера!'
+- ''
+GUI_SOUNDKILLS_ZOMBIEHORSE_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки крипера!'
+- ''
+GUI_SOUNDKILLS_WITHER_LORE:
+- '§7Всякий раз, когда Вы умираете'
+- '§7Вы умрете, под звуки крипера!'
+- ''
+
+GUI_KILLEFFECTS_NAME: 'Profile ▸ Cosmetics ▸ Kills'
+GUI_KILLEFFECTS_FIREWORK_LORE:
+- '§7Всякий раз, когда Вы убиваете игрока,'
+- '§7на его могиле появляется прощальный фейерверк!'
+- ''
+GUI_KILLEFFECTS_LIGHTNING_LORE:
+- '§7Всякий раз, когда Вы убиваете игрока,'
+- '§7на его труп снисходит гнев с небес!'
+- ''
+GUI_KILLEFFECTS_ROMEO_LORE:
+- '§7Всякий раз, когда Вы убиваете игрока,'
+- '§7Вы даете ему понять, что любите его!'
+- ''
+GUI_KILLEFFECTS_SYMPHONY_LORE:
+- '§7Всякий раз, когда Вы убиваете игрока,'
+- '§7Вы делаете это, под эффект музыкальных нот!'
+- ''
+
+GUI_WINEFFECTS_NAME: 'Profile ▸ Cosmetics ▸ Win'
+GUI_WINEFFECTS_GOLDENKING_LORE:
+- '§7Когда Вы выигрываете игру,'
+- '§7из вашей головы вылетает поток золота!'
+- ''
+GUI_WINEFFECTS_DIAMONDMAGNATE_LORE:
+- '§7Когда Вы выигрываете игру,'
+- '§7из вашей головы вылетает потом алмазов!'
+- ''
+GUI_WINEFFECTS_LOVER_LORE:
+- '§7Когда Вы выигрываете игру,'
+- '§7из вашей головы вылетает поток роз и одуванчиков!'
+- ''
+GUI_WINEFFECTS_BASTARD_LORE:
+- '§7Когда Вы выигрываете игру,'
+- '§7Ваши противники Вас возненавидят...'
+- ''
+
+GUI_REPORTS_NAME: 'Report list'
+GUI_REPORTS_EMPTY: '§cВ данный момент нет report'
+GUI_REPORTS_EMPTY_LORE:
+- ''
+- '§7В данный момент никто,'
+- '§7не подавал report.'
+GUI_REPORTS_ITEM: '§eReport list'
+GUI_REPORTS_ITEM_LORE:
+- ''
+- '§fTotal reports §e%s'
+GUI_REPORTS_REPORT_LORE:
+- ''
+- '§7Server: %s'
+- ''
+- '§7Last report:'
+- '§e%s ago'
+- ''
+- '§7Total reports: §c%s'
+- ''
+- '§7Список пожаловавшихся:'
+GUI_REPORTS_SPECTATORS: '§7Список смотрящих:'
+GUI_REPORTS_ACTIONS_LORE:
+- '§e▸ Left click, для наказания за %s'
+- '§e▸ Drop item, для наказания за %s'
+- '§e▸ Shift+Left click, для наказания за %s'
+- '§e▸ Shift+Right click, для наказания за %s'
+- '§e▸ Right click, для отклонения жалобы'
+GUI_REPORTS_ACTIONS_UNAVAILABLE_LORE:
+- '§c▸ Принимать решения по жалобам, могут только модераторы и выше'
+- '§e▸ Right click, to decline report'
+GUI_REPORTS_INFO_LORE:
+- '§e▸ Left click, to snooping for player'
+- '§e▸ Right click, to decline report'
+GUI_REPORTS_FORMAT: '§eReport for %s'
+
+GUI_ANS_NAME: 'Questions list'
+GUI_ANS_ITEM: '§eQuestions list'
+GUI_ANS_ITEM_LORE:
+- ''
+- '§fTotal questions'
+- '§c%s'
+GUI_ANS_EMPTY: '§cВ данный момент никто не задавал questions'
+GUI_ANS_EMPTY_LORE:
+- ''
+- '§7В данный момент,'
+- '§7никто не задавал question'
+GUI_ANS_LORE:
+- ''
+- '§7Player asked question:'
+- '§e%s'
+- ''
+- '§e%s ago'
+- ''
+- '§7Server: %s'
+- ''
+- '§e▸ Left click, чтобы ответить игроку'
+- '§e▸ Right click, чтобы наказать за offtopic'
+
+GUI_TOPS_NAME: 'Tops players ▸ %s'
+GUI_TOPS_TYPE_MONEY: '§7Money: §a%s'
+GUI_TOPS_TYPE_KILLS: '§7Kills: §a%s'
+GUI_TOPS_TYPE_DEATHS: '§7Deaths: §a%s'
+GUI_TOPS_ITEM: '§eTops players'
+GUI_TOPS_ITEM_LORE:
+- ''
+- '§7Total tops:'
+- '§a%s'
+GUI_TOPS_MONEY: '§eTop money'
+GUI_TOPS_MONEY_LORE:
+- ''
+- '§7В данном топе Вы;'
+- '§7можете посмотреть игроков;'
+- '§7которые больще всего заработали монет;'
+- '§7на сервере.'
+GUI_TOPS_ONLINE: '§eTop online'
+GUI_TOPS_ONLINE_LORE:
+- ''
+- '§7В данном топе Вы;'
+- '§7можете посмотреть игроков;'
+- '§7которые больще всего провели времени;'
+- '§7на сервере.'
+GUI_TOPS_DEATHS: '§eTop deaths'
+GUI_TOPS_DEATHS_LORE:
+- ''
+- '§7В данном топе Вы;'
+- '§7можете посмотреть игроков;'
+- '§7которые больще всего погибали;'
+- '§7на сервере.'
+GUI_TOPS_KILLS: '§cTop kills'
+GUI_TOPS_KILLS_LORE:
+- ''
+- '§7В данном топе Вы;'
+- '§7можете посмотреть игроков;'
+- '§7которые больще всего убивали игроков;'
+- '§7на сервере.'
+GUI_TOPS_SELECTED: 
+- '' 
+- '§a▸ Selected'
+GUI_TOPS_SELECT:
+- ''
+- '§e▸ Click, to select top'
+
+GUI_BANREQUESTS_NAME: 'Ожидающие запросы на блокировку'
+GUI_BANREQUESTS_ITEM: '§eОжидающие запросы на блокировку'
+GUI_BANREQUESTS_ITEM_LORE:
+- ''
+- '§fTotal requests §e%s'
+GUI_BANREQUESTS_EMPTY: '§cОжидающих запросов на блокировку нет.'
+GUI_BANREQUESTS_EMPTY_LORE:
+- ''
+- '§7В данный момент,'
+- '§7нет ни одного запроса,'
+- '§7на blocked'
+GUI_BANREQUESTS_LORE:
+- ''
+- '§7Ник нарушителя: %s'
+- '§7Просит заблокировать: %s'
+- '§7На срок: §e%s'
+- ''
+- '§7Причина блокировки:'
+- '§a%s'
+- ''
+- '§e▸ Left click, to accept request'
+- '§e▸ Right click, to decline request'
+GUI_BANREQUESTS_NEVER: '§4Навсегда'
+
+GUI_MAILS_NAME: 'Mails list'
+GUI_MAILS_EMPTY: '§cВ данный момент никто не писал вам писем'
+GUI_MAILS_EMPTY_LORE:
+- ''
+- '§7В данный момент,'
+- '§7Ваш список писем пуст.'
+GUI_MAILS_MAIL_LORE:
+- ''
+- '§7Message:'
+- '§e%s'
+- ''
+- '§7Date: §a%s'
+- '§e%s ago'
+- ''
+- '§7Stats: %s'
+GUI_MAILS_FORMAT: '§eMail for %s'
+GUI_MAILS_ITEM: '§eMails list'
+GUI_MAILS_ITEM_LORE:
+- ''
+- '§7Total mails:'
+- '§a%s'
+GUI_MAILS_TYPE_PROVER: '§6unread'
+GUI_MAILS_TYPE_CHECK: '§aread'
+
+GUI_PARTY_NAME: 'Grouo members'
+GUI_PARTY_OWNER: '§7Group owner'
+GUI_PARTY_IN_OWNER: '§7Owner: %s'
+GUI_PARTY_LORE:
+- ''
+- '§7Group: §a%s'
+- ''
+- '§7Creator: %s'
+- '§7Created: §a%s'
+- ''
+- '§7Существует: §e%s'
+- '§7Members: §a%s§8/§c%s'
+- '§7Online members: §a%s'
+- ''
+- '§7Публичность: %s'
+- '§7Автоматическая телепортация: %s'
+- '§7Свободная: %s'
+- '§7Автоматическое исключение: %s'
+GUI_PARTY: '§eInformation for group'
+
+GUI_GUILDALL_NAME: 'Guild ▸ Guild list'
+GUI_GUILDALL_CREATOR: '§7Creator: %s'
+GUI_GUILDALL_OWNER: '§7Owner: %s'
+GUI_GUILDALL_FOUNDER: '§7Founder: %s'
+GUI_GUILDALL_LORE:
+- ''
+- '%s'
+- '§7Members: §a%s§8/§c%s'
+- '§7Date founder: §e%s'
+- ''
+- '%s'
+- '%s'
+- ''
+GUI_GUILD_TOP_MONEY: '§7On §a%s§7 place for top money'
+GUI_GUILD_TOP_MEMBERS: '§7On §a%s§7 place for top members'
+GUI_GUILD_NO_TOP_MONEY: '§cNo involved to top money'
+GUI_GUILD_NO_TOP_MEMBERS: '§cNo involdev to top members'
+GUI_GUILDALL_ONLINE:
+- '§7%s guild §aonline'
+- '§7on server §e%s'
+GUI_GUILDALL_OFFLINE:
+- ' §c✗ %s guild offline'
+GUI_GUILDALL_ITEM: '§eGuild ▸ Guild list'
+GUI_GUILDALL_ITEM_LORE:
+- ''
+- '§7Total guilds:'
+- '§a%s'
+GUI_GUILDALL_FORMAT: '§eGuild %s'
+
+GUI_HISTORY_NAME: 'Список истории (%s)'
+GUI_HISTORY_TYPE_UNMUTE: 'разблокировки чата'
+GUI_HISTORY_TYPE_UNBANIP: 'разблокировки IP адреса'
+GUI_HISTORY_TYPE_UNBAN: 'разблокировки'
+GUI_HISTORY_TYPE_KICK: 'кика'
+GUI_HISTORY_TYPE_GUILDMUTE: 'блокировки'
+GUI_HISTORY_TYPE_GUILDUNMUTE: 'разблокировки'
+GUI_HISTORY_TYPE_MUTE: 'блокировки'
+GUI_HISTORY_TYPE_PMUTE: 'блокировки'
+GUI_HISTORY_TYPE_BAN: 'блокировки аккаунта'
+GUI_HISTORY_TYPE_PBAN: 'блокировки аккаунта'
+GUI_HISTORY_TYPE_BANIP: 'блокировки'
+GUI_HISTORY_TYPE_PBANIP: 'блокировки'
+GUI_HISTORY_ITEM: '§eСписок истории (%s)'
+GUI_HISTORY_ITEM_LORE:
+- ''
+- '§7Total history:'
+- '§a%s'
+GUI_HISTORY_UNBLOCKING:
+- '§7%s: %s'
+- '§7Date %s: §6%s'
+GUI_HISTORY_BLOCKING:
+- '§7%s: %s'
+- '§7Reason: §a%s'
+- '§7Date %s: §6%s'
+GUI_HISTORY_FOR_TIME_BLOCKING: '§7На срок: %s'
+GUI_HISTORY_FOR_REQUEST_BLOCKING: '§7По просьбе: %s'
+
+GUI_BANLIST_NAME: 'Список блокировок'
+GUI_BANLIST_ITEM: '§eСписок блокировок'
+GUI_BANLIST_ITEM_LORE:
+- ''
+- '§7Всего блокировок:'
+- '§a%s'
+GUI_BANLIST_EMPTY: '§cВ данный момент нет блокировок'
+GUI_BANLIST_EMPTY_LORE:
+- ''
+- '§7В данный момент,'
+- '§7нет ни одного наказанного игрока'
+
+GUI_PARTYALL_NAME: 'Группы ▸ Список групп'
+GUI_PARTYALL_EMPTY: '§cВ данный момент нет публичных групп'
+GUI_PARTYALL_EMPTY_LORE:
+- ''
+- '§7В данный момет,'
+- '§7нету ни одной публичной группы'
+GUI_PARTYALL_ITEM: '§eГруппы ▸ Список групп'
+GUI_PARTYALL_ITEM_LORE:
+- ''
+- '§7Всего групп:'
+- '§a%s'
+- '§7Публичных групп:'
+- '§a%s'
+GUI_PARTYALL_LORE:
+- ''
+- '§7Создатель: %s'
+- '§7Создана: §a%s'
+- ''
+- '§7Существует: §e%s'
+- '§7Участников: §a%s§8/§c%s'
+- ''
+GUI_PARTYALL_ONLINE:
+- '§7%s группы §aонлайн'
+- '§7на сервере §e%s'
+GUI_PARTYALL_OFFLINE:
+- ' §c✗ %s Группы оффлайн'
+GUI_PARTYALL_LIMIT: ' §c✗ Группа переполнена'
+GUI_PARTYALL_JOIN: '§e▸ Нажмите, чтобы присоединится'
+GUI_PARTYALL_ALREADY: ' §c✗ Вы уже состоите в группе'
+GUI_PARTYALL_ALREADY_OTHER: ' §c✗ Вы уже другой в группе'
+GUI_PARTYALL_CREATOR: 'Создатель'
+GUI_PARTYALL_OWNER: 'Владелец'
+GUI_PARTYALL_FORMAT: '§eГруппа %s'
+
+GUI_GUILD_NAME: 'Участники гильдии'
+GUI_GUILD_LORE:
+- ''
+- '§7Должность в гильдии: §e%s'
+GUI_GUILD_GUILD_LORE:
+- ''
+- '§7Гильдия: §a%s'
+- ''
+- '§7Создатель: %s'
+- '§7Дата создания:'
+- '§a%s'
+- ''
+- '§7Участников: §a%s§8/§c%s'
+- '§7Онлайн: §a%s'
+- ''
+- '§7Баланс гильдии: §e%s'
+GUI_GUILD_ITEM: '§eИнформация о гильдии'
+
+GUI_GUILDSHOP_NAME: 'Баланс гильдии: %s'
+GUI_GUILDSHOP_NO_MONEY_LORE:
+- ''
+- '§7Стоимость улучшения: §a%s §7%s'
+- ''
+- ' §e▸ Нажмите для приобретения'
+GUI_GUILDSHOP_BUY_LORE:
+- ''
+- '§7Стоимость улучшения: §c%s §7%s'
+- ''
+- ' §c▸ В гильдии не достаточно монет для приобретения'
+GUI_GUILDSHOP_ALREADY_LORE:
+- ''
+- ' §c▸ Данное улучшение уже приобретено'
+GUI_GUILDSHOP_TYPE_MEMBERS: '§eУлучшение вместительности %s'
+GUI_GUILDSHOP_TYPE_MONEY: '§eУлучшение банка'
+GUI_GUILDSHOP_TYPE_TAG: '§eТег гильдии'
+GUI_GUILDSHOP_TYPE_MOTD: '§eПриветствие гильдии'
+GUI_GUILDSHOP_MEMBERS_LORE:
+- ' '
+- '§7Увеличит максимальное'
+- '§7количество участников в'
+- '§7гильдии до §e%s'
+GUI_GUILDSHOP_MONEY_LORE:
+- ''
+- '§7Увеличит максимальное'
+- '§7количество монеток в день'
+- '§7для гильдии до §e%s'
+GUI_GUILDSHOP_TAG_LORE:
+- ''
+- '§7Позволяет задать тэг (суффикс)'
+- '§7гильдии, который будет отображаться'
+- '§7после ника каждого участника.'
+- ''
+- '§7Limit - 14 букв или знаков'
+GUI_GUILDSHOP_MOTD_LORE:
+- ''
+- '§7Позволяет задать своё собственное'
+- '§7приветствие гильдии, которое будет'
+- '§7отображено каждому участнику при входе'
+
+GUI_BOOST_NAME: 'Повышение'
+GUI_BOOST_LORE:
+- '§7Статус: %s'
+- '§7Сейчас: §b%s§7/§b%s'
+- '§7До повышения: §a%s§a %s §6%s'
+GUI_BOOST_NEED_XP_LORE:
+- ''
+- '§7Вам нужно §a%s§a процентов §7для повышения до %s'
+- ''
+GUI_BOOST_UP_TO_LORE:
+- ''
+- '§e▸ Нажмите, чтобы повысится до %s'
+- ''
+GUI_BOOST_ADMIN: 'administrator'
+GUI_BOOST_DEVELOPER: 'developer'
+GUI_BOOST_MAX_LORE:
+- ''
+- '§cВы уже %s, Вам некуда повышатся!'
+- ''
+GUI_BOOST: 'Повышение'
+GUI_BOOST_ITEM: '§bИнформация об повышении'
+
+GUI_STAFFRULES_NAME: 'Дополнительные правила'
+GUI_STAFFRULES_ITEM: '§6Дополнительные правила'
+
+GUI_LANGUAGESELECT_NAME: 'Выбор языка | Select language'
+GUI_LANGUAGESELECT_ITEM: '§eВыбор языка §8|§e Select language'
+GUI_LANGUAGESELECT_ITEM_LORE:
+- ''
+- '§7Языков §8|§7 Languages:'
+- '§a%s'
+GUI_LANGUAGESELECT_LORE:
+- '§7Выбрать язык %s §8| §7Select language %s'
+- '§7Переведен (%s) §8| §7Translation (%s)'
+- ''
+- '§e▸ Нажмите, чтобы выбрать §8| §e▸ Click, to select'
+
+
+#Holograms
+HOLO_TOP_ONLINE_FORMAT: ' §6#%s §f- %s§f, played - §a%s'
