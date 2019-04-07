@@ -25,7 +25,7 @@ BAN_REQUEST_FOR_PERSONAL:
 CONVERT_FORMAT: '/convert <валюта> <сумма>'
 CONVERT_ERROR: '§cОшибка, нужно указывать только положительное число число!'
 CONVERT: '§6Магазин §8| §fВы успешно обменяли §e%s §f%s на §a%s §f%s'
-CONVERT_AVAILABLE: '§cОшибка, доступные вклюты: golds, ktems'
+CONVERT_AVAILABLE: '§cОшибка, доступные валюты: golds, ktems'
 CORE_PROXY_CONNECTED: '§6Core §8| §fПрокси §a%s§f §fбыл успешно§a подключен§f с адреса §e%s'
 CORE_PROXY_CONNECTION_CLOSED: '§6Core §8| §fПрокси §a%s§f §cотключен§f, по причине: §a%s'
 CORE_SERVER_CONNECTED: '§6Core §8| §fСервер §a%s§f §fбыл§a подключен§f с адреса §e%s'
@@ -57,6 +57,7 @@ SPONSOR: '§eСпонсор'
 DEVELOPER: '§5Разработчик'
 ELITE: '§aЭлита'
 RESTARTING_BROADCAST: '§cДо перезагрузки осталось, §e%s§c %s'
+RESTARTING_MESSAGE: '§6Сервер §8| §fСервер на котором Вы находились перезагружается..'
 NO_CONNECT_REASON: "§cОшибка #13, Синхронизация не выполнена. Если ошибка повторилась, сообщите » §a§nvk.com/FilkWorld"
 CORE_NO_FOUND_PLAYER_SERVER_MSG: '§6Сервер §8| §fОшибка, Ваш сервер был не найден в главном ядре, Вы были телепортированы в §a%s'
 CORE_NO_FOUND_PLAYER_SERVER: "§fОшибка, Ваш сервер был не найден в главном ядре. Если ошибка повторилась, сообщите » §a§nvk.com/FilkWorld\n\n§fКод ошибки (§c%s§f)"
@@ -286,13 +287,13 @@ LEVEL_NOT: |-
 REDIRECT_TO_SERVER: '§aТелепортирую на сервер %s'
 SERVER_QUEUE: '§aТелепортирую на сервер %s'
 
-TAB_HEADER: "§2§lFilk§3§lWorld §8(§2%sms§8)\n\n§fОнлайн-магазин:\n§ewww.filkworld.cf\n"
+TAB_HEADER: "§b§lFilk§a§lWorld §8(§2%sms§8)\n\n§fОнлайн-магазин:\n§ewww.filkworld.cf\n"
 TAB_FOOTER: "\n§fВы находитесь на сервере:\n§e%s"
 
 REDIRECT_ERROR: '§cНевозможно найти подходящий сервер('
 HUBS_ERROR: '§cОшибка, нет доступного лобби, попробуйте повторить попытку позже'
 
-JOIN_WARNING_IP_CHANGE: '§c⚠ Внимание! §fВаш §cip адрес§f прошлой сессии не совпадает, наведите сюда, и проверьте'
+JOIN_WARNING_IP_CHANGE: '§c⚠ Внимание! §fВаш §cip адрес§f прошлой сессии не совпадает, наведите сюда и проверьте'
 JOIN_WARNING_HOVER: "§fВаш прошлый адрес: §a%s\n§fВаш текущий адрес: §c%s\n§fВаша почта: %s\n\n§fРекомендуем сделать: %s"
 JOIN_NOT_MAIL: '§cНет почты'
 JOIN_RECOMMEND_ADDMAIL: "§bПривязать почту\n\n §e▸ Нажмите сюда, чтобы привязать почту"
@@ -410,7 +411,7 @@ TRAINING_STAGE_0_HOVER_NO: 'Нажмите, чтобы выбрать друго
 
 #Stage 1
 TRAINING_STAGE_1_TITLE: '§fВы хотите пройти курс §eобучения§f?'
-TRAINING_STAGE_1_SUBTITLE: '§7вы сможете узнать о плюшках, и возможностях'
+TRAINING_STAGE_1_SUBTITLE: '§7вы сможете узнать о плюшках и возможностях'
 TRAINING_STAGE_1_WHATTRAINING: '§fХотите пройти §dобучение§f?'
 TRAINING_STAGE_1_HOVER_YES: 'Нажмите, чтобы пройти обучение'
 TRAINING_STAGE_1_HOVER_NO: 'Нажмите, чтобы пропустить обучение'
@@ -426,7 +427,7 @@ TRAINING_STAGE_2_HOVER: '§b(Нажмите сюда)'
 #Stage 3
 TRAINING_STAGE_3_MSG_1_TITLE: '§fА теперь давайте ознакомимся,'
 TRAINING_STAGE_3_MSG_1_SUBTITLE: '§fс полезными возможностями и командами.'
-TRAINING_STAGE_3_MSG_2_TITLE: '§fС которыми игра на сервер станет проще, и легче'
+TRAINING_STAGE_3_MSG_2_TITLE: '§fС которыми игра на сервер станет проще и легче'
 TRAINING_STAGE_3_MSG_2_SUBTITLE: ''
 TRAINING_STAGE_3_MSG_3_TITLE: '§fНачнем с §aВопросов§f'
 TRAINING_STAGE_3_MSG_3_SUBTITLE: '§7. . .'
@@ -552,6 +553,7 @@ ASK_FORMAT: '/ask <ваш вопрос>'
 ANS_FORMAT: '/ans <ник> <ответ>'
 FIND_FORMAT: '/find <ник>'
 DEVELOPER_FORMAT: '/developer <ваше сообщение разработчику>'
+BANIP_FORMAT: '/banip <ip/ник> <время/e> <причина>'
 BAN_FORMAT: '/ban <ник> <время/e> <причина>'
 MUTE_FORMAT: '/mute <ник> <время/e> <причина>'
 UNBAN_FORMAT: '/unban <ник>'
@@ -955,7 +957,6 @@ FRIEND_COMMAND_HELP:
  - '§7/friends reject <ник игрока> §f- отклонить запрос игрока в друзья'
  - '§7/friends requests §f- список запросов в друзья'
  - '§7/friends list §f- список друзей'
- - '§7/friends present <ник игрока> §f- отправить подарок другу'
  - '§7/friends chat <сообщение> §f- отправить сообщение всем вашим друзьям'
  - '§7/friends tp <ник друга> §f- телепортироватся к другу на сервер'
 FRIEND_NO_FRIENDS: '§cУ вас нет друзей'
@@ -995,13 +996,6 @@ FRIEND_TP_FORMAT: '/f tp <ник друга>'
 FRIEND_TP_ALREADY: '§cВы уже на одном сервере'
 FRIEND_TP: '§6Друзья §8| %s §fтелепортировался к вам на сервер'
 FRIEND_TP_ALERT: '§6Друзья §8| §fВы были телепортированы на сервер игрока %s §f(§7%s§f)'
-
-FRIEND_PRESENT_FORMAT: '/f present <ник друга>'
-FRIEND_PRESENT_NOT: '§cОшибка, у вас ничего нет в руках'
-FRIEND_PRESENT: '§6Друзья §8| §fВы отправили подарок другу %s'
-FRIEND_PRESENT_ALERT: '§6Друзья §8| %s §fотправил вам подарок.'
-FRIEND_PRESENT_INVALID: '§6Друзья §8| §cОшибка, ваш друг %s §cне находится на §aAnarchy§c, §aCreative§c или §aSkyBlock'
-FRIEND_PRESENT_NSERVER: '§cОшибка, чтобы сделать подарок, вы должны быть на одном сервере с другом'
 
 LVL_UP: '§a§l§kX§r §6§lУРОВЕНЬ ПОВЫШЕН §a§l§kX§r'
 NEW_LVL: '§fВы достигли §d%s§f уровня!'
@@ -1518,13 +1512,13 @@ TRAINING_FORMAT: '/training <yes/no>'
 TRAINING_SKIP_HOVER_YES: 'Нажмите, чтобы пройти урезанное обучение'
 TRAINING_SKIP_HOVER_NO: 'Нажмите, чтобы удалить урезенное обучение'
 TRAINING_SKIP_TITLE: '§fВы хотите пройти §cурезанное §eобучения§f?'
-TRAINING_SKIP_SUBTITLE: '§7вы сможете узнать о плюшках, и возможностях'
+TRAINING_SKIP_SUBTITLE: '§7вы сможете узнать о плюшках и возможностях'
 TRAINING_SKIP_NAME: '   §8 -| §6§lОбучение §8|-'
 TRAINING_SKIP: '§fХотите пройти §dобучение§f?'
 
 TRAINING_SKIP_MSG_1_TITLE: '§fДавайте ознакомимся,'
 TRAINING_SKIP_MSG_1_SUBTITLE: '§fс полезными возможностями и командами.'
-TRAINING_SKIP_MSG_2_TITLE: '§fС которыми игра на сервер станет проще, и легче'
+TRAINING_SKIP_MSG_2_TITLE: '§fС которыми игра на сервер станет проще и легче'
 TRAINING_SKIP_MSG_2_SUBTITLE: ''
 TRAINING_SKIP_MSG_3_TITLE: '§fНачнем с §aВопросов§f'
 TRAINING_SKIP_MSG_3_SUBTITLE: '§7. . .'
@@ -1622,7 +1616,7 @@ BUY_MAX_NOT_MULTIACCOUNT: "§cУ вас было создано максимал
 BUY_MAX_MULTIACCOUNT: "§cВы исчерпали лимит создания мульти-аккаунтов!\nВаш доступный мульти-аккаунт для входа: %s"
 
 BUY_HOVER_BROADCAST: '§fНажмите сюда для\n§fперехода по ссылке'
-PLAYER_IS_BANNED: '§cОшибка #5, Пожалуйста сделайте скриншот, и сообщите vk.com/ktem_projects'
+PLAYER_IS_BANNED: '§cОшибка #5, Пожалуйста сделайте скриншот и сообщите vk.com/ktem_projects'
 
 ALERT_FORMAT: '/alert <сообщение>'
 
@@ -1799,6 +1793,7 @@ ANARCHY_RULES: |-
  §f2. §7Не использовать читы или любой запрещенный софт
  §f3. §7Не багоюзить, не создавать лаг машины и
  §7не совершать действия, которые могут навредить серверу!
+ §f4. §7Не убивать на спавне
   
  §eНа этом все, больше вы ничем не ограничены
  §eДелайте что хотите и как захотите!
@@ -1864,7 +1859,7 @@ CHAT_DOUBLE: ' §cℹ Пожалуйста, не повторяйте одина
 CHAT_SPAM: ' §cℹ Не флудите.'
 CHAT_YOUTUBE: "\n§cℹ Рекламировать каналы могут только игроки с привилегией §6§lYouTube\n"
 CHAT_PIAR: "\n§cℹ У нас запрещено рекламировать сайты и сторонние ресурсы\n"
-CHAT_MAT: "\n§cℹ У нас запрещено обзываться, и оскорблять других (Предупреждение %s/%s)\n"
+CHAT_MAT: "\n§cℹ У нас запрещено обзываться и оскорблять других (Предупреждение %s/%s)\n"
 CHAT_MAT_REASON: '1.2. (Оскорбления)'
 
 ANTICHEAT: '§cАнтичит'
@@ -2175,7 +2170,7 @@ GUI_PROFILE_ITEMS_LORE:
 GUI_PROFILE_SHOP_LORE:
 - '§7Магазин, в котором вы можете'
 - '§7приобрести различные вещи, предметы'
-- '§7за кристаллы, и ктемы'
+- '§7за кристаллы и ктемы'
 - ''
 - '§e▸ Открыть магазин'
 
@@ -2692,7 +2687,7 @@ GUI_INFO_HELP_LORE:
 - '§7Также для получения списка всех доступных Вам команд,'
 - '§7введите в поле ввода §e/§7 и нажмите на кнопку Tab'
 - '§7Команды добавяться автоматически. Также можно начать'
-- '§7вводить команду, и она также будет добавлена.'
+- '§7вводить команду и она также будет добавлена.'
 
 GUI_INFO_DONATE_LORE:
 - '§7Список привилегий:'
@@ -3618,7 +3613,7 @@ GUI_REWARDS_3_LORE:
 - ''
 - '§7Ежемесячная награда, которая'
 - '§7включает в себя бонус в виде'
-- '§7монеток, опыта, и ключей'
+- '§7монеток, опыта и ключей'
 GUI_REWARDS_4: '§eГолосование за сервер'
 GUI_REWARDS_4_LORE:
 - ''
@@ -3858,6 +3853,7 @@ GUI_STATS_GLOBAL_LORE:
 - ' §8▪ §7Статус: §e%s'
 - ' §8▪ §7Убийств: §e%s'
 - ' §8▪ §7Смертей: §e%s'
+- ' §8▪ §7Дата первого захода: §e%s'
 
 GUI_GADGETS_NAME: 'Гаджеты'
 GUI_GADGETS_NAME_OTHER: 'Гаджеты ▸ %s'
