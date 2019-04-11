@@ -68,10 +68,12 @@ JUNIOR: '§2Junior'
 HELPER: '§2Helper'
 MODER: '§9Moderator'
 ADMIN: '§4Admin'
+SPONSOR: '§eSponsor'
 DEVELOPER: '§5Developer'
 ELITE: '§aElite'
 
-RESTARTING_BROADCAST: '§cBefore a restart remained, §e%s§c %s'
+SERVER_RESTARTING_BROADCAST: '§cBefore a restart remained, §e%s§c %s'
+SERVER_RESTARTING_MESSAGE: '§6Server §8| §fServer на котором Вы находились перезагружается..'
 NO_CONNECT_REASON: "§cError#13, Synchronization is not executed. Report, if error to repeated » §a§nvk.com/FilkWorld"
 CORE_NO_FOUND_PLAYER_SERVER_MSG: '§6Server §8| §fError, you server not found in main core, you redirected to §a%s'
 CORE_NO_FOUND_PLAYER_SERVER: "§fError, you server not found in main core. If error repeated, report » §a§nvk.com/FilkWorld\n\n§fError code (§c%s§f)"
@@ -141,6 +143,11 @@ FRIEND_0: 'friend'
 FRIEND_1: ''
 FRIEND_2: ''
 FRIEND_3: 's'
+
+UPDATE_0: 'update'
+UPDATE_1: ''
+UPDATE_2: ''
+UPDATE_3: 's'
 
 UNKNOWN: 'unknown'
 
@@ -232,9 +239,34 @@ PLAYER_GUILD_BUY_TAG:
 - ' §fДля этого используйте команду §7/guild tag'
 - ''
 
+PLAYER_MARKETING_ACTIONBAR_TIME: '§cДо окончания игры осталось: %s'
+PLAYER_MARKETING_START_ONE: |-
+ §6Marketing §8| §fВы выбрали тип игры: §aПримеры§f.
+ §6Marketing §8| §fКаждые несколько секунд, у вас в чате будут появляться примеры, отвечайте на них правильно, чтобы проходить на следующие модули, и в конце окончить игру.
+PLAYER_MARKETING_START_TWO: |-
+ §6Marketing §8| §fВы выбрали тип игры: §bПаркур§f.
+ §6Marketing §8| §fПройдите все модули до самого конца, чтобы окончить игру.
+PLAYER_MARKETING_QUESTION_WIN: '§6Marketing §8| §fВы ответили правильно, и получили §e+1 модуль'
+PLAYER_MARKETING_FINISH: |-
+ §6Marketing §8| §fПоздравляем, вы прошли все модули, и получили награды
+PLAYER_MARKETING_QUESTION_TITLE: '              §8 -| §6§lПример §8|-'
+PLAYER_MARKETING_QUESTION: |-
+ §fСколько будет, §a%s §fумножить на§a %s§f = §e?
+ §7ответ напишите в чате
+PLAYER_MARKETING_QUESTION_WRONG: '§cОшибка, ответ на пример неверный'
+PLAYER_MARKETING_END_TIME: '§6Marketing §8| §cСожалеем, время вышло, вы не успели пройти игру'
+PLAYER_MARKETING_MODULE_CONFIRM: '§6Marketing §8| §f+1 §aмодуль пройден'
+PLAYER_MARKETING_QUIT_GAME: '§6Marketing §8| §fВы закрыли меню, арена покинута'
+
+PLAYER_RESTARTING_ARENA: '§cРестарт арены, вы будите телепортированны в лобби через 5 секунд'
+PLAYER_ARENA_RESTARTED: '§cАрена перезапускается'
+
+PLAYER_FLY_ACTIONBAR_TIME: '§cДо конца полета осталось: %s'
+PLAYER_CREATIVE_ACTIONBAR_TIME: '§cДо конца творческого режима осталось: %s'
+
 PLAYER_BOOST_NEED_XP: '§cВам нехватает %s, для повышения до %s'
 PLAYER_BOOST_BROADCAST: '§6Повышение §8| %s §fповысился до звания %s §aПоздравьте его!'
-PLAYER_BOOST_TO_MAX_BROADCAST: '§6Повышение §8| %s §fповысился до §a§nмаксимального§f звания %s §aПоздравьте его!'
+PLAYER_BOOST_MAX_BROADCAST: '§6Повышение §8| %s §fповысился до §a§nмаксимального§f звания %s §aПоздравьте его!'
 PLAYER_BOOST_YOUR_UP_1: '%s§l§kX§f §5Вы повысились до %s %s§l§kX§f'
 PLAYER_BOOST_YOUR_UP_2: '§fи получили:'
 PLAYER_BOOST_YOUR_UP_COINS: '§7+§6%s §f%s'
@@ -247,6 +279,48 @@ PLAYER_BOOST_PLEASE_MADE_SCREENSHOT:
 AVAILABLE_SERVER_NOT_FOUND: '§6Server §8| §fНе удалось найти подходящий server'
 
 SERVER_NOT_AVAILABLE_GROUP: '§cError, вход доступен только для %s§c и выше'
+
+SLOT_BUSY: '§cПростите, но вы были перемещены в лобби, ваше место занял §r%s'
+ERROR_TELEPORT: '§cОшибка телепортации в лобби'
+ONLY_DONATOR: '§cОшибка, на арене только донатеры'
+ARENA_BUSY: '§cАрена заполнена, не хватает слотов? Купите §e§lGOLD§c или выше'
+ARENA_START: '§cИгра начинается...'
+ARENA_RESTART: '§cСервер перезагружается...'
+
+PLAYER_JOIN_ARENA: '%s§f зашел в игру (§a%s§f/§a%s§f)'
+PLAYER_QUIT_ARENA: '%s§f покинул игру (§c%s§f/§a%s§f)'
+ARENA_DO_NOT_PLAYERS: '§cОшибка, не хватает игроков для старта'
+ARENA_STARTED: '§fИгра начнется через §a%s §f%s'
+
+LUCKYWARS_STARTED_TITLE: '§c§lСтарт!'
+LUCKYWARS_STARTED_SUBTITLE: '§fВыживите и не попадитесь в ловушку'
+
+LUCKYWARS_FLY: '§6LuckyWars §8| §fПолет отключается через §a5 секунд.'
+LUCKYWARS_FLY_INFO: '§6LuckyWars §8| §fИгроку %s§f выпал полёт из лаки блока'
+
+GAME_PLAYER_KILLED_YOURSELF: 'Вы умерли!'
+GAME_PLAYER_RESPAWN_TITLE: '§aВы возродились'
+GAME_PLAYER_RESPAWN_SUBTITLE: '§6%s ресурсов §7восстановлено'
+GAME_PLAYER_RESPAWN_SUBTITLE_BY: '§fВас убил игрок %s'
+GAME_PLAYER_KILLED_INFO: '%s §fубил игрока %s'
+GAME_PLAYER_KILLED_FELL_OUT_WORLD: '%s §fвыпал из мира'
+GAME_TEAM_WIN: '§eПобедила команда §8- %s'
+GAME_SOLO_WIN: '§eПобедил игрок §8- %s'
+GAME_CHAT_SPECTATORS: '§8[§7Наблюдателям§8]'
+GAME_CHAT_GLOBAL: '§8[Всем§8] [%s§8]'
+GAME_CHAT_TEAM: '§8[Команде§8]'
+GAME_TEAM_GAME_OVER: 'Команда %s§f проиграла'
+
+LUCKYWARS_INFO:
+- '§eВаша задача ломать лакиблоки и убивать игроков'
+- '§eВас будет преследовать множество ловушек,'
+- '§eтак что будьте очень осторожны!'
+
+PLAYER_TEAM_NO_PLACES: '§cВ данной команде нет мест.'
+PLAYER_TEAM_SELECTED: 'Вы выбрали команду %s'
+
+ARENA_TYPE_TEAM_NO_TEAM: '§c§lВнимание! §cОбразование союзов из нескольких команд запрещено. Докладывайте о таких игроках на форум.'
+ARENA_TYPE_SOLO_NO_TEAM: '§c§lВнимание! §cКомандная игра запрещена на Solo режиме. Докладывайте о таких игроках на форум.'
 
 SITESHOP_BUY: '§6Shop §8| §fYou buying §a%s'
 SITESHOP_INFO: '§6Server §8| §fPlayer %s§f buying §a%s§f, can buy in §6/siteshop'
@@ -406,6 +480,14 @@ ITEM_GADGETS_GADGET_LORE:
 - '§cRight click, to removed from favorites'
 ITEM_GADGETS_HAT: '§aHat'
 ITEM_GADGETS_BANNER: '§aBanner'
+ITEM_GAME_EXIT_NAME: '§eExit'
+ITEM_GAME_EXIT_LORE:
+- '§7Используйте этот предмет,'
+- '§7чтобы покинуть арену'
+ITEM_TEAMS_NAME: '§eSelect team'
+ITEM_TEAMS_LORE:
+- '§7Используйте этот предмет,'
+- '§7чтобы выбрать свою команду'
 
 TRAINING_PREFIX: '§6Training §8| §f'
 TRAINING_PREFIX_HOVER: '   §8 -| §6§lTraining §8|-'
@@ -503,6 +585,8 @@ BOARD_SERVER: 'Server'
 BOARD_TO_START: 'Старт через'
 BOARD_SPECTATOR: 'Spectators'
 BOARD_KILLS: 'Kills'
+BOARD_LUCKYBLOCKS: 'LuckyBlocks'
+BOARD_SECOUNDS: 'sec'
 BOARD_LIFE_COUNT: 'Health'
 BOARD_CHEST: 'Chests'
 BOARD_DEATH: 'Deaths'
@@ -560,6 +644,7 @@ NO_PERMISSION_ONLY: '§cYou do not have permissions, this function is only for %
 REPORT_FORMAT: '/report <nickname> <reason>'
 WHOIS_FORMAT: '/whois <nickname>'
 STAFFCHAT_FORMAT: '/sc <message>'
+TESTERCHAT_FORMAT: '/tc <message>'
 DONATECHAT_FORMAT: '/dc <message>'
 PERSONALUP_FORMAT: '/personalup <key>'
 ASK_FORMAT: '/ask <your questing>'
@@ -651,6 +736,7 @@ GROUP_CLEAR_BROADCAST: '§6Group §8| %s§7 stripped off privilege from player %
 GROUP_MIGRATE_BROADCAST: '§6Group §8| %s§7 migrated privilege of %s§7 to %s'
 GROUP_VIEW_INVALID: '§cYou wrote wrong group. Available groups: §fDEFAULT, PREMIUM, GOLD, LEGEND, EMERALD, GOLEM, DIAMOND, ENDERMAN, TESTER, ELITE'
 GROUP_SET_BROADCAST: '§6Group §8| %s§7 set to player %s§7 group %s'
+GROUP_SET_STATS_BROADCAST: '§6Group §8| %s§7 set to player %s§7 stats %s'
 
 NO_FOUND_PLAYER: '§cPlayer %s§c not found or player is offline'
 NO_FOUND_PLAYER_IN_GAMEMODE: '§cPlayer %s§c not found on this gamemode'
@@ -962,7 +1048,6 @@ FRIEND_COMMAND_HELP:
  - '§7/friends reject <player name> §f- decline friend request from player'
  - '§7/friends requests §f- friend request list'
  - '§7/friends list §f- friend list'
- - '§7/friends present <player name> §f- send present for friend'
  - '§7/friends chat <message> §f- send all message for your friends'
  - '§7/friends tp <player name> §f- teleport to your friend server'
 FRIEND_NO_FRIENDS: "§cYou haven't got friends"
@@ -1003,13 +1088,6 @@ FRIEND_TP_ALREADY: '§cYou are already on the same server'
 FRIEND_TP: '§6Friends §8| %s §fteleported to you on the server'
 FRIEND_TP_ALERT: '§6Friends §8| §fYou were teleported on the server of player %s §f(§7%s§f)'
 
-FRIEND_PRESENT_FORMAT: '/f present <player name>'
-FRIEND_PRESENT_NOT: "§cError, you haven't got anything in your hands"
-FRIEND_PRESENT: '§6Friends §8| §fYou sent a present to %s'
-FRIEND_PRESENT_ALERT: '§6Friends §8| %s §fsent you a present.'
-FRIEND_PRESENT_INVALID: "§6Friends §8| §cError, your friend %s §cisn't on §aAnarchy§c, §aCreative§c or §aSkyBlock"
-FRIEND_PRESENT_NSERVER: '§cError, to send a present, you have to be on the same server with friend'
-
 LVL_UP: '§a§l§kX§r §6§lLEVEL UP §a§l§kX'
 NEW_LVL: '§fYou received §d%s§f level!'
 EXP_TO_NEW_LVL: '§fTo the next level you need §a%s§f exp more'
@@ -1043,7 +1121,9 @@ BOX_BANNER_ALREADY: '§bLuckyChest §8| §fYou has already this banner, You get 
 BOX_STATS_ALREADY: '§bLuckyChest §8| §fYou has already this stats, You got §e+%s §f%s'
 
 STAFFCHAT_MSG: '§eStaff chat §8| §f%s §8» §f%s'
+TESTERCHAT_MSG: '§6Testers chat §8| §f%s §8» §f%s'
 DONATECHAT_MSG: '§6Donate chat §8| §f%s §8» §7%s'
+STAFFCHAT_MARKIS_MSG: '§eStaff chat §8| §f%s §d✎ §f%s'
 
 SERVER_DISABLE_BROADCAST: '§6Server §8| %s§f отключил сервер ▬ §a%s'
 SERVER_RELOAD_BROADCAST: '§6Server §8| %s§f перезагрузил сервер ▬ §a%s'
@@ -1339,6 +1419,7 @@ BANINFO_IP: |-
  §f- Reason: §e%s
  §f- Date: §6%s
 UNBAN_NO_ACCESS: '§cThe player is blocked administration, you do not have permission to him unlocked'
+UNMUTE_NO_YOURSELF: '§cYou no available unblocked to yourself chat'
 BAN_NO_ACCESS: '§cВы не можете наказать данного игрока'
 BAN_NO_ACCESS_SYNTAX: '§cУ вас нет прав, для использование перманентного синтаксиса'
 BAN_UP_RANK: '§cВы не можете наказывать игроков, выше вашего статуса'
@@ -1504,12 +1585,17 @@ YT_COMMAND_HELP:
  - '§7/yt remlink §f- removed link'
  - '§7/yt getlink §f- view current link'
  - '§7/yt alert §f- create announcement for all server'
+ - '§7/yt alertactionbar §f- сделать объявление на весь сервер в actionbar'
  - '§7/yt menu §f- open youtube menu'
 YT_LINK_NOT_FOUND: '§cУ вас еще нет ссылки, добавьте её /yt addlink <ссылка>'
 
 YT_ALERT_FORMAT: '/yt alert <your broadcast>'
 YT_ALERT_DELAY: '§6YouTube §8| §fWait still §a%s §f%s to sent new announcement'
 YT_ALERT_BROADCAST: '§fУ %s §fnow §e%s'
+
+YT_ALERTACTIONBAR_FORMAT: '/yt alertactionbar <your broadcast>'
+YT_ALERTACTIONBAR_DELAY: '§6YouTube §8| §fПодождите еще §a%s §f%s для отправки нового объявления в actionbar'
+YT_ALERTACTIONBAR_BROADCAST: '§fУ %s §fnow §e%s'
 
 YT_ADDLINK_NO_CHANGE: '§cLink no changed'
 YT_ADDLINK: '§6YouTube §8| §fYou added link §a%s'
@@ -1523,13 +1609,13 @@ TRAINING_FORMAT: '/training <yes/no>'
 TRAINING_SKIP_HOVER_YES: 'Click, to passing урезанное training'
 TRAINING_SKIP_HOVER_NO: 'Click, to removed урезенное training'
 TRAINING_SKIP_TITLE: '§fВы хотите пройти §cурезанное §eоtraining§f?'
-TRAINING_SKIP_SUBTITLE: '§7вы сможете узнать о плюшках, и возможностях'
+TRAINING_SKIP_SUBTITLE: '§7вы сможете узнать о плюшках и возможностях'
 TRAINING_SKIP_NAME: '   §8 -| §6§lTraining §8|-'
 TRAINING_SKIP: '§fХотите пройти §dоtraining§f?'
 
 TRAINING_SKIP_MSG_1_TITLE: '§fДавайте ознакомимся,'
 TRAINING_SKIP_MSG_1_SUBTITLE: '§fс полезными возможностями и командами.'
-TRAINING_SKIP_MSG_2_TITLE: '§fС которыми игра на сервер станет проще, и легче'
+TRAINING_SKIP_MSG_2_TITLE: '§fС которыми игра на сервер станет проще и легче'
 TRAINING_SKIP_MSG_2_SUBTITLE: ''
 TRAINING_SKIP_MSG_3_TITLE: '§fНачнем с §aВопросов§f'
 TRAINING_SKIP_MSG_3_SUBTITLE: '§7. . .'
@@ -1776,6 +1862,14 @@ RTP_CANCEL: '§cYou moved, teleportation cancel'
 
 ANVIL_DELAY: '§cOpen anvil may once per 4 minutes, time left %s'
 
+FLY_DELAY: '§cПодождите еще %s чтобы использовать полет'
+FLY_INFO: '§6Server §8| §fПолет будет отключен через §a%s'
+FLY_END: '§6Server §8| §fВремя полета кончилось'
+
+CREATIVE_DELAY: '§cПодождите еще %s чтобы использовать творческий режим'
+CREATIVE_INFO: '§6Server §8| §fПолет будет отключен через §a%s'
+CREATIVE_END: '§6Server §8| §fВремя творческого режима кончилось'
+
 HAT: 'Enjoy your hat!'
 HAT_ERROR: "§cError, you aren't holding anything"
 
@@ -1788,11 +1882,13 @@ LIST:
 #- ' §a▪ §fАдминистрация: %s'
 - ''
 LIST_EMPTY: '§8Никого нет'
+LIST_CMD: '%s§fOn server §a%s §f%s'
 
 ONLY_ANARCHY: '§cThis feature is disabled'
 ONLY_CREATIVE: '§cThis feature is disabled'
 ONLY_ANARCHY_CREATIVE: '§cThis feature is disabled'
 NO_ANARCHY: '§6Anarchy §8| §cThis feature is disabled for anarchy'
+NO_ANARCHY_CREATIVE: '§6Anarchy §8| §cДанная функция отключена на anarchy и creative'
 
 ANARCHY_RULES: |-
  
@@ -1802,6 +1898,7 @@ ANARCHY_RULES: |-
  §f2. §7Do not use cheats or any prohibited software
  §f3. §7Do not use bugs, do not create a lag machine and
  §7do not perform actions that can harm the server!
+ §f4. §7Не убивать на спавне
   
  §eThat's all, the more you are not limited by anything
  §eDo what you want and how you want!
@@ -1869,7 +1966,7 @@ CHAT_DOUBLE: ' §cℹ Please, не повторяйте одинаковые с�
 CHAT_SPAM: ' §cℹ Не флудите.'
 CHAT_YOUTUBE: '\n§cℹ Рекламировать каналы могут только игроки с привилегией §6§lYouTube\n'
 CHAT_PIAR: "\n§cℹ У нас запрещено рекламировать site and other resources\n"
-CHAT_MAT: "\n§cℹ У нас запрещено обзываться, и оскорблять других (Warning %s/%s)\n"
+CHAT_MAT: "\n§cℹ У нас запрещено обзываться и оскорблять других (Warning %s/%s)\n"
 CHAT_MAT_REASON: '1.2. (Оскорбления)'
 
 ANTICHEAT: '§cАнтичит'
@@ -2028,6 +2125,33 @@ MESSAGES_2_BROADCAST: "\n §8| §fСнимаешь §cлетсплеи§f, §cо
 MESSAGES_2_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
 MESSAGES_1_BROADCAST: "\n §8| §fПосетите нашу группу §9VK§f и ты будишь всегда\n §8| §fв курсе последних новостей §eсервера\n §8| §fПереходи по ссылке §bvk.com/filkworld\n"
 MESSAGES_1_HOVER_BROADCAST: "§fНажмите сюда для\n§fперехода по ссылке"
+
+ECONOMY_MONEY_CHANGE_BROADCAST: '§6Экономика §8| %s§7 начислил на аккаунт %s§7 - §6Монеты §f(§a+%s§f)'
+ECONOMY_KTEMS_CHANGE_BROADCAST: '§6Экономика §8| %s§7 начислил на аккаунт %s§7 - §5Ктемы §f(§a+%s§f'
+ECONOMY_GOLDS_CHANGE_BROADCAST: '§6Экономика §8| %s§7 начислил на аккаунт %s§7 - §eКристаллы §f(§a+%s§f)'
+
+LAST_UPDATES_INFO: '§6Updates §8| §fБыло сделано §a%s§f %s'
+LAST_UPDATES: '§6Updates §8| §f%s'
+LAST_STAFF_UPDATES_INFO: '§cUpdates §8| §fБыло сделано §a%s§f %s для персонала'
+LAST_STAFF_UPDATES: '§cUpdates §8| §f%s'
+
+AFK_USE: '§6Server §8| §fАфк-режим §cотключен'
+AFK_GOTE: '§6Server §8| §fАфк-режим §aвключен'
+AFK_ENABLED: 'Отошел и может не отвечать'
+AFK_DISABLED: 'Снова с нами!'
+AFK_WHISPER: 'Я сейчас отошел и могу не отвечать'
+
+LUCKYWARS_COMMAND_HELP_SETUP:
+- '§6LuckyWars §8| §fСписок команд:'
+- '§7/lw setspawn Lobby §f- Точка лобби'
+- '§7/lw setspawn <название> §f- Установить точку спавна'
+LUCKYWARS_COMMAND_HELP:
+- '§6LuckyWars §8| §fСписок команд:'
+- '§7/lw start §f- Принудительно начать игру'
+
+LUCKYWARS_TELEPORTED_TO: '§fТелепортация на §a%s'
+LUCKYWARS_SETLOCATION: '§fТочка §a%s§f установленна'
+LUCKYWARS_GAME_ALREADY_STARTED: '§cИгра уже запущена'
 
 #Guis en
 GUI_BACK_NAME: '§cBack'
@@ -2636,7 +2760,7 @@ GUI_INFO_HELP_LORE:
 - '§7Также для получения списка всех доступных Вам команд,'
 - '§7введите в поле ввода §e/§7 и нажмите на кнопку Tab'
 - '§7Команды добавяться автоматически. Также можно начать'
-- '§7вводить команду, и она также будет добавлена.'
+- '§7вводить команду и она также будет добавлена.'
 GUI_INFO_DONATE_LORE:
 - '§7List of paid statuses:'
 - ' §8▪ §6§lPREMIUM §7- §f37 Rubbles'
@@ -3520,7 +3644,7 @@ GUI_REWARDS_3_LORE:
 - ''
 - '§7Ежемесячная награда, которая'
 - '§7включает в себя бонус в виде'
-- '§7монеток, опыта, и ключей'
+- '§7монеток, опыта и ключей'
 GUI_REWARDS_4: '§eГолосование за сервер'
 GUI_REWARDS_4_LORE:
 - ''
@@ -3576,6 +3700,7 @@ GUI_LOBBY_FRIENDS_1:
 - ''
 - '§7Friends on lobby:'
 - '%s'
+- ''
 - '§e  Click to teleport'
 GUI_LOBBY_FRIENDS_2:
 - ''
@@ -3583,6 +3708,7 @@ GUI_LOBBY_FRIENDS_2:
 - ''
 - '§7Friends on lobby:'
 - '%s'
+- ''
 - '§e▶ Click to teleport'
 GUI_LOBBY_FRIENDS_FORMAT: ' §8• %s'
 GUI_LOBBY_FRIENDS_MAX:
@@ -3758,6 +3884,7 @@ GUI_STATS_GLOBAL_LORE:
 - ' §8▪ §7Stats: §e%s'
 - ' §8▪ §7Kills: §e%s'
 - ' §8▪ §7Deaths: §e%s'
+- ' §8▪ §7Date first join: §e%s'
 
 GUI_GADGETS_NAME: 'Cosmetics'
 GUI_GADGETS_NAME_OTHER: 'Cosmetics ▸ %s'
@@ -3969,9 +4096,13 @@ GUI_GADGETS_EFFECT_18_LORE:
 GUI_GADGETS_EFFECT_19: 'Enderman'
 GUI_GADGETS_EFFECT_19_LORE:
 - '§7Только не говорите админам..'
-GUI_GADGETS_EFFECT_20: 'Crits'
+GUI_GADGETS_EFFECT_20: 'Ktem effect!'
 GUI_GADGETS_EFFECT_20_LORE:
-- '§7Надеюсь это не вас бьют игроки..'
+- '§fУ вас будет один из редчайших effects,'
+- '§fкоторые когда-либо были созданы на сервере!'
+- ''
+- '§fДанный effect сочитает в себе сразу несколько эффектов,'
+- '§fтакое вы больше нигде не увидите!'
 GUI_GADGETS_HAT_1: 'Default hat'
 GUI_GADGETS_HAT_1_LORE:
 - '§7У Вас будет шапка стива'
@@ -4631,6 +4762,52 @@ GUI_LANGUAGESELECT_LORE:
 - '§7Переведен (%s) §8| §7Translation (%s)'
 - ''
 - '§e▸ Нажмите, чтобы выбрать §8| §e▸ Click, to select'
+
+GUI_MARKETING_NAME: 'Информация об игре'
+GUI_MARKETING: '§eИнформация'
+GUI_MARKETING_LORE:
+- ''
+- '§7В данной мини-игре, присудствует;'
+- '§72 варианта прохождения игры.'
+- '§7После того как вы нажмете на этот предмет,'
+- '§7у вас будет 3 минуты, чтобы пройти игру.'
+- ''
+- '§7Если вы успеваете, вы получаете награды.'
+- '§7В проигрыше вы ничего не теряете.'
+- ''
+- '§7P.s. У каждого типа свои награды'
+- ''
+- '§e▶ Нажмите, чтобы открыть меню выбора типа'
+GUI_MARKETING_MAIN_NAME: 'Выберите тип'
+GUI_MARKETING_ONE: '§aПримеры'
+GUI_MARKETING_ONE_LORE:
+- '§7Ваша задача будет ответить на несколько;'
+- '§7примеров, которые будут написаны вам в чате.'
+- '§7Если вы успеваете пройти, вы получаете §b1 донатный ключ'
+- '§7В противном случае вы ничего не теряете, и игра оканчивается.'
+- ''
+- '§e▶ Нажмите, чтобы начать'
+GUI_MARKETING_TWO: '§bПаркур'
+GUI_MARKETING_TWO_LORE:
+- '§7Ваша задача будет пройти несколько;'
+- '§7модулей(чекпоинтов) паркура, за 3 минуты.'
+- '§7Если вы успеваете пройти, вы получаете §e1 золото'
+- '§7В противном случае вы ничего не теряете, и игра оканчивается.'
+- ''
+- '§e▶ Нажмите, чтобы начать'
+
+GUI_TEAMS_NAME: 'Выбор команды: %s'
+GUI_TEAMS_NO_PLAYERS_LORE:
+- '§7Нет игроков%s'
+GUI_TEAMS_PLAYERS_LORE:
+- '§7Игроки:'
+- '%s'
+GUI_TEAMS_YELLOW: '§eЖёлтые [%s/%s]'
+GUI_TEAMS_GREEN: '§aЗеленые [%s/%s]'
+GUI_TEAMS_BLUE: '§9Синии [%s/%s]'
+GUI_TEAMS_RED: '§cКрасные [%s/%s]'
+
+PERK_FIRE: 'Огонь'
 
 
 #Holograms
